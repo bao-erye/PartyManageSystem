@@ -1,9 +1,9 @@
 {
   "pages":[
-    "components/activityItem/activityItem",
+    "pages/message/message",
     "pages/activity/activity",
     "pages/index/index",
-    "pages/message/message",
+    
     "pages/mine/mine"
   ],
   "window":{

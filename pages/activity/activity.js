@@ -12,6 +12,9 @@ Page({
     orderIndex:0,
     //活动内容
     activityTitle:'入党积极份子大会',
+    activityTime:'2020年4月1日',
+    activityPosition:'软件楼',
+    activityJoinSum:'30',
     activityIssuer:'党支部党委书记',
     activityDate:'2020-5-1',
     imageUrl:'/images/滑动窗/2.jpg',

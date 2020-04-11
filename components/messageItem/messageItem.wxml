@@ -1,0 +1,14 @@
+<!--components/message/message.wxml-->
+<view class="message">
+  <view class="message-image">
+    <view class="message-image1"><image src="{{messageImage1}}"></image></view>
+    <view class="message-image2"><image src="{{messageImage2}}"></image></view>
+  </view>
+  <view class="message-item">
+    <view class="message-item-typeDate">
+      <view class="message-item-type">{{messageType}}</view>
+      <view class="message-item-date">{{messageDate}}</view>
+    </view>
+    <view class="message-item-contain">{{messageContain}}</view>
+  </view>
+</view>

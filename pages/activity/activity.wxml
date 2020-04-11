@@ -30,7 +30,7 @@
     <image src="/images/下拉.png"></image>
   </view>
 </view>
-<activity activityTitle='{{activityTitle}}' activityIssuer='{{activityIssuer}}' activityDate='{{activityDate}}'
+<activity activityTitle='{{activityTitle}}' activityTime='{{activityTime}}' activityPosition='{{activityPosition}}' activityJoinSum='{{activityJoinSum}}' activityIssuer='{{activityIssuer}}' activityDate='{{activityDate}}'
 imageUrl='{{imageUrl}}'/>
 <activity/>
 <activity/>

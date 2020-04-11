@@ -1,0 +1,69 @@
+/* components/message/message.wxss */
+.message{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  height:60px;
+  border: 1px solid rgb(209, 204, 204);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.message-image{
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: row
+}
+.message-image1{
+  width: 10%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.message-image1 image{
+  width: 8px;
+  height: 8px;
+  padding-top: 5px;
+}
+.message-image2{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.message-image2 image{
+  width: 35px;
+  height: 35px;
+}
+.message-item{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.message-item-typeDate{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+.message-item-type{
+  width: 60%;
+  font-size: 13px;
+  font-family: PingFangSCMedium;
+  color: #fe3333;
+}
+.message-item-date{
+  width: 40%;
+  padding-top: 5px;
+  padding-right: 10px;
+  font-size: 10px;
+  text-align: right;
+}
+.message-item-contain{
+  height: 20px;
+  font-size: 10px;
+}

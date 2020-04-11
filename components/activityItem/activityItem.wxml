@@ -1,0 +1,13 @@
+<view class="activity">
+  <view class="activity-detail">
+    <view class="activity-detail-title">{{activityTitle}}</view>
+    <view class="activity-detail-time">时间：{{activityTime}}</view>
+    <view class="activity-detail-position">地点：{{activityPosition}}</view>
+    <view class="activity-detail-joinSum">参与人数：{{activityJoinSum}}人</view>
+    <view class="activity-detail-issuer">{{activityIssuer}}</view>
+    <view class="activity-detail-date">{{activityDate}}</view>
+  </view>
+  <view class="activity-image">
+    <image src="{{imageUrl}}"></image>
+  </view>
+</view>

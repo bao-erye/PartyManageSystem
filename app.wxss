@@ -1,0 +1,4 @@
+@font-face{
+  font-family: 'PingFangSCMedium';
+  src: url('https://www.your-server.com/PingFangSC-Medium.ttf');
+}
