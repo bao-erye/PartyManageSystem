@@ -1,0 +1,49 @@
+/* components/activityItem/activityItem.wxss */
+.activity{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 8px;
+  height:70px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid 
+
+}
+.activity-detail{
+  width: 65%;
+  margin-right: 10px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.activity-image{
+  width: 35%;
+  height: 100%;
+}
+.activity-image image{
+  width: 100%;
+  height: 100%;
+}
+.acticity-detail-title{
+  width: 100%;
+  height: 80%;
+  font-size: 13px;
+}
+.acticity-detail-issuer{
+  width: 35%;
+  height: 20%;
+  font-size: 10px;
+  color:  rgb(77,77,77);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.acticity-detail-date{
+  width: 35%;
+  height: 20%;
+  color:  rgb(77, 77, 77);
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

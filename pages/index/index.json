@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "window": {
+    "navigationBarTitleText": "首页"
+  },
+  "usingComponents":{
+    "activity":"/components/activityItem/activityItem"
+  }
+
 }

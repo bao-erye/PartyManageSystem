@@ -1,13 +1,46 @@
 {
   "pages":[
+    "components/activityItem/activityItem",
+    "pages/activity/activity",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/message/message",
+    "pages/mine/mine"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "首页",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "/images/菜单栏/首页.png",
+        "selectedIconPath": "/images/菜单栏/首页-选中.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活 动",
+        "iconPath": "/images/菜单栏/活动.png",
+        "selectedIconPath": "/images/菜单栏/活动-选中.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消 息",
+        "iconPath": "/images/菜单栏/消息.png",
+        "selectedIconPath": "/images/菜单栏/消息-选中.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我 的",
+        "iconPath": "/images/菜单栏/我的.png",
+        "selectedIconPath": "/images/菜单栏/我的-选中.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
