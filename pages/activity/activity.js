@@ -8,7 +8,7 @@ Page({
     typeIndex:0,
     statusArray:['未开始','进行中','已结束'],
     statusIndex:0,
-    orderArray:['时间','参加人数'],
+    orderArray:['时间排序','人数排序'],
     orderIndex:0,
     //活动内容
     activityTitle:'入党积极份子大会',
@@ -18,10 +18,23 @@ Page({
     activityIssuer:'党支部党委书记',
     activityDate:'2020-5-1',
     imageUrl:'/images/滑动窗/2.jpg',
-
-
-    
   },
+
+  //picker显示选择值函数
+  bindPickerChangeXueyuan: function(e){
+    //console.log(e);
+    this.setData({xueyuanIndex:e.detail.value});
+  },
+  bindPickerChangeType: function (e) {
+    this.setData({ typeIndex: e.detail.value });
+  },
+  bindPickerChangeStatus: function (e) {
+    this.setData({ statusIndex: e.detail.value });
+  },
+  bindPickerChangeOrder: function (e) {
+    this.setData({ orderIndex: e.detail.value });
+  },
+  
 
   onLoad: function (options) {
     

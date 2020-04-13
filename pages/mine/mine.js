@@ -4,7 +4,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    mineImageUrl:'/images/菜单栏/我的.png',
+    mineName:'王晨宝',
+    mineSchool:'南昌大学',
+    mineAcademy:'软件学院党委',
+    mineMajor:'软件工程党支部',
+    mineStage:'入党积极分子'
   },
 
   /**

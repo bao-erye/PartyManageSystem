@@ -9,37 +9,37 @@
 <view class="container">
   <view class="container-item">
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/申请书.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapApplyParty" src="/images/首页/申请书.png"></image></view>
       <label>入党申请书</label>
     </view>
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/党费.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapPartyCost" src="/images/首页/党费.png"></image></view>
       <label>缴纳党费</label>
     </view>
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/思想报告.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapReport" src="/images/首页/思想报告.png"></image></view>
       <label>思想报告</label>
     </view>
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/登记表.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapCheckTable" src="/images/首页/登记表.png"></image></view>
       <label>登记表</label>
     </view>
   </view>
   <view class="container-item">
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/投票.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapVote" src="/images/首页/投票.png"></image></view>
       <label>投票</label>
     </view>
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/考核.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapTest" src="/images/首页/考核.png"></image></view>
       <label>学习与考核</label>
     </view>
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/计算器.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapCalculator" src="/images/首页/计算器.png"></image></view>
       <label>党费计算器</label>
     </view>
     <view class="container-item-applyParty">
-      <view class="container-item-applyParty-image"><image src="/images/首页/转入转出.png"></image></view>
+      <view class="container-item-applyParty-image"><image bindtap="bandtapInOut" src="/images/首页/转入转出.png"></image></view>
       <label>转入转出</label>
     </view>
   </view>

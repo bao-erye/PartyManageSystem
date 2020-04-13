@@ -1,0 +1,111 @@
+/* pages/index/partyCost/partyCost.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.partyCost{
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 100%;
+}
+.header{
+  height: 5%;
+  padding-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+.header-cost{
+  width: 30px;
+  height: 28rpx;
+  text-align: center;
+  background-color: #BBBBBE;
+  border-radius: 2px;
+}
+.container{
+  height: 50%;
+  width: 100%;
+}
+.container-title{
+  height: 15px;
+}
+.container-table{
+  padding-top: 3px;
+  width: 100%;
+  height: 100%;
+}
+.container-table-title{
+  height: 20px;
+  background: #E71111;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.container-table-title-number{
+  width: 12.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-year{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-quarter{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-month{
+  width: 12.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-account{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-scrollView{
+  height: 100%;
+}
+.container-table-item{
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.container-table-item-number{
+  width: 12.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-year{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-quarter{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-month{
+  width: 12.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-account{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.footer{
+  height: 37%;
+  padding-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer button{
+  background-color: #E71111;
+  color: #ffffff;
+}

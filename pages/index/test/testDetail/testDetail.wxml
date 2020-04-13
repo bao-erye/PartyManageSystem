@@ -1,0 +1,16 @@
+<!--pages/index/test/testDetail/testDetail.wxml-->
+<view class="test">
+  <view class="test-contain">
+    <view class="test-contain-title">{{testIndex}}.{{testTitle}}</view>
+    <radio-group bindchange="bindchange">
+      <radio class="test-contain-radio" wx:for-items="{{arrayTestChoose}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}"><text>{{item.value}}</text></radio>
+
+    </radio-group>
+  </view>  
+  <view class="test-button">
+    <view class="button">
+      <button>上一题</button>
+      <button>下一题</button>
+    </view>
+  </view>
+</view>

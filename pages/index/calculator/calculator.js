@@ -1,15 +1,20 @@
+// pages/index/calculator/calculator.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
+    incomeArray:['月薪制','年薪制'],
+    incomeIndex:0,
+    partyPay:0,
+  },
+  //收入方式选择器
+  bindchangeIncome:function(e){
+    this.setData({incomeIndex:e.detail.value});
+  },
+  //计算按钮
+  bindtapCalculator:function(){
 
   },
 
@@ -17,11 +22,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
-    })
 
   },
 

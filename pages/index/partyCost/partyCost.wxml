@@ -1,0 +1,33 @@
+<!--pages/index/partyCost/partyCost.wxml-->
+<view class="partyCost">
+  <view class="header">
+    <view>您本次需要缴纳的党费为：</view>
+    <view class="header-cost">{{partyCost}}</view>
+    <view>元</view>
+  </view>
+  <view class="container">
+    <view class="container-title">缴费记录：</view>
+    <view class="container-table">
+      <view class="container-table-title">
+        <view class="container-table-title-number">序号</view>
+        <view class="container-table-title-year">年份</view>
+        <view class="container-table-title-quarter">季度</view>
+        <view class="container-table-title-month">月份</view>
+        <view class="container-table-title-account">金额</view>
+      </view>
+      <scroll-view class="container-table-scrollView" scroll-y="true">
+        <view class="container-table-item" wx:for='{{array}}'>
+          <view class="container-table-item-number">1</view>
+          <view class="container-table-item-year">2019</view>
+          <view class="container-table-item-quarter">第一季度</view>
+          <view class="container-table-item-month">10</view>
+          <view class="container-table-item-account">20</view>  
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="footer">
+    <button bindtap="bindtapPay">点击支付</button>
+  </view>
+</view>
+

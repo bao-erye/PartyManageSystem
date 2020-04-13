@@ -1,0 +1,18 @@
+<!--pages/index/calculator/calculator.wxml-->
+<view class="calculator">
+  <view class="income-type">
+    <view class="income-type-label">选择收入方式：</view>
+    <view class="income-type-picker">
+      <picker bindchange="bindchangeIncome" value="{{incomeIndex}}" range="{{incomeArray}}">
+          {{incomeArray[incomeIndex]}}<image src="/images/下拉.png"></image>
+      </picker>
+    </view>
+  </view>
+  <view class="income">
+    <view class="income-label">输入税后收入：</view>
+    <view class="income-input"><input></input>元</view>
+    <view class="income-reminder">按新颁布的税后比率计算</view>
+  </view>
+  <view class="income-button"><button bindtap="bindtapCalculator">立即计算</button></view>
+  <view class="income-show">您要缴纳的党费是{{partyPay}}元</view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/activity/activityDetail/activityDetail.wxml-->
+<view class="activityDetail">
+  <view class="activity-title">
+    <view class="header">{{acTitle}}</view>
+    <view class="line"></view>
+    <view class="container">
+      <view class="container-detail">
+        <view class="container-detail-date">时间：{{acDate}}</view>
+        <view class="container-detail-place">地点：{{acPlace}}</view>
+        <view class="container-detail-host">主持人：{{acHost}}</view>
+        <view class="container-detail-tag">标签：
+          <view class="tag1">{{acType}}</view>
+          <view class="tag2">{{acScore}}积分</view>
+        </view>
+      </view>
+      <view class="container-image"><image src="/images/滑动窗/1.jpg"></image></view>
+    </view>
+    <view class="line"></view>
+    <view class="footer">
+      <view class="footer-affirm">确认时间：{{acAffirmTime}}</view>
+      <view class="footer-signin">签到时间：{{acSigninTime}}</view>
+      <view class="footer-begin">活动时间：{{acBeginTime}}</view>
+    </view>
+    <view class="line"></view>
+    <view class="bottom">
+      <view class="bottom-join">参与人数：{{acSum}}人</view>
+      <view class="bottom-affirmed">已确认：{{acAffirmed}}人</view>
+      <view class="bottom-signined">已签到：{{acSignined}}人</view>
+    </view>
+  </view>
+  <view class="activity-notice"></view>
+  <view class="activity-detail"></view>
+  <view class="activity-operate"></view>
+</view>

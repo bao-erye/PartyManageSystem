@@ -1,0 +1,23 @@
+<view class="vote">
+  <view class="vote-title">
+    <view class="vote-title-label">投票主题:</view>
+    <view class="vote-title-contain">{{voteTitle}}</view>
+  </view>
+  <view class="vote-choose">
+    <view class="vote-choose-label">投票选项：</view>
+    <view class="vote-choose-radio-group">
+      <radio-group bindchange="bindchange">
+      <radio class="vote-choose-radio" wx:for-items="{{arrayChoose}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}"><text>{{item.value}}</text></radio>
+      </radio-group>
+    </view>
+  </view>
+  <view class="vote-note">
+    <view class="vote-note-label">备    注：</view>
+    <view class="vote-note-contain">
+      <textarea name="voteNote"></textarea>
+    </view>
+  </view>
+  <view class="vote-submit">
+    <button bindtap="btnVote" >确认投票</button>
+  </view>
+</view>

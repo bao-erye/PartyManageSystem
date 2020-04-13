@@ -1,0 +1,36 @@
+/* pages/index/test/testDetail/testDetail.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.test{
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 100%;
+}
+.test-contain{
+  padding-top: 10px;
+  height: 25%;
+}
+.test-contain-title{
+  height:10%;
+}
+.test-contain-radio{
+  margin-top: 5px;
+  display: flex;
+}
+.test-button{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+}
+.button button{
+  background-color: #e71111;
+  color: #ffffff;
+}

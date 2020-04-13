@@ -1,6 +1,6 @@
 <view class="section">
   <view class="section-picker">
-    <picker  bindchange="bindPickerChange" value="{{xueyuanIndex}}" range="{{xueyuanArray}}">
+    <picker  bindchange="bindPickerChangeXueyuan" value="{{xueyuanIndex}}" range="{{xueyuanArray}}">
     <view class="section-picker-item">
     {{xueyuanArray[xueyuanIndex]}}
     </view>
@@ -8,21 +8,23 @@
     <image src="/images/下拉.png"></image>
   </view>
     <view class="section-picker">
-    <picker  bindchange="bindPickerChange" value="{{typeIndex}}" range="{{typeArray}}">
+    <picker  bindchange="bindPickerChangeType" value="{{typeIndex}}" range="{{typeArray}}">
     <view class="section-picker-item">
     {{typeArray[typeIndex]}}
     </view>
     </picker>
     <image src="/images/下拉.png"></image>
-  </view>  <view class="section-picker">
-    <picker  bindchange="bindPickerChange" value="{{statusIndex}}" range="{{statusArray}}">
+  </view>  
+  <view class="section-picker">
+    <picker  bindchange="bindPickerChangeStatus" value="{{statusIndex}}" range="{{statusArray}}">
     <view class="section-picker-item">
     {{statusArray[statusIndex]}}
     </view>
     </picker>
     <image src="/images/下拉.png"></image>
-  </view>  <view class="section-picker">
-    <picker  bindchange="bindPickerChange" value="{{orderIndex}}" range="{{orderArray}}">
+  </view>  
+  <view class="section-picker">
+    <picker  bindchange="bindPickerChangeOrder" value="{{orderIndex}}" range="{{orderArray}}">
     <view class="section-picker-item">
     {{orderArray[orderIndex]}}
     </view>

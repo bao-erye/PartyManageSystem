@@ -1,27 +1,45 @@
+// pages/index/inAndOut/inAndOut.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
+    name:'王晨宝',
+    belong:'软件学院党委软件工程党支部',
+    gotoAcademyArray: ['软件学院', '计算机学院', '信息科学学院', '物理学院'],
+    gotoAcademyIndex:0,
+    gotoMajorArray:['软件工程','信息安全'],
+    gotoMajorIndex:0,
+
+    timePicked:'',
 
   },
+
+  //选择器函数
+  bindPickerGotoAcademy:function(e){
+    this.setData({gotoAcademyIndex:e.detail.value});
+  },
+  bindPickerGotoMajor:function(e){
+    this.setData({gotoMajorIndex: e.detail.value});
+  },
+  bindchangeTime:function(e){
+    this.setData({timePicked:e.detail.value});
+  },
+  //提交按钮事件
+  formSubmit:function(e){
+
+  },
+
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
-    })
 
   },
 

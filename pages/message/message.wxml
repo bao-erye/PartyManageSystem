@@ -1,1 +1,3 @@
 <messageItem/>
+<messageItem  messageImage1='{{messageImage1}}' messageImage2='{{messageImage2}}' messageType='{{messageType}}'
+messageDate='{{messageDate}}' messageContain='{{messageContain}}' />

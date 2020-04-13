@@ -1,0 +1,146 @@
+/* pages/activity/activityDetail/activityDetail.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.activityDetail{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 100%;
+}
+.activity-title{
+  height: 35%;
+  margin-top: 30rpx;
+  border: 1px solid #BEEEEE;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line{
+  height: 1px;
+  background-color: #BEEEEE;
+}
+.container{
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.container-detail{
+  width: 60%;
+  height: 100%;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-detail-item{
+  display: flex;
+  flex-direction: column;
+}
+.container-detail-date{
+  height: 23%;
+  display: flex;
+  align-items: center;
+}
+.container-detail-place{
+  height: 23%;
+  display: flex;
+  align-items: center;
+}
+.container-detail-host{
+  height: 23%;
+  display: flex;
+  align-items: center;
+}
+.container-detail-tag{
+  height: 23%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tag1{
+  color: #ffffff;
+  background-color: #E71111;
+  border-radius:  5px;
+  margin-right: 10px;
+}
+.tag2{
+  color: #ffffff;
+  background-color: #E71111;
+  border-radius:  5px;
+}
+.container-image{
+  width: 40%;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+  padding-right: 18rpx;
+}
+.container-image image{
+  width: 100%;
+  height: 100%;
+}
+.footer{
+  height: 30%;
+  padding-left: 10rpx;
+  font-size: 12px;
+  color: rgb(143, 136, 136);
+  display: flex;
+  flex-direction: column
+}
+.footer-affirm{
+  padding-top: 16rpx;
+}
+.footer-signin{
+
+}
+.footer-begin{
+
+}
+.bottom{
+  height: 10%;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: rgb(143, 136, 136);
+}
+.bottom-join{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.bottom-affirmed{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.bottom-signined{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.activity-notice{
+  height: 15%;
+  margin-top: 30rpx;
+  border: 1px solid #BEEEEE;
+  border-radius: 7px;
+}
+.activity-detail{
+  height: 20%;
+  margin-top: 30rpx;
+  border: 1px solid #BEEEEE;
+  border-radius: 7px;
+  mar
+}
+.activity-operate{
+  height: 25%;
+  margin-top: 30rpx;
+  border: 1px solid #BEEEEE;
+  border-radius: 7px;
+}

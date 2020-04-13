@@ -5,5 +5,7 @@ App({
   },
   globalData: {
     //userInfo: null
+    //红色：#E71111
+    //灰色：#BBBBBE
   }
 })

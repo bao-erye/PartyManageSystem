@@ -1,15 +1,24 @@
+// pages/activity/activityDetail/activityDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
+    acTitle:'活动标题',
+    acDate:'2020年4月7日',
+    acPlace:'逸夫馆门口',
+    acHost:'党委副书记',
+    acType:'实践活动',
+    acScore:5,
+    acAffirmTime:'2020-01-01 00:00-2020-01-02 23:00',
+    acSigninTime:'2020-01-03 08:00-2020-01-03 08:15',
+    acBeginTime:'2020-01-03 08:00-2020-01-03 10:00',
+    acSum:50,//总参与人数
+    acAffirmed:40,//已确认人数
+    acSignined:30,//已签到人数
+
+
 
   },
 
@@ -17,11 +26,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
-    })
 
   },
 

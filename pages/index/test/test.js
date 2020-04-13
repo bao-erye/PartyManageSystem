@@ -1,27 +1,20 @@
+// pages/index/test/test.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
-
+    arrayLearn: ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a','a','a'],//课程对象数组
+    learnItemTitle: '党章',//课程名称
+    arrayTest: ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'],//考核对象数组
+    testItemTitle:'第一考核',//考核名称
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
-    })
 
   },
 

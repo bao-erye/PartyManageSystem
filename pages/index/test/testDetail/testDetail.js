@@ -1,27 +1,24 @@
+// pages/index/test/testDetail/testDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
+    testIndex:1,
+    testTitle:'党的生日是哪一天？',
+    arrayTestChoose: [{ name: 'A', value: '1972年10月1日' }, { name: 'B', value: '1972年10月1日' }, { name: 'C', value: '1972年10月1日' }, { name: 'D', value: '1972年10月1日' }],
 
+  },
+  //单选框选中事件
+  bindchange:function(e){
+    console.log(e);
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
-    })
 
   },
 

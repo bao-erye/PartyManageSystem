@@ -1,0 +1,80 @@
+/* pages/index/test/test.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.learn-test{
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 100%;
+}
+.learn{
+  height: 40%;
+}
+.learn-contain{
+  height: 85%;
+  border: 1px solid #BBBBBE;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+.learn-contain-title{
+  height: 15%;
+  padding-left: 10px;
+  background-color: #BBBBBE;
+  display: flex;
+  align-items: center;
+}
+.learn-contain-line{
+  height: 1px;
+  background-color: gray;
+}
+.learn-contain-scrollView{
+  height: 80%;
+}
+.learn-contain-item{
+  height:25px;
+  display: flex;
+  flex-direction: row;
+}
+.learn-contain-item-image{
+  width: 10%;
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.learn-contain-item-image image{
+  width: 15px;
+  height: 15px;
+}
+.learn-contain-item-name{
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+.learn-attention{
+  height: 10%;
+  border-radius: 7px;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  flex-direction: row;
+}
+.learn-attention-image{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.learn-attention-image image{
+  width: 15px;
+  height: 15px;
+}
+.learn-attention-text{
+  font-size: 11px;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+}
+.test{
+  height: 40%;
+}

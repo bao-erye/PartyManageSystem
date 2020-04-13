@@ -1,0 +1,19 @@
+<view class="applyParty">
+  <view class="applyParty-title">入党申请书:</view>
+  <view class="applyParty-input">
+    <textarea placeholder="在此输入内容" placeholder-style="font-size: 13px;font-style: oblique;"                maxlength="-1"></textarea> 
+  </view>
+  <view class="applyParty-document">
+    <view class="applyParty-document-add">
+      <view>或者直接提交文档:</view>
+      <view class="applyParty-document-add-image">
+        <image src="/images/添加文档.png"></image>
+        <view >点击添加文档</view>
+      </view>
+    </view>
+    <view>{{documentName}}</view>
+  </view>
+  <view class="applyparty-submit">
+    <button>提 交</button>
+  </view>
+</view>

@@ -53,7 +53,7 @@
 .message-item-type{
   width: 60%;
   font-size: 13px;
-  font-family: PingFangSCMedium;
+  font-weight: bold;
   color: #fe3333;
 }
 .message-item-date{

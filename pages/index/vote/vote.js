@@ -1,27 +1,27 @@
+// pages/index/vote/vote.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
+    arrayChoose: [{ name: 'A', value: '同意' }, { name: 'B', value: '不同意' }, { name: 'C', value: '放弃' }, { name: 'D', value: '无' }],
+    voteTitle:'是否同意给***同志的奖励通告',
 
+  },
+  //投票选项
+  bindchange:function(e){
+    console.log(e.detail.value);
+  },
+  //确认投票按钮
+  btnVote:function(e){
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
-    })
 
   },
 

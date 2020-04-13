@@ -1,0 +1,59 @@
+/* pages/index/report/report.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.report{
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+}
+.report-title{
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+}
+.report-title-label{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.report-title-input{
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.report-title-input input{
+  width: 100%;
+  height: 60%;
+  border: 1px solid #BEEEEE;
+  border-radius: 7px;
+}
+.report-contain{
+  height: 80%;
+  
+}
+.report-contain-label{
+  height: 5%;
+  padding-bottom: 3px;
+}
+.report-contain-textarea{
+  width: 100%;
+  height: 95%;
+  border: 1px solid #BEEEEE;
+  border-radius: 7px;
+}
+.report-contain-textarea textarea{
+  width: 100%;
+  height: 100%;
+}
+.report-submit{
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+.report-submit button{
+  color: #ffffff;
+  background-color: #e71111;
+}

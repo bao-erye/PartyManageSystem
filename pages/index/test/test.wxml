@@ -1,0 +1,37 @@
+<!--pages/index/test/test.wxml-->
+<view class="learn-test">
+  <view class="learn">
+    <view class="learn-contain">
+      <view class="learn-contain-title">课程分类</view>
+      <view class="learn-contian-line"></view>
+      <scroll-view class="learn-contain-scrollView" scroll-y='true'>
+        <view class="learn-contain-item" wx:for='{{arrayLearn}}'>
+        <view class="learn-contain-item-image"><image src="/images/文件夹.png"></image></view>
+        <view class="learn-contain-item-name">{{learnItemTitle}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="learn-attention">
+      <view class="learn-attention-image"><image src="/images/提示.png"></image></view>
+      <view class="learn-attention-text">学习课程满30分钟可以获得5个积分</view>
+    </view>
+  </view>
+  <view class="test">
+    <view class="learn-contain">
+      <view class="learn-contain-title">考核分类</view>
+      <view class="learn-contian-line"></view>
+      <scroll-view class="learn-contain-scrollView" scroll-y='true'>
+        <view class="learn-contain-item" wx:for='{{arrayTest}}'>
+        <view class="learn-contain-item-image"><image src="/images/文件夹.png"></image></view>
+        <view class="learn-contain-item-name">{{testItemTitle}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="learn-attention">
+      <view class="learn-attention-image"><image src="/images/提示.png"></image></view>
+      <view class="learn-attention-text">考试成绩满80分可以获得5个积分</view>
+    </view>
+
+  </view>
+
+</view>

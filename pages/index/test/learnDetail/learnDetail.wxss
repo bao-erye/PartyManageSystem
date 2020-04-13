@@ -1,0 +1,28 @@
+/* pages/index/test/learnDetail/learnDetail.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.learnDetail{
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 100%;
+}
+.learn-text{
+  height: 95%;
+  border: 1px solid #BBBBBE;
+}
+.learn-reminder{
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.learn-reminder-score{
+  width: 80%;
+}
+.learn-reminder-time{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
