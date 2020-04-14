@@ -13,13 +13,15 @@
           <view class="tag2">{{acScore}}积分</view>
         </view>
       </view>
-      <view class="container-image"><image src="/images/滑动窗/1.jpg"></image></view>
+      <view class="container-image"><image src="{{acImageUrl}}"></image></view>
     </view>
     <view class="line"></view>
     <view class="footer">
-      <view class="footer-affirm">确认时间：{{acAffirmTime}}</view>
-      <view class="footer-signin">签到时间：{{acSigninTime}}</view>
-      <view class="footer-begin">活动时间：{{acBeginTime}}</view>
+      <view class="footer-contain">
+        <view >确认时间：{{acAffirmTime}}</view>
+        <view >签到时间：{{acSigninTime}}</view>
+        <view >活动时间：{{acBeginTime}}</view>
+      </view>
     </view>
     <view class="line"></view>
     <view class="bottom">
@@ -28,7 +30,34 @@
       <view class="bottom-signined">已签到：{{acSignined}}人</view>
     </view>
   </view>
-  <view class="activity-notice"></view>
-  <view class="activity-detail"></view>
-  <view class="activity-operate"></view>
+  <view class="activity-notice">
+    <view class="notice-title">公告</view><view class="line"></view>
+    <view class="notice-contain">
+      <view class="notice-progress-affirm">
+        <view class="notice-progress-affirm-top">等待确认</view>
+        <view class="notice-progress-affirm-middle"><image src="{{noticeImageUrlArray[affirmImageUrlIndex]}}"></image></view>
+        <view class="notice-progress-affirm-bottom">确认</view>
+      </view>
+      <view class="notice-progress-signin">
+        <view class="notice-progress-signin-top">等待签到</view>
+        <view class="notice-progress-signin-middle"><image src="{{noticeImageUrlArray[signinImageUrlIndex]}}"></image></view>
+        <view class="notice-progress-signin-bottom">签到</view>
+      </view>
+      <view class="notice-progress-end">
+        <view class="notice-progress-end-top">活动结束</view>
+        <view class="notice-progress-end-middle"><image src="{{noticeImageUrlArray[endImageUrlIndex]}}"></image></view>
+        <view class="notice-progress-end-bottom">结束</view>
+      </view>
+    </view>
+  </view>
+  <view class="activity-detail">
+    <view class="detail-title">详情</view><view class="line"></view>
+    <view class="detail-contain">{{acDetail}}</view>
+  </view>
+  <view class="activity-operate">
+    <view class="operate-collect">
+      <image bindtap="collectTap" src="{{imageCollectImageArray[imageCollectImageIndex]}}"></image><view>收藏</view>
+    </view>
+    <view class="operate-button"><button bindtap="buttonTap" >{{buttonArray[buttonIndex]}}</button></view>
+  </view>
 </view>

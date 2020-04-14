@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/mine/score/score",
+    "pages/mine/personalData/personalData",
     "pages/activity/activityDetail/activityDetail",
     "pages/index/vote/vote",
     "pages/index/report/report",
@@ -15,7 +17,6 @@
     "pages/activity/activity",
     "pages/message/message",
     "pages/mine/mine"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -91,16 +91,12 @@ page{
   font-size: 12px;
   color: rgb(143, 136, 136);
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  justify-content: center;
 }
-.footer-affirm{
-  padding-top: 16rpx;
-}
-.footer-signin{
-
-}
-.footer-begin{
-
+.footer-contain{
+  display: flex;  
+  flex-direction:column;
 }
 .bottom{
   height: 10%;
@@ -130,17 +126,119 @@ page{
   margin-top: 30rpx;
   border: 1px solid #BEEEEE;
   border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+.notice-title{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice-contain{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.notice-progress-affirm{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notice-progress-affirm-top{
+  text-align: center;
+}
+.notice-progress-affirm-middle{
+  text-align: center;
+}
+.notice-progress-affirm-middle image{
+  width: 10px;
+  height: 10px;
+}
+.notice-progress-affirm-bottom{
+  text-align: center;
+}
+.notice-progress-signin{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notice-progress-signin-top{
+  text-align: center;
+}
+.notice-progress-signin-middle{
+  text-align: center;
+}
+.notice-progress-signin-middle image{
+  width: 10px;
+  height: 10px;
+}
+.notice-progress-signin-bottom{
+  text-align: center;
+}
+.notice-progress-end{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notice-progress-end-top{
+  text-align: center;
+}
+.notice-progress-end-middle{
+  text-align: center;
+}
+.notice-progress-end-middle image{
+  width: 10px;
+  height: 10px;
+}
+.notice-progress-end-bottom{
+  text-align: center;
 }
 .activity-detail{
   height: 20%;
   margin-top: 30rpx;
   border: 1px solid #BEEEEE;
   border-radius: 7px;
-  mar
+}
+.detail-title{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-contain{
+  height: 80%;
 }
 .activity-operate{
-  height: 25%;
+  height: 18%;
   margin-top: 30rpx;
-  border: 1px solid #BEEEEE;
   border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+}
+.operate-collect{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.operate-collect image{
+  width: 30px;
+  height: 30px;
+}
+.operate-button{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.operate-button button{
+  color: #ffffff;
+  background-color: #E71111;
 }

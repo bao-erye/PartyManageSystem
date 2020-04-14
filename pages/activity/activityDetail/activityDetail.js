@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //活动信息
     acTitle:'活动标题',
     acDate:'2020年4月7日',
     acPlace:'逸夫馆门口',
@@ -17,64 +18,31 @@ Page({
     acSum:50,//总参与人数
     acAffirmed:40,//已确认人数
     acSignined:30,//已签到人数
-
-
+    acImageUrl:'/images/滑动窗/1.jpg',//活动图片路径
+    acDetail:'   活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动',
+    //公告中图片路径
+    noticeImageUrlArray:['/images/白圈.png','/images/红圈.png'],
+    affirmImageUrlIndex:1,
+    signinImageUrlIndex:1,
+    endImageUrlIndex:0,
+    //收藏图标
+    imageCollectImageArray:['/images/我的/我的收藏.png','/images/我的/收藏选中.png'],
+    imageCollectImageIndex:0,
+    //按钮字样
+    buttonArray:['确认参加','签到','已结束'],
+    buttonIndex:0,
+  },
+  //收藏点击事件
+  collectTap:function(e){
+    this.setData({imageCollectImageIndex:1});
+  },
+  //按钮点击事件
+  buttonTap:function(e){
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

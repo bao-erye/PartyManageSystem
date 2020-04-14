@@ -1,0 +1,24 @@
+<!--pages/mine/score/score.wxml-->
+<view class="score">
+  <view class="header">
+    <view class="header-image"><image src="{{userImgUrl}}"></image></view>
+    <view class="header-detail">
+      <view class="header-detail-name">{{userName}}</view>
+      <view class="header-detail-class">班级：{{userClass}}</view>
+      <view class="header-detail-stuNumber">学号：{{userStuNumber}}</view>
+    </view>
+  </view>
+  <view class="container">您的总积分为：<view class="container-score">{{score}}</view>分</view>
+  <view class="footer">
+    <view class="footer-title">积分明细：</view><view class="line"></view>
+    <scroll-view class="footer-contain" scroll-y="true">
+      <view class="footer-contain-item" wx:for='{{activityItemArray}}'>
+        <view class="footer-contain-item-left">
+          <view class="item-left-acTitle">{{acTitle}}</view>
+          <view class="item-left-acDate">{{acDate}}</view>
+        </view>
+        <view class="footer-contain-item-score">{{acScore}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
