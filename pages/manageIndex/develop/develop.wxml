@@ -1,0 +1,45 @@
+<view class="masses">
+  <view class="info">
+    <view class="info-title"><view class="info-title-contain">基本信息</view></view>
+    <view class="info-detail">
+      <view class="detail-row">
+        姓名：<view class="detail-name">{{name}}</view>
+        民族：<view class="detail-nation">{{nation}}</view>
+        性别：<view class="detail-sex">{{sex}}</view>
+      </view>
+      <view class="detail-row">
+        籍贯：<view class="detail-birthPlace">{{birthPlace}}</view>
+        生日：<view class="detail-birthDay">{{birthDay}}</view>
+      </view>
+      <view class="detail-row">
+        学校：<view class="detail-birthPlace">{{school}}</view>
+        学院：<view class="detail-birthDay">{{academy}}</view>
+      </view>
+      <view class="detail-row">
+        专业：<view class="detail-birthPlace">{{major}}</view>
+        班级：<view class="detail-birthDay">{{class}}</view>
+      </view>
+      <view class="detail-row">
+        学号：<view class="detail-birthPlace">{{number}}</view>
+        电话：<view class="detail-birthDay">{{telenumber}}</view>
+      </view>
+      <view class="detail-row">
+        担任职位：<view class="detail-position">{{position}}</view>
+      </view>
+      <view class="detail-row">
+        获奖情况：<view class="detail-award">{{award}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="zhengshen">
+    <view class="zhengshen-title"><view class="zhengshen-title-contain">政审结果</view></view>
+    <scroll-view  scroll-y="true" class="zhengshen-detail">
+    {{zhengshen}}
+    </scroll-view>
+  </view>
+  <view class="button">
+    <button bindtap="tapYes">审核不通过</button>
+    <view class="space"></view>
+    <button bindtap="tapNo">审核通过</button>
+  </view>
+</view>

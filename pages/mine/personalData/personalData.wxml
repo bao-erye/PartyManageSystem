@@ -1,21 +1,31 @@
-<!--pages/mine/personalData/personalData.wxml-->
-<!--pages/index/checkTable/checkTable.wxml-->
-<view class="checkTable">
+<view class="personalData">
   <form class="form" bindsubmit="formSubmit">
     <view class="name"><view class="name-label">姓名：</view><input name="name" class="name-input" value="{{name}}"></input></view>
     <view class="name"><view class="name-label">民族：</view><input name="nation" class="name-input" value="{{nation}}"></input></view>
-    <view class="name"><view class="name-label">性别：</view><input name="sex" class="name-input" value="{{sex}}"></input></view>
-    <view class="name"><view class="name-label2">出生年月日：</view><input name="birth" class="name-input2" value="{{birthDay}}"></input></view>
-    <view class="name"><view class="name-label">籍贯：</view><input name="jiguan" class="name-input" value="{{birthPlace}}"></input></view>
-    <view class="name"><view class="name-label">学校：</view><input name="xueli" class="name-input" value="{{school}}"></input></view>
-    <view class="name"><view class="name-label">学院：</view><input name="xueli" class="name-input" value="{{academy}}"></input></view>
-    <view class="name"><view class="name-label">专业：</view><input name="xueli" class="name-input" value="{{major}}"></input></view>
-    <view class="name"><view class="name-label">班级：</view><input name="xueli" class="name-input" value="{{class}}"></input></view>
-    <view class="name"><view class="name-label">学号：</view><input name="xueli" class="name-input" value="{{stuNumber}}"></input></view>
-    <view class="name"><view class="name-label">电话：</view><input name="xueli" class="name-input" value="{{tele}}"></input></view>
-    <view class="name"><view class="name-label2">担任职位：</view><input name="birth" class="name-input2" value="{{duty}}"></input></view>
-    <view class="name2"><view class="name-label4">获奖情况：</view><textarea name="family" class="name-input4" value="{{award}}"></textarea></view>
-    <view class="btn-submit"><button>确认修改</button> </view>
+    <view class="name">
+      <view class="name-label">性别：</view>
+      <view class="sex">
+        <view class="sex-show">{{sex}}</view>
+        <picker class="sex-picker" value="{{sexArray[sexIndex]}}" range="{{sexArray}}" bindchange="changeSex" name="sex"><image src="/images/下拉.png"></image> </picker>
+      </view>
+    </view>
+    <view class="name">
+      <view class="name-label2">出生年月日：</view>
+      <view class="show">
+        <view class="show-detail">{{birthDay}}</view>
+        <picker mode="date" class="show-picker" bindchange="changeBirthDay" name="birthDay"><image src="/images/下拉.png"></image> </picker>
+      </view>
+    </view>
+    <view class="name"><view class="name-label">籍贯：</view><input name="birthPlace" class="name-input" value="{{birthPlace}}"></input></view>
+    <view class="name"><view class="name-label">学校：</view><input name="school" class="name-input" value="{{school}}"></input></view>
+    <view class="name"><view class="name-label">学院：</view><input name="academy" class="name-input" value="{{academy}}"></input></view>
+    <view class="name"><view class="name-label">专业：</view><input name="major" class="name-input" value="{{major}}"></input></view>
+    <view class="name"><view class="name-label">班级：</view><input name="stuClass" class="name-input" value="{{class}}"></input></view>
+    <view class="name"><view class="name-label">学号：</view><input name="stuNumber" class="name-input" value="{{stuNumber}}" maxlength="10"></input></view>
+    <view class="name"><view class="name-label">电话：</view><input name="tele" class="name-input" value="{{tele}}" maxlength="11"></input></view>
+    <view class="name"><view class="name-label2">担任职位：</view><input name="position" class="name-input2" value="{{duty}}"></input></view>
+    <view class="name2"><view class="name-label4">获奖情况：</view><textarea name="award" class="name-input4" value="{{award}}"></textarea></view>
+    <view class="btn-submit"><button form-type="submit">确认修改</button> </view>
   </form>
 </view>
 

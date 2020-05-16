@@ -1,0 +1,83 @@
+<view class="addActivity">
+  <form class="form" bindsubmit="formSubmit">
+    <view class="item"><view class="item-title">标题：</view><input value="{{title}}" class="item-input-origin" name="title"></input></view>
+    <view class="item">
+      <view class="item-title">日期：</view>
+      <view class="item-input">
+        <view class="item-input-view">{{date}}</view>
+        <picker class="item-input-picker" mode="date" bindchange="changeDate" value="{{date}}" name="date"><image src="/images/下拉.png"></image></picker>
+      </view>
+    </view>
+    <view class="item"><view class="item-title">地点：</view><input class="item-input-origin" name="place" value="{{place}}"></input></view>
+    <view class="item">
+      <view class="item-title">对象：</view>
+        <view class="item-input">
+          <view class="item-input-view">{{object}}</view>
+          <picker class="item-input-picker" bindchange="changeObject" value="{{object}}" range="{{objectArray}}" name="object"><image src="/images/下拉.png"></image></picker>
+        </view>
+    </view>
+    <view class="item">
+      <view class="item-title">组织：</view>
+        <view class="item-input">
+          <view class="item-input-view">{{belong}}</view>
+          <picker class="item-input-picker" bindchange="changeBelong" value="{{belong}}" range="{{belongArray}}" name="belong"><image src="/images/下拉.png"></image></picker>
+        </view>
+    </view>
+    <view class="item"><view class="item-title">积分：</view><input class="item-input-origin" name="score" value="{{score}}"></input></view>
+    <view class="item"><view class="item-title">人数：</view><input class="item-input-origin" name="sum" value="{{sum}}"></input></view>
+    <view class="item">
+      <view class="item-time">确认时间：</view>
+      <view class="item-time-input">
+        <view class="item-time-input1">
+          <view class="item-time-input1-view">{{affirmBegin}}</view>
+          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmBegin" mode="date" name="affirmBegin" ><image src="/images/下拉.png"></image></picker>
+        </view>
+        <view class="item-time-">-</view>
+        <view class="item-time-input2">
+          <view class="item-time-input2-view">{{affirmEnd}}</view>
+          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmEnd" mode="date" name="affirmEnd" ><image src="/images/下拉.png"></image></picker>
+       </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item-time">签到时间：</view>
+      <view class="item-time-input">
+        <view class="item-time-input1">
+          <view class="item-time-input1-view">{{signinBegin}}</view>
+          <picker class="item-time-input1-picker" value="{{signinBegin}}" bindchange="bindSigninBegin" mode="time" name="signinBegin"><image src="/images/下拉.png"></image></picker>
+        </view>
+        <view class="item-time-">-</view>
+        <view class="item-time-input2">
+          <view class="item-time-input2-view">{{signinEnd}}</view>
+          <picker class="item-time-input2-picker" value="{{signinEnd}}" bindchange="bindSigninEnd" mode="time" name="signinEnd"><image src="/images/下拉.png"></image></picker>
+       </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item-time">活动时间：</view>
+      <view class="item-time-input">
+        <view class="item-time-input1">
+          <view class="item-time-input1-view">{{activityBegin}}</view>
+          <picker class="item-time-input1-picker" value="{{activityBegin}}" bindchange="bindActivityBegin" mode="time" name="activityBegin"><image src="/images/下拉.png"></image></picker>
+        </view>
+        <view class="item-time-">-</view>
+        <view class="item-time-input2">
+          <view class="item-time-input2-view">{{activityEnd}}</view>
+          <picker class="item-time-input2-picker" value="{{activityEnd}}" bindchange="bindActivityEnd" mode="time" name="activityEnd"><image src="/images/下拉.png"></image></picker>
+       </view>
+      </view>
+    </view>
+    <view class="acDetail">
+      <view class="acDetail-title">活动详情：</view>
+      <textarea class="acDetail-contain" name="detail" value="{{detail}}"></textarea>
+    </view>
+    <view class="acImage">
+      <view class="acImage-title">活动图片：</view>
+      <view class="acImage-contain" bindtap="tapAddImage">
+        <view class="contain-icon"><image src="/images/图片.png"></image></view>
+        <view class="contain-text">点击添加图片</view>
+      </view>
+    </view>
+    <view class="button"><button form-type="submit">确认修改</button></view>
+  </form>
+</view>

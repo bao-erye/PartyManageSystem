@@ -7,9 +7,9 @@
       <view class="container-detail">
         <view class="container-detail-date">时间：{{acDate}}</view>
         <view class="container-detail-place">地点：{{acPlace}}</view>
-        <view class="container-detail-host">主持人：{{acHost}}</view>
+        <view class="container-detail-host">对象：{{aObject}}</view>
         <view class="container-detail-tag">标签：
-          <view class="tag1">{{acType}}</view>
+          <view class="tag1">{{acBelong}}</view>
           <view class="tag2">{{acScore}}积分</view>
         </view>
       </view>

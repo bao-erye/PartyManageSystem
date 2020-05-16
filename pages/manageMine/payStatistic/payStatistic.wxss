@@ -1,0 +1,144 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.payStatistic{
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.choose{
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.choose-year{
+  width: 45%;
+  height: 60%;
+  color: #ffffff;
+  background-color: #837D7D;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.choose-year-label{
+  width: 90%;
+  padding-left: 5px;
+}
+.choose-year-picker{
+  width: 10%;
+  margin-right: 5px;
+}
+.choose-year-picker image{
+  
+  width: 20px;
+  height: 20px;
+}
+.payed{
+  height: 40%;
+}
+.payed-label{
+  height: 8%;
+}
+.payed-detail{
+  height: 96%;
+  width: 100%;
+}
+.table{
+  width: 100%;
+  height: 100%;
+}
+.table-title{
+  height: 25px;
+  background: #E71111;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.table-title-number{
+  width: 10%;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-title-name{
+  width:25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DBDBDB;
+}
+.table-title-year{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DBDBDB;
+}
+.table-title-month{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DBDBDB;
+}
+.table-title-account{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DBDBDB;
+}
+.table-scrollView{
+  height: 95%;
+}
+.table-item{
+  height: 23px;
+  display: flex;
+  flex-direction: row;
+}
+.table-item-number{
+  width: 10%;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-name{
+  width: 25%;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-year{
+  width: 25%;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-month{
+  width: 20%;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-account{
+  width: 20%;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nopay{
+  height: 40%;
+  margin-top: 20px;
+}

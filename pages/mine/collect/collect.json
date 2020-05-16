@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "activity": "/components/activityItem/activityItem"
+  },
+  "navigationBarTitleText": "我的收藏"
+}

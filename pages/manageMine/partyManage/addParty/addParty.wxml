@@ -1,0 +1,26 @@
+<view class="addParty">
+  <form class="addParty-form" bindsubmit="formSubmit">
+    <view class="item">
+      <view class="item-label">支部名称：</view>
+      <view class="item-input"><input maxlength="10" name="partyName" ></input></view>
+    </view>
+    <view class="item">
+      <view class="item-label">所属党委：</view>
+      <view class="item-input">
+        <view class="item-input-show">{{dangweiArray[dangweiIndex]}}</view>
+        <picker class="item-input-picker" bindchange="changeDangwei" value="{{dangweiIndex}}" range="{{dangweiArray}}" name="partyDangwei"><image src="/images/下拉.png"></image></picker>      
+      </view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员姓名：</view>
+      <view class="item-input"><input maxlength="5" name="managerName"></input></view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员电话：</view>
+      <view class="item-input"><input type="number" maxlength="11" name="managerTele"></input></view>
+    </view>
+    <view class="addParty-button"><button form-type="submit">确认添加</button></view>
+  </form>
+  
+
+</view>

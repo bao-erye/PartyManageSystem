@@ -1,0 +1,126 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.partyMember{
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.activity-choose{
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.activity-choose-academy{
+  display: flex;
+  align-items: center;
+}
+.activity-choose-academy-detail{
+  display: flex;
+  align-items: center;
+}
+.activity-choose image{
+  width: 16px;
+  height: 16px;
+}
+.activity-add{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.activity-add image{
+  width: 23px;
+  height: 23px;
+}
+.table{
+  height: 86%;
+}
+.table-title{
+  height: 23px;
+  background: #E71111;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.table-title-number{
+  width: 10%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-title-name{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #BBBBBE;
+}
+.table-title-admin{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #BBBBBE;
+}
+.table-title-tele{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #BBBBBE;
+}
+.table-title-sum{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #BBBBBE;
+}
+.table-scrollView{
+  height: 95%;
+}
+.table-item{
+  height: 23px;
+  display: flex;
+  flex-direction: row;
+}
+.table-item-number{
+  width: 10%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-name{
+  width: 35%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-admin{
+  width: 20%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-tele{
+  width: 25%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-item-sum{
+  width: 10%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

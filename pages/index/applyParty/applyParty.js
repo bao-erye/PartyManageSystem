@@ -1,65 +1,39 @@
+
+var app = getApp();//获取应用实例
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    documentName:'入党申请书.doc',
+
+    textContent:'',//textarea输入内容
+    user_number:null,
+  },
+  //textarea失去焦点触发
+  textChange:function(e){
+    this.setData({textContent:e.detail.value});
+  },
+  //提交按钮
+  submit:function(){
+    var user_number = this.data.user_number //获取用户ID
+    var text = this.data.textContent  //获取输入内容
+    console.log(text)
+    db.collection('user').doc(user_number).update({
+      data: {
+        user_application: text
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+  },
+  onLaunch: function () {
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    
+    this.setData({
+        user_number:app.globalData.user_number
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
 })

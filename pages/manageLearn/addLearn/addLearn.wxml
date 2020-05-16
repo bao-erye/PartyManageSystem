@@ -1,0 +1,14 @@
+<view class="editLearn">
+  <form bindsubmit="formSubmit">
+    <view class="editLearn-title">
+      <view class="editLearn-title-text">学习标题：</view>
+      <view class="editLearn-title-input"><input name="learnTitle"></input></view>
+    </view>
+    <view class="editLearn-contain"><textarea maxlength="-1" name="learnContain" placeholder="输入学习内容"></textarea></view>
+    <view class="editLearn-score">
+      满<view class="editLearn-score-time"><input name="scoreTime"></input></view>分钟可得
+      <view class="editLearn-score-score"><input name="scoreScore"></input></view>积分
+    </view>
+    <view class="editLearn-button"><button form-type="submit">确认提交</button></view>
+  </form>
+</view>

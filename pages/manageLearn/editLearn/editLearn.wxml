@@ -1,0 +1,14 @@
+<view class="editLearn">
+  <form bindsubmit="formSubmit">
+    <view class="editLearn-title">
+      <view class="editLearn-title-text">文章标题：</view>
+      <view class="editLearn-title-input"><input value="{{learnTitle}}" name="learnTitle"></input></view>
+    </view>
+    <view class="editLearn-contain"><textarea name="learnContain" maxlength="-1" value="{{learnContain}}"></textarea></view>
+    <view class="editLearn-score">
+      满<view class="editLearn-score-time"><input name="scoreTime" value="{{scoreTime}}"></input></view>分钟可得
+      <view class="editLearn-score-score"><input name="scoreScore" value="{{scoreScore}}"></input></view>积分
+    </view>
+    <view class="editLearn-button"><button form-type="submit">确认提交</button></view>
+  </form>
+</view>

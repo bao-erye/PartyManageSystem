@@ -1,0 +1,6 @@
+<!--pages/mine/collect/collect.wxml-->
+<view class="collect">
+  <activity/>
+  <activity/>
+  <activity/>
+</view>

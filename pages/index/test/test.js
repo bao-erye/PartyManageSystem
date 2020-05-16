@@ -1,69 +1,42 @@
-// pages/index/test/test.js
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+
   data: {
-    arrayLearn: ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a','a','a'],//课程对象数组
-    learnItemTitle: '党章',//课程名称
-    arrayTest: ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'],//考核对象数组
-    testItemTitle:'第一考核',//考核名称
+    arrayLearn: [],//课程对象数组
+    arrayTest: [],//考核对象数组
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    var that=this
+    //获取学习列表
+    db.collection('study').get({
+      success:function(res){
+        that.setData({
+          arrayLearn:res.data
+        })
+        console.log(that.data.arrayLearn)
+      }
+    })
+    //获取考核列表
+    db.collection('exam').get({
+      success: function (res) {
+        that.setData({
+          arrayTest: res.data
+        })
+        console.log(that.data.arrayTest)
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //学习列表点击事件
+  tapLearn:function(e){
+    console.log(e.currentTarget.id)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //考核列表点击事件
+  tapTest: function (e) {
+    console.log(e.currentTarget.id)
   }
+
 })

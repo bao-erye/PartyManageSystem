@@ -1,0 +1,17 @@
+<view class="login">
+  <view class="icon">
+    <image src="/images/头像.png"></image>
+  </view>
+  <view class="input">
+    <view class="picker">
+      <view class="picker-show">{{identity}}</view>
+      <picker class="picker-image" range="{{arrayIdentity}}" bindchange="changeIndex"><image src="/images/下拉.png"></image></picker>
+    </view>
+    <view class="input-number"><input type="number" maxlength="10" placeholder="输入账号" placeholder-style="color:#ffffff" bindblur="blurNumber" style="color:#ffffff"></input></view>
+    <view class="input-password"><input password="true" placeholder="输入密码" placeholder-style="color:#ffffff" bindblur="blurPassword" style="color:#ffffff"></input></view>
+  </view> 
+  <view class="button">
+    <view class="button-detail"><button bindtap="tapLogin">登    录</button></view>
+    <view class="button-register" bindtap="tapRegister">没有账号？注册一个！</view>
+  </view>
+</view>

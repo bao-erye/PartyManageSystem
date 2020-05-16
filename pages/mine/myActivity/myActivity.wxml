@@ -1,0 +1,6 @@
+<!--pages/mine/myActivity/myActivity.wxml-->
+<view class="myActivity">
+  <activity/>
+  <activity/>
+  <activity/>
+</view>

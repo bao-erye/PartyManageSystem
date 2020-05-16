@@ -16,13 +16,13 @@ page{
 }
 .header-cost{
   width: 30px;
-  height: 28rpx;
+  height: 45rpx;
   text-align: center;
   background-color: #BBBBBE;
   border-radius: 2px;
 }
 .container{
-  height: 50%;
+  height: 55%;
   width: 100%;
 }
 .container-title{
@@ -41,7 +41,7 @@ page{
   flex-direction: row;
 }
 .container-table-title-number{
-  width: 12.5%;
+  width: 13%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
@@ -50,18 +50,18 @@ page{
   text-align: center;
   border: 1px solid #BBBBBE;
 }
-.container-table-title-quarter{
+.container-table-title-isPayed{
   width: 25%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
 .container-table-title-month{
-  width: 12.5%;
+  width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
 .container-table-title-account{
-  width: 25%;
+  width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
@@ -74,7 +74,7 @@ page{
   flex-direction: row;
 }
 .container-table-item-number{
-  width: 12.5%;
+  width: 13%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
@@ -83,23 +83,23 @@ page{
   text-align: center;
   border: 1px solid #BBBBBE;
 }
-.container-table-item-quarter{
+.container-table-item-isPayed{
   width: 25%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
 .container-table-item-month{
-  width: 12.5%;
+  width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
 .container-table-item-account{
-  width: 25%;
+  width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
 }
 .footer{
-  height: 37%;
+  height:30%;
   padding-bottom: 40rpx;
   display: flex;
   flex-direction: column;

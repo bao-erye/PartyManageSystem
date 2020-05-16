@@ -1,0 +1,34 @@
+<view class="partyInfo">
+  <form class="partyInfo-form" bindsubmit="formSubmit">
+    <view class="item">
+      <view class="item-label">支部名称：</view>
+      <input class="item-show" name="partyName" value="{{partyName}}"></input>
+    </view>
+    <view class="item">
+      <view class="item-label">所属党委：</view>
+      <view class="item-show">
+        <view class="item-show-input">{{dangwei}}</view>
+        <picker class="item-show-picker" name="dangwei" value="{{dangweiArray[dangweiIndex]}}" range="{{dangweiArray}}" bindchange="changeDangwei"><image src="/images/下拉.png"></image></picker>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员姓名：</view>
+      <input class="item-show" name="managerName" value="{{managerName}}"></input>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员电话：</view>
+      <input class="item-show" name="managerTele" value="{{managerTele}}"></input>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员职称：</view>
+      <input class="item-show" name="managerPosition" value="{{managerPosition}}"></input>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员工号：</view>
+      <input class="item-show" name="managerNumber" value="{{managerNumber}}"></input>
+    </view>
+    <view class="partyInfo-button"><button form-type="submit">提交修改</button></view>
+  </form>
+  
+
+</view>

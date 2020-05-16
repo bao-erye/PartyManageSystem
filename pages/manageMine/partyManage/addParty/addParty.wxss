@@ -1,0 +1,59 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.addParty{
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.addParty-form{
+  height: 100%;
+}
+.item{
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-label{
+  width: 25%;
+}
+.item-input{
+  width: 75%;
+  height: 35px;
+  border: 1px solid #bbbbbe;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-input input{
+  width: 100%;
+  height: 100%;
+}
+.item-input-show{
+  padding-left: 5px;
+  width: 90%;
+}
+.item-input-picker{
+  width: 10%;
+}
+.item-input-picker image{
+  width: 15px;
+  height: 15px;
+}
+.addParty-button{
+  height: 40%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.addParty-button button{
+  color: #ffffff;
+  background-color: #e71111;
+}

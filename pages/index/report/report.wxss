@@ -8,6 +8,10 @@ page{
   margin-right: 20px;
   height: 100%;
 }
+.form{
+  height: 100%;
+  width: 100%;
+}
 .report-title{
   height: 8%;
   display: flex;

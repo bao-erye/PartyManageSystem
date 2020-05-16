@@ -1,0 +1,68 @@
+<view class="activer">
+  <view class="info">
+    <view class="info-title"><view class="info-title-contain">基本信息</view></view>
+    <view class="info-detail">
+      <view class="detail-row">
+        姓名：<view class="detail-name">{{name}}</view>
+        民族：<view class="detail-nation">{{nation}}</view>
+        性别：<view class="detail-sex">{{sex}}</view>
+      </view>
+      <view class="detail-row">
+        籍贯：<view class="detail-birthPlace">{{birthPlace}}</view>
+        生日：<view class="detail-birthDay">{{birthDay}}</view>
+      </view>
+      <view class="detail-row">
+        学校：<view class="detail-birthPlace">{{school}}</view>
+        学院：<view class="detail-birthDay">{{academy}}</view>
+      </view>
+      <view class="detail-row">
+        专业：<view class="detail-birthPlace">{{major}}</view>
+        班级：<view class="detail-birthDay">{{stuClass}}</view>
+      </view>
+      <view class="detail-row">
+        学号：<view class="detail-birthPlace">{{stuNumber}}</view>
+        电话：<view class="detail-birthDay">{{telenumber}}</view>
+      </view>
+      <view class="detail-row">
+        担任职位：<view class="detail-position">{{position}}</view>
+      </view>
+      <view class="detail-colunm">
+        家庭成员情况：<view class="detail-family">{{family}}</view>
+      </view>
+      <view class="detail-colunm">
+        主要社会关系情况：<view class="detail-family">{{society}}</view>
+      </view>
+      <view class="detail-colunm">
+        历次申请情况：<view class="detail-family">{{applyHistory}}</view>
+      </view>
+      <view class="detail-colunm">
+        何时何地参加过何种组织任何职：<view class="detail-family">{{work}}</view>
+      </view>
+      <view class="detail-colunm">
+        何时何地受过何种奖励：<view class="detail-family">{{award}}</view>
+      </view>
+      <view class="detail-colunm">
+        何时何地何原因受过何种处分：<view class="detail-family">{{punishment}}</view>
+      </view>
+    </view> 
+  </view>
+  <view class="learn">
+    <view class="learn-title"><view class="learn-title-contain">学习与考核情况</view></view>
+    <view class="learn-detail">
+      <view class="learn-detail-score">总积分：{{score}}分</view>
+      <view class="learn-detail-contain">参加活动情况：</view>
+      <view class="learn-detail-activity">{{activitys}}</view>
+    </view>
+  </view>
+  <view class="report">
+    <view class="report-title">思想报告</view>
+    <view class="report-detail" wx:for="{{arrayReport}}">
+      <scroll-view scroll-y="true">{{item}}</scroll-view>
+    </view>
+  </view>
+  <view class="button">
+    <button bindtap="tapYes">审核不通过</button>
+    <view class="space"></view>
+    <button bindtap="tapNo">审核通过</button>
+  </view>
+</view>

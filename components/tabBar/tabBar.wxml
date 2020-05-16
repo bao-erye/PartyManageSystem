@@ -1,0 +1,18 @@
+<view class="tabBar">
+  <view class="index" bindtap="tapIndex">
+    <view class="index-image"><image src="/images/菜单栏/首页.png"></image></view>
+    <view class="index-text">首页</view>
+  </view>
+  <view class="activity" bindtap="tapActivity">
+    <view class="index-image"><image src="/images/菜单栏/活动.png"></image></view>
+    <view class="index-text">活动</view>
+  </view>
+  <view class="learn" bindtap="tapLearn">
+    <view class="index-image"><image src="/images/菜单栏/学习.png"></image></view>
+    <view class="index-text">学习</view>
+  </view>
+  <view class="mine" bindtap="tapMine">
+    <view class="index-image"><image src="/images/菜单栏/我的.png"></image></view>
+    <view class="index-text">我的</view>
+  </view>
+</view>

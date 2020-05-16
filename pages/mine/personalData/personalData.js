@@ -1,9 +1,5 @@
-// pages/mine/personalData/personalData.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     //个人信息
     name:'王晨宝',
@@ -19,62 +15,25 @@ Page({
     tele:'120219201',
     duty:'班长',
     award:'三等奖学金、一等奖学金',
+    sexArray: ['男', '女'],
+    sexIndex: 0,
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //选择性别
+  changeSex: function (e) {
+    this.setData({
+      sex: this.data.sexArray[e.detail.value]
+    })
+  },
+  //选择出生年月日
+  changeBirthDay: function (e) {
+    this.setData({
+      birthDay: e.detail.value
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

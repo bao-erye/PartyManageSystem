@@ -1,0 +1,35 @@
+<view class="learn">
+  <view class="learn-title">
+    <view class="title-left">学习内容</view>
+    <view class="title-right" bindtap="tapAddLearn">
+      <view class="title-right-icon"><image src="/images/新建.png"></image></view>
+      <view class="title-right-text">添加学习内容</view>
+    </view>
+  </view>
+  <view class="learn-contain">
+    <scroll-view class="learn-contain-scrollView" scroll-y='true'>
+      <view wx:for='{{arrayLearn}}'>
+        <view class="learn-contain-item" bindtap="tapItem" id="{{index}}" >
+        <view class="learn-contain-item-image"><image src="/images/文件夹.png"></image></view>
+        <view class="learn-contain-item-name">{{item}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="learn-title">
+    <view class="title-left">考核内容</view>
+    <view class="title-right" bindtap="tapAddTest">
+      <view class="title-right-icon"><image src="/images/新建.png"></image></view>
+      <view class="title-right-text">添加考核内容</view>
+    </view>
+  </view>
+  <view class="learn-contain">
+    <scroll-view class="learn-contain-scrollView" scroll-y='true'>
+    <view class="learn-contain-item" wx:for='{{arrayTest}}'>
+    <view class="learn-contain-item-image"><image src="/images/文件夹.png"></image></view>
+    <view class="learn-contain-item-name">{{item}}</view>
+    </view>
+    </scroll-view>
+  </view>
+</view>
+<tabBar/>

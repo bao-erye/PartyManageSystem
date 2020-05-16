@@ -1,0 +1,8 @@
+/* pages/mine/collect/collect.wxss */
+pgae{
+  width: 100%;
+  height: 100%
+}
+.collect{
+  height: 100%;
+}

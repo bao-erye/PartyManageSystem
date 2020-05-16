@@ -1,13 +1,39 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
+//云数据库初始化
+wx.cloud.init({env: "party-test-3q2zh"})
+const db = wx.cloud.database({env: "party-test-3q2zh"})
 Page({
   data: {
-    images: ['/images/滑动窗/1.jpg', '/images/滑动窗/2.jpg','/images/滑动窗/3.jpg']
+    images: ['/images/滑动窗/1.jpg', '/images/滑动窗/2.jpg','/images/滑动窗/3.jpg'],
+    arrayImageID:[],//滑动窗图片ID
+    //活动对象数组
+    arrayActivity:[],
+  },
+  onLoad: function () {
+    var that = this;
+    //获取活动对象
+    db.collection('activity').get({
+      success:function(res){
+        console.log(res.data)//打印活动对象
+        that.setData({
+          arrayActivity:res.data
+        })
+        //获取活动图片ID
+        var length=res.data.length;
+        var array=new Array();
+        var i=0;
+        for(i = 0 ;i<length;i++){
+          array.push(res.data[i].activity_imageID)//将图片ID存入数组
+        }
+        that.setData({
+          arrayImageID:array//将数组赋值给data
+        })
+        console.log(that.data.arrayImageID)
+        
+      }
+    })
   },
   //入党申请书
-  bandtapApplyParty:function(e){
+  bandtapApplyParty: function (e) {
     wx.navigateTo({
       url: '/pages/index/applyParty/applyParty',
     })
@@ -15,45 +41,43 @@ Page({
   //缴纳党费
   bandtapPartyCost: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/partyCost/partyCost',
     })
   },
   //思想报告
   bandtapReport: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/report/report',
     })
   },
   //登记表
   bandtapCheck: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/checkTable/checkTable',
     })
   },
   //投票
-  bandtapVote: function (e) {
+  bandtapProcess: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/process/process',
     })
   },
   //学习与考核
   bandtapTest: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/test/test',
     })
   },
   //党费计算器
   bandtapCalculator: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/calculator/calculator',
     })
   },
   //转入转出
   bandtapInOut: function (e) {
     wx.navigateTo({
-      url: '/pages/index/applyParty/applyParty',
+      url: '/pages/index/inAndOut/inAndOut',
     })
   },
-  onLoad: function () {
-  }
 })

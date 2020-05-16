@@ -1,0 +1,53 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.partyInfo{
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.partyInfo-form{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-label{
+  width: 25%;
+  
+}
+.item-show{
+  width: 75%;
+  height: 75%;
+  padding-left: 5px;
+  border: 1px solid #bbbbbe;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.item-show-input{
+  width: 90%;
+}
+.item-show-picker{
+  width: 10%;
+}
+.item-show-picker image{
+  width: 15px;
+  height: 15px;
+}
+.partyInfo-button{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.partyInfo-button button{
+  color: #ffffff;
+  background-color: #e71111;
+}

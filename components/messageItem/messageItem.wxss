@@ -8,10 +8,12 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row;
+  background-color: #837D7D;
+  color: #ffffff;
 }
 .message-image{
   height: 100%;
-  width: 25%;
+  width: 21%;
   display: flex;
   flex-direction: row
 }
@@ -35,8 +37,8 @@
   align-items: center;
 }
 .message-image2 image{
-  width: 35px;
-  height: 35px;
+  width: 33px;
+  height: 33px;
 }
 .message-item{
   width: 75%;
@@ -54,7 +56,7 @@
   width: 60%;
   font-size: 13px;
   font-weight: bold;
-  color: #fe3333;
+  color: rgb(17, 206, 231);
 }
 .message-item-date{
   width: 40%;

@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mineImageUrl:'/images/菜单栏/我的.png',
+    mineImageUrl:'/images/我的/头像.png',
     mineName:'王晨宝',
     mineSchool:'南昌大学',
     mineAcademy:'软件学院党委',

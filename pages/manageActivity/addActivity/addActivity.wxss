@@ -1,0 +1,168 @@
+page{
+  width: 100%;
+}
+.addActivity{
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 100%;
+}
+.form{
+
+}
+.item{
+  width: 100%;
+  height: 30px;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+}
+.item-title{
+  height: 30px;
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.item-input-origin{
+  width: 85%;
+  height: 30px;
+  padding-left: 5px;
+  border: 1px solid #BBBBBE;
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+}
+.item-input{
+  height: 30px;
+  width: 85%;
+  border: 1px solid #BBBBBE;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.item-input-view{
+  width: 90%;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+}
+.item-input-picker{
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+.item-input-picker image{
+  width: 15px;
+  height: 15px;
+}
+.item-time{
+  height: 30px;
+  width: 23%;
+  display: flex;
+  align-items: center;
+}
+.item-time-{
+  display: flex;
+  align-items: center;
+}
+.item-time-input{
+  width: 77%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.item-time-input1{
+  width: 45%;
+  height: 30px;
+  border: 1px solid #BBBBBE;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-time-input1-view{
+  width: 80%;
+  padding-left: 5px;
+}
+.item-time-input1-picker{
+  width: 20%;
+}
+.item-time-input1-picker image{
+  width: 15px;
+  height: 15px;
+}
+.item-time-input2{
+  width: 45%;
+  height: 30px;
+  border: 1px solid #BBBBBE;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-time-input2-view{
+  width: 80%;
+  padding-left: 5px;
+}
+.item-time-input2-picker{
+  width: 20%;
+}
+.item-time-input2-picker image{
+  width: 15px;
+  height: 15px;
+}
+.acDetail{
+  height: 100px;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+}
+.acDetail-title{
+  height: 20%
+}
+.acDetail-contain{
+  width: 100%;
+  height: 80%;
+  border: 1px solid #BBBBBE;
+  border-radius: 5px;
+}
+.acImage{
+  height: 80px;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+}
+.acImage-title{
+  height: 20px;
+}
+.acImage-contain{
+  width: 90px;
+  height: 60px;
+  border: 3px dashed #BBBBBE;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.contain-icon{
+
+}
+.contain-icon image{
+  width: 40px;
+  height: 40px;
+}
+.contain-text{
+  font-size: 10px;
+}
+.button{
+  margin-top: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button button{
+  color: #ffffff;
+  background-color: #e71111;
+}

@@ -7,7 +7,7 @@
     </picker>
     <image src="/images/下拉.png"></image>
   </view>
-    <view class="section-picker">
+  <view class="section-picker">
     <picker  bindchange="bindPickerChangeType" value="{{typeIndex}}" range="{{typeArray}}">
     <view class="section-picker-item">
     {{typeArray[typeIndex]}}

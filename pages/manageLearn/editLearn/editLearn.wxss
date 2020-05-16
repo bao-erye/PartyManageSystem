@@ -1,0 +1,59 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.editLearn{
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.editLearn-title{
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.editLearn-title-text{
+  width: 22%;
+}
+.editLearn-title-input{
+  width: 78%;
+  height: 25  px;
+  border-radius: 5px;
+  border: 1px solid #beeeee;
+}
+.editLearn-contain{
+  height: 72%;
+  border-radius: 5px;
+  border: 1px solid #beeeee;
+}
+.editLearn-contain textarea{
+  width: 100%;
+  height: 100%;
+}
+.editLearn-score{
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.editLearn-score-time{
+  width: 30px;
+  border-radius: 5px;
+  border: 1px solid #beeeee;
+  text-align: center;
+}
+.editLearn-score-score{
+  width: 30px;
+  border-radius: 5px;
+  border: 1px solid #beeeee;
+  text-align: center;
+}
+.editLearn-button{
+  height: 12%;
+}
+.editLearn-button button{
+  color: #ffffff;
+  background-color: #e71111;
+
+}

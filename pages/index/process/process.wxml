@@ -1,0 +1,48 @@
+<view class="process">
+  <view class="process-item">
+    <view class="item-header">群众</view>
+    <view class="item-footer">
+      <view class="footer-left"></view>
+      <view class="footer-right">
+        <view class="text">提交入党申请书</view>
+        <view class="text">审核</view>
+        <view class="text">建档</view>
+      </view>
+    </view>
+  </view>
+  <view class="process-item">
+    <view class="item-header">入党积极分子</view>
+    <view class="item-footer">
+      <view class="footer-left"></view>
+      <view class="footer-right">
+        <view class="text">学习与考察</view>
+        <view class="text">定期考察</view>
+        <view class="text">党支部推荐</view>
+        <view class="text">审核</view>
+      </view>
+    </view>
+  </view>
+  <view class="process-item">
+    <view class="item-header">发展对象</view>
+    <view class="item-footer">
+      <view class="footer-left"></view>
+      <view class="footer-right">
+        <view class="text">政审</view>
+      </view>
+    </view>
+  </view>
+  <view class="process-item">
+    <view class="item-header">预备党员</view>
+    <view class="item-footer">
+      <view class="footer-left"></view>
+      <view class="footer-right">
+        <view class="text">预备期考察</view>
+        <view class="text">转正审批</view>
+        <view class="text">建档备案</view>
+      </view>
+    </view>
+  </view>
+  <view class="process-item">
+    <view class="item-header">正式党员</view>
+  </view>
+</view>

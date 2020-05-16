@@ -1,0 +1,30 @@
+<view class="partyInfo">
+  <view class="partyInfo-items">
+    <view class="item">
+      <view class="item-label">支部名称：</view>
+      <view class="item-show">{{partyName}}</view>
+    </view>
+    <view class="item">
+      <view class="item-label">所属党委：</view>
+      <view class="item-show">{{belongDangwei}}</view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员姓名：</view>
+      <view class="item-show">{{managerName}}</view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员电话：</view>
+      <view class="item-show">{{managerTele}}</view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员职称：</view>
+      <view class="item-show">{{managerPosition}}</view>
+    </view>
+    <view class="item">
+      <view class="item-label">管理员工号：</view>
+      <view class="item-show">{{managerNumber}}</view>
+    </view>
+  </view>
+  <view class="partyInfo-button"><button hidden="{{isButton}}">修改信息</button></view>
+
+</view>

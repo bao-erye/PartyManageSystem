@@ -1,0 +1,32 @@
+<!--pages/manageIndex/manageIndex.wxml-->
+<view class="manageIndex">
+  <view class="header">
+    <view class="header-masses" bindtap="tapMasses" style="background-color:{{arrayColor[massColorIndex]}}">群众</view>
+    <view class="header-activer" bindtap="tapActiver" style="background-color:{{arrayColor[activerColorIndex]}}">入党积极分子</view>
+    <view class="header-develop" bindtap="tapDevelop" style="background-color:{{arrayColor[developColorIndex]}}">发展对象</view>
+    <view class="header-ready" bindtap="tapReady" style="background-color:{{arrayColor[readyColorIndex]}}">预备党员</view>
+    <view class="header-member" bindtap="tapMember" style="background-color:{{arrayColor[memberColorIndex]}}">党员</view>
+  </view>
+  <view class="search">
+    <view class="search-name"><input placeholder="姓名"></input></view>
+    <view class="search-tele"><input placeholder="手机号"></input></view>
+    <view class="search-button" bindtap="tapSearch"><image src="/images/搜索.png" ></image></view>
+  </view>
+  <view class="table">
+    <view class="table-title">
+        <view class="table-title-number">序号</view>
+        <view class="table-title-name">姓名</view>
+        <view class="table-title-class">班级</view>
+        <view class="table-title-tele">电话</view>
+      </view>
+      <scroll-view class="table-scrollView" scroll-y="true">
+        <view class="table-item" wx:for='{{arrayMasses}}'>
+          <view class="table-item-number">1</view>
+          <view class="table-item-name">王晨宝</view>
+          <view class="table-item-class">软件工程168班</view>
+          <view class="table-item-tele">15079617331</view>
+        </view>
+      </scroll-view>
+  </view>
+</view>
+<tabBar/>

@@ -1,0 +1,33 @@
+<view class="personalData">
+  <form class="form" bindsubmit="formSubmit">
+  <view class="name"><view class="name-label">学号：</view><input name="stuNumber" class="name-input"maxlength="10"></input></view>
+    <view class="name"><view class="name-label">密码：</view><input name="password" class="name-input" password="true"></input></view>
+    <view class="name"><view class="name-label2">确认密码：</view><input name="confirmPsd" class="name-input" password="true"></input></view>
+    <view class="name"><view class="name-label">姓名：</view><input name="name" class="name-input" ></input></view>
+    <view class="name"><view class="name-label">民族：</view><input name="nation" class="name-input" ></input></view>
+    <view class="name">
+      <view class="name-label">性别：</view>
+      <view class="sex">
+        <view class="sex-show">{{sex}}</view>
+        <picker class="sex-picker" value="{{sexArray[sexIndex]}}" range="{{sexArray}}" bindchange="changeSex" name="sex"><image src="/images/下拉.png"></image> </picker>
+      </view>
+    </view>
+    <view class="name">
+      <view class="name-label2">出生年月日：</view>
+      <view class="show">
+        <view class="show-detail">{{birthDay}}</view>
+        <picker mode="date" class="show-picker" bindchange="changeBirthDay" name="birthDay"><image src="/images/下拉.png"></image> </picker>
+      </view>
+    </view>
+    <view class="name"><view class="name-label">籍贯：</view><input name="birthPlace" class="name-input"></input></view>
+    
+    <view class="name"><view class="name-label">学院：</view><input name="academy" class="name-input" ></input></view>
+    <view class="name"><view class="name-label">专业：</view><input name="major" class="name-input"></input></view>
+    <view class="name"><view class="name-label">班级：</view><input name="stuClass" class="name-input" ></input></view>
+    
+    <view class="name"><view class="name-label">电话：</view><input name="tele" class="name-input" maxlength="11"></input></view>
+    <view class="name"><view class="name-label2">担任职位：</view><input name="position" class="name-input2"></input></view>
+    <view class="btn-submit"><button form-type="submit">注    册</button> </view>
+  </form>
+</view>
+

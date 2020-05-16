@@ -1,12 +1,15 @@
 <!--pages/index/report/report.wxml-->
 <view class="report">
-  <view class="report-title">
+  <form class="form" bindsubmit="submit">
+    <view class="report-title">
     <view class="report-title-label">报告标题：</view>
-    <view class="report-title-input"><input name="titleInput"></input></view>
-  </view>
-  <view class="report-contain">
-    <view class="report-contain-label" >报告内容：</view>
-    <view class="report-contain-textarea"><textarea></textarea></view>
-  </view>
-  <view class="report-submit"><button>确认提交</button></view>
+    <view class="report-title-input"><input name="reportTitle"></input></view>
+    </view>
+    <view class="report-contain">
+      <view class="report-contain-label" >报告内容：</view>
+      <view class="report-contain-textarea"><textarea name="reportDetail"></textarea></view>
+    </view>
+    <view class="report-submit"><button form-type="submit">确认提交</button></view>
+  </form>
+  
 </view>

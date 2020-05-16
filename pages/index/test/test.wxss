@@ -9,19 +9,21 @@ page{
   height: 100%;
 }
 .learn{
-  height: 40%;
+  height: 45%;
 }
 .learn-contain{
   height: 85%;
   border: 1px solid #BBBBBE;
-  border-radius: 7px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
 .learn-contain-title{
   height: 15%;
+  border-radius: 5px;
   padding-left: 10px;
-  background-color: #BBBBBE;
+  color: #ffffff;
+  background-color: #E71111;
   display: flex;
   align-items: center;
 }
@@ -55,7 +57,7 @@ page{
 }
 .learn-attention{
   height: 10%;
-  border-radius: 7px;
+  border-radius: 5px;
   border: 1px solid #BBBBBE;
   display: flex;
   flex-direction: row;
@@ -76,5 +78,5 @@ page{
   align-items: center;
 }
 .test{
-  height: 40%;
+  height: 45%;
 }
