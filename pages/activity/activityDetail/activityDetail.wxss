@@ -239,6 +239,4 @@ page{
   align-items: center;
 }
 .operate-button button{
-  color: #ffffff;
-  background-color: #E71111;
 }

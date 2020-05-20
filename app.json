@@ -1,10 +1,11 @@
 {
   "cloud": true,
   "pages": [
-    "pages/index/process/process",
+    
+    
+    "pages/manageActivity/manageActivity",
     "pages/login/login",
     "pages/login/register/register",
-
 
     "pages/index/applyParty/applyParty",
     "pages/index/index/index",
@@ -16,17 +17,18 @@
     "pages/index/inAndOut/inAndOut",
     "pages/index/test/testDetail/testDetail",
     "pages/index/test/learnDetail/learnDetail",
-    
-    "pages/activity/activity",
+    "pages/index/process/process",
     "pages/activity/activityDetail/activityDetail",
     "pages/message/message",
+    "pages/activity/activity",
     "pages/mine/personalData/personalData",
-    "pages/mine/mine",
     "pages/mine/myActivity/myActivity",
     "pages/mine/collect/collect",
     "pages/mine/score/score",
+    "pages/mine/mine",
+
     "pages/manageLearn/manageLearn",
-    "pages/manageActivity/manageActivity",
+    
     "pages/manageIndex/manageIndex/manageIndex",
     "pages/manageIndex/member/member",
     "pages/manageIndex/ready/ready",

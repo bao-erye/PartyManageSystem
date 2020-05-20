@@ -12,12 +12,14 @@
   <view class="footer">
     <view class="footer-title">积分明细：</view><view class="line"></view>
     <scroll-view class="footer-contain" scroll-y="true">
-      <view class="footer-contain-item" wx:for='{{activityItemArray}}'>
-        <view class="footer-contain-item-left">
-          <view class="item-left-acTitle">{{acTitle}}</view>
-          <view class="item-left-acDate">{{acDate}}</view>
-        </view>
-        <view class="footer-contain-item-score">{{acScore}}</view>
+      <view wx:for="{{arrayScore}}" wx:key='key'>
+        <view class="footer-contain-item" >
+          <view class="footer-contain-item-left">
+            <view class="item-left-acTitle">{{item.title}}</view>
+            <view class="item-left-acDate">{{item.nowTime}}</view>
+          </view>
+          <view class="footer-contain-item-score">{{item.score}}</view>
+      </view>
       </view>
     </scroll-view>
   </view>

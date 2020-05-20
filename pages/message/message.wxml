@@ -1,3 +1,11 @@
-<messageItem/>
-<messageItem  messageImage1='{{messageImage1}}' messageImage2='{{messageImage2}}' messageType='{{messageType}}'
-messageDate='{{messageDate}}' messageContain='{{messageContain}}' />
+<view wx:for='{{arrayMessage}}' wx:key='key'>
+  <view bindtap="tapMessage" id='{{index}}'>
+    <messageItem 
+    messageImage1='{{arrayImageIsread[item.message_isRead]}}' 
+    messageImage2='{{arrayImageType[item.message_type]}}' 
+    messageType='{{arrayTextType[item.message_type]}}' 
+    messageDate='{{item.message_date}}' 
+    messageContain='{{item.message_content}}' />
+  </view>
+  
+</view>

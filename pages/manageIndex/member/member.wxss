@@ -140,7 +140,17 @@
   height: 20px;
 }
 .learn-detail-activity{
-
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.learn-detail-activity-title{
+  width: 92%;
+}
+.learn-detail-activity-score{
+  width: 8%;
 }
 .report{
   margin-top: 5px;
@@ -235,7 +245,7 @@
   background-color: #e71111;
 }
 .partyCost{
-  height: 80px;
+  height: 150px;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -252,19 +262,30 @@
 }
 .partyCost-contain{
   width: 100%;
-  height: 50px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.partyCost-contain-input{
+  width: 100%;
+  height: 30%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
-.partyCost-contain input{
-  width: 80px;
+.partyCost-contain-input input{
+  width: 50px;
+  padding-left: 5px;
   border: 1px solid #bbbbbe;
   border-radius: 5px;
 }
-.partyCost-contain button{
+.partyCost-contain-button{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.partyCost-contain-button button{
   color: #ffffff;
-  background-color: #e71111;
-  width: 60px;
 }

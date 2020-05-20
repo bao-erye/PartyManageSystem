@@ -47,5 +47,5 @@
 <view class="line"></view>
 <view class="activity-recently">最近活动</view>
 <view wx:for='{{arrayActivity}}' wx:key='key' wx:for-item='activity'>
-  <activity acTitle='{{activity.activity_title}}' acDate='{{activity.activity_date}}' acPlace='{{activity.activity_place}}' acIssuer='{{activity.activity_issuer}}' acObject='{{activity.activity_object}}'/>
+  <activity acTitle='{{activity.activity_title}}' acDate='{{activity.activity_date}}' acPlace='{{activity.activity_place}}' acIssuer='{{activity.activity_issuer}}' acObject='{{activity.activity_object}}' imageUrl='{{activity.activity_imageID}}'/>
 </view>

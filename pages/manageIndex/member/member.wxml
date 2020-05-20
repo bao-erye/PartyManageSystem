@@ -54,14 +54,19 @@
     <view class="learn-title"><view class="learn-title-contain">学习与考核情况</view></view>
     <view class="learn-detail">
       <view class="learn-detail-score">总积分：{{score}}分</view>
-      <view class="learn-detail-contain">参加活动情况：</view>
-      <view class="learn-detail-activity">{{activitys}}</view>
+      <view class="learn-detail-contain">积分明细：</view>
+      <view wx:for='{{arrayScore}}' wx:key='key'>
+        <view class="learn-detail-activity">
+          <view class="learn-detail-activity-title">{{item.title}}</view>
+          <view class="learn-detail-activity-score">{{item.score}}分</view>
+        </view>
+      </view>
     </view>
   </view>
   <view class="report">
     <view class="report-title">思想报告</view>
-    <view class="report-detail" wx:for="{{arrayReport}}">
-      <scroll-view scroll-y="true">{{item}}</scroll-view>
+    <view class="report-detail" wx:for="{{arrayReport}}" wx:key='key'>
+      <scroll-view scroll-y="true">{{item.user_reportDetail}}</scroll-view>
     </view>
   </view>
   <view class="zhengshen">
@@ -79,8 +84,8 @@
   <view class="partyCost">
     <view class="partyCost-title">党费</view>
     <view class="partyCost-contain">
-      设置党费：<input></input>元
-      <button bindtap="tapPartyCost">设置</button>
+      <view class="partyCost-contain-input">设置本月党费：<input bindinput="inputCharge"></input>元</view>
+      <view class="partyCost-contain-button"><button bindtap="tapPartyCost" style="background-color:{{btnColor}}" disabled="{{disabled}}">{{btnText}}</button></view>
     </view>
   </view>
 </view>

@@ -2,32 +2,32 @@
   <view class="mine-head-image"><image src="{{mineImageUrl}}"></image></view>
   <view class="mine-head-name">{{mineName}}</view>
   <view class="mine-head-branch">{{mineSchool}}|{{mineAcademy}}|{{mineMajor}}</view>
-  <view class="mine-head-stage">{{mineStage}}</view>
+  <view class="mine-head-stage">{{mineStatus}}</view>
 </view>
 <view class="mine-contain">
   <view class="mine-contain-item">
     <view class="mine-contain-item-image"><image src="/images/我的/个人资料.png"></image></view>
     <view class="mine-contain-item-title">个人资料</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapData"></image></view>
   </view>
   <view class="mine-contain-item">
     <view class="mine-contain-item-image"><image src="/images/我的/我的积分.png"></image></view>
     <view class="mine-contain-item-title">我的积分</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapScore"></image></view>
   </view>
   <view class="mine-contain-item">
     <view class="mine-contain-item-image"><image src="/images/我的/我的活动.png"></image></view>
     <view class="mine-contain-item-title">我的活动</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapActivity"></image></view>
   </view>
   <view class="mine-contain-item">
     <view class="mine-contain-item-image"><image src="/images/我的/我的收藏.png"></image></view>
     <view class="mine-contain-item-title">我的收藏</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapCollect"></image></view>
   </view>
   <view class="mine-contain-item">
     <view class="mine-contain-item-image"><image src="/images/我的/关于.png"></image></view>
     <view class="mine-contain-item-title">关于</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapAbout"></image></view>
   </view>
 </view>

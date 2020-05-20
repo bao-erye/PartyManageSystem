@@ -50,19 +50,24 @@
     <view class="learn-title"><view class="learn-title-contain">学习与考核情况</view></view>
     <view class="learn-detail">
       <view class="learn-detail-score">总积分：{{score}}分</view>
-      <view class="learn-detail-contain">参加活动情况：</view>
-      <view class="learn-detail-activity">{{activitys}}</view>
+      <view class="learn-detail-contain">积分明细：</view>
+      <view wx:for='{{arrayScore}}' wx:key='key'>
+        <view class="learn-detail-activity">
+          <view class="learn-detail-activity-title">{{item.title}}</view>
+          <view class="learn-detail-activity-score">{{item.score}}分</view>
+        </view>
+      </view>
     </view>
   </view>
   <view class="report">
     <view class="report-title">思想报告</view>
-    <view class="report-detail" wx:for="{{arrayReport}}">
-      <scroll-view scroll-y="true">{{item}}</scroll-view>
+    <view class="report-detail" wx:for="{{arrayReport}}" wx:key='key'>
+      <scroll-view scroll-y="true">{{item.user_reportDetail}}</scroll-view>
     </view>
   </view>
   <view class="button">
-    <button bindtap="tapYes">审核不通过</button>
+    <button bindtap="tapNo">审核不通过</button>
     <view class="space"></view>
-    <button bindtap="tapNo">审核通过</button>
+    <button bindtap="tapYes">审核通过</button>
   </view>
 </view>

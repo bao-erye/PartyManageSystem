@@ -1,6 +1,7 @@
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
-
-
   data: {
     title: "",
     date: "",
@@ -9,8 +10,10 @@ Page({
     belong: "",
     score: "",
     sum: "",
-    affirmBegin: "",
-    affirmEnd: "",
+    affirmDateBegin: "",
+    affirmTimeBegin:'',
+    affirmDateEnd:'',
+    affirmTimeEnd: "",
     signinBegin: "",
     signinEnd: "",
     activityBegin: "",
@@ -41,17 +44,28 @@ Page({
       belong: this.data.belongArray[e.detail.value]
     })
   },
-
-  //确认时间开始
-  bindAffirmBegin: function (e) {
+  //确认日期开始
+  bindAffirmDateBegin: function (e) {
     this.setData({
-      affirmBegin: e.detail.value
+      affirmDateBegin: e.detail.value
+    })
+  },
+  //确认时间开始
+  bindAffirmTimeBegin: function (e) {
+    this.setData({
+      affirmTimeBegin: e.detail.value
+    })
+  },
+  //确认日期结束
+  bindAffirmDateEnd: function (e) {
+    this.setData({
+      affirmDateEnd: e.detail.value
     })
   },
   //确认时间结束
-  bindAffirmEnd: function (e) {
+  bindAffirmTimeEnd: function (e) {
     this.setData({
-      affirmEnd: e.detail.value
+      affirmTimeEnd: e.detail.value
     })
   },
   bindSigninBegin: function (e) {
@@ -80,9 +94,49 @@ Page({
   },
   //提交表单
   formSubmit: function (e) {
-    console.log(e)
-    this.setData({
-      title: e.detail.value.title
+    let title=e.detail.value.title
+    let date=this.data.date
+    let place=e.detail.value.place
+    let object=this.data.object
+    let belong=this.data.belong
+    let score=e.detail.value.score
+    let sum=e.detail.value.sum
+    let affirmDateBegin=this.data.affirmDateBegin
+    let affirmTimeBegin=this.data.affirmTimeBegin
+    let affirmDateEnd=this.data.affirmDateEnd
+    let affirmTimeEnd=this.data.affirmTimeEnd
+    let signinBegin=this.data.signinBegin
+    let signinEnd = this.data.signinEnd
+    let activityBegin = this.data.activityBegin
+    let activityEnd = this.data.activityEnd
+    let detail=e.detail.value.detail
+    db.collection('activity').add({
+      data:{
+        activity_title:title,
+        activity_date:date,
+        activity_place:place,
+        activity_object:object,
+        activity_issuer:belong,
+        activity_score:score,
+        activity_sum:sum,
+        activity_affirmDateBegin: affirmDateBegin,
+        activity_affirmDateEnd: affirmDateEnd,
+        activity_affirmTimeBegin: affirmTimeBegin,
+        activity_affirmTimeEnd: affirmTimeEnd,
+        activity_signinBegin:signinBegin,
+        activity_signinEnd:signinEnd,
+        activity_begin:activityBegin,
+        activity_end:activityEnd,
+        activity_detail:detail
+      },success:function(res){
+        console.log('成功发布活动')
+        wx.showToast({
+          title: '成功发布活动',
+          icon:'none',
+          duration:1500
+        })
+        wx.navigateBack({})
+      }
     })
   }
 })

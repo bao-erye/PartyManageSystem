@@ -1,70 +1,60 @@
+var app=getApp()
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     mineImageUrl:'/images/我的/头像.png',
-    mineName:'王晨宝',
-    mineSchool:'南昌大学',
-    mineAcademy:'软件学院党委',
-    mineMajor:'软件工程党支部',
-    mineStage:'入党积极分子'
+    mineName:'',
+    mineSchool:'',
+    mineAcademy:'',
+    mineMajor:'',
+    mineStatus:'',
+    arrayStatus:['群众','入党积极分子','发展对象','预备党员','党员'],
+
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    var that=this
+    var user_number=app.globalData.user_number
+    db.collection('user').doc(user_number).get({
+      success:function(res){
+        that.setData({
+          mineName:res.data.user_name,
+          mineSchool:res.data.user_school,
+          mineAcademy:res.data.user_dangWei,
+          mineMajor:res.data.user_partyBranch,
+          mineStatus:that.data.arrayStatus[res.data.user_status]
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //个人资料
+  tapData:function(e){
+    wx.navigateTo({
+      url: '/pages/mine/personalData/personalData',
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  //我的积分
+  tapScore:function(e){
+    wx.navigateTo({
+      url: '/pages/mine/score/score',
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  //我的活动
+  tapActivity:function(e){
+    wx.navigateTo({
+      url: '/pages/mine/myActivity/myActivity',
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //我的收藏
+  tapCollect:function(e){
+    wx.navigateTo({
+      url: '/pages/mine/myActivity/myActivity',
+    })
   }
+  //关于
+
+
 })

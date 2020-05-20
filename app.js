@@ -18,7 +18,6 @@ App({
   globalData: {
     openid:'',//程序初始化时获得
     user_number:'8000116237',//登录时设置
-
     //userInfo: null
     //红色：#E71111
     //浅灰色：#BBBBBE

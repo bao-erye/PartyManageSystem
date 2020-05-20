@@ -1,7 +1,7 @@
 <!--components/message/message.wxml-->
 <view class="message">
   <view class="message-image">
-    <view class="message-image1"><image src="{{messageImage1}}" hidden="{{isRed}}"></image></view>
+    <view class="message-image1"><image src="{{messageImage1}}"></image></view>
     <view class="message-image2"><image src="{{messageImage2}}"></image></view>
   </view>
   <view class="message-item">

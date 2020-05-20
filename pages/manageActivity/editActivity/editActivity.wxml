@@ -1,4 +1,4 @@
-<view class="editActivity">
+<view class="addActivity">
   <form class="form" bindsubmit="formSubmit">
     <view class="item"><view class="item-title">标题：</view><input value="{{title}}" class="item-input-origin" name="title"></input></view>
     <view class="item">
@@ -26,16 +26,30 @@
     <view class="item"><view class="item-title">积分：</view><input class="item-input-origin" name="score" value="{{score}}"></input></view>
     <view class="item"><view class="item-title">人数：</view><input class="item-input-origin" name="sum" value="{{sum}}"></input></view>
     <view class="item">
-      <view class="item-time">确认时间：</view>
+      <view class="item-time">确认时间开始：</view>
       <view class="item-time-input">
         <view class="item-time-input1">
-          <view class="item-time-input1-view">{{affirmBegin}}</view>
-          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmBegin" mode="date" name="affirmBegin" ><image src="/images/下拉.png"></image></picker>
+          <view class="item-time-input1-view">{{affirmDateBegin}}</view>
+          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmDateBegin" mode="date" name="affirmBegin" ><image src="/images/下拉.png"></image></picker>
         </view>
         <view class="item-time-">-</view>
         <view class="item-time-input2">
-          <view class="item-time-input2-view">{{affirmEnd}}</view>
-          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmEnd" mode="date" name="affirmEnd" ><image src="/images/下拉.png"></image></picker>
+          <view class="item-time-input2-view">{{affirmTimeBegin}}</view>
+          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmTimeBegin" mode="time" name="affirmEnd" ><image src="/images/下拉.png"></image></picker>
+       </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item-time">确认时间结束：</view>
+      <view class="item-time-input">
+        <view class="item-time-input1">
+          <view class="item-time-input1-view">{{affirmDateEnd}}</view>
+          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmDateEnd" mode="date" name="affirmBegin" ><image src="/images/下拉.png"></image></picker>
+        </view>
+        <view class="item-time-">-</view>
+        <view class="item-time-input2">
+          <view class="item-time-input2-view">{{affirmTimeEnd}}</view>
+          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmTimeEnd" mode="time" name="affirmEnd" ><image src="/images/下拉.png"></image></picker>
        </view>
       </view>
     </view>

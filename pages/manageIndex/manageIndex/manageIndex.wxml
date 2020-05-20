@@ -8,8 +8,8 @@
     <view class="header-member" bindtap="tapMember" style="background-color:{{arrayColor[memberColorIndex]}}">党员</view>
   </view>
   <view class="search">
-    <view class="search-name"><input placeholder="姓名"></input></view>
-    <view class="search-tele"><input placeholder="手机号"></input></view>
+    <view class="search-name"><input placeholder="姓名" bindblur="blurSearchName"></input></view>
+    <view class="search-tele"><input placeholder="手机号" bindblur="blurSearchTele"></input></view>
     <view class="search-button" bindtap="tapSearch"><image src="/images/搜索.png" ></image></view>
   </view>
   <view class="table">
@@ -20,11 +20,13 @@
         <view class="table-title-tele">电话</view>
       </view>
       <scroll-view class="table-scrollView" scroll-y="true">
-        <view class="table-item" wx:for='{{arrayMasses}}'>
-          <view class="table-item-number">1</view>
-          <view class="table-item-name">王晨宝</view>
-          <view class="table-item-class">软件工程168班</view>
-          <view class="table-item-tele">15079617331</view>
+        <view  wx:for='{{arrayUser}}' wx:key='key'>
+          <view class="table-item" id='{{index}}' bindtap="tapUser">
+            <view class="table-item-number">{{index+1}}</view>
+            <view class="table-item-name">{{item.user_name}}</view>
+            <view class="table-item-class">{{item.user_class}}</view>
+            <view class="table-item-tele">{{item.user_telephone}}</view>
+          </view>
         </view>
       </scroll-view>
   </view>

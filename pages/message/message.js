@@ -1,76 +1,90 @@
+var app=getApp()
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     //通知板块数据
-    messageImage1: '/images/红点.png',
-    messageImage2:'/images/系统通知.png',
-    messageType: '系统通知',
-    messageDate: '2020-09-10' ,
-    messageContain:'通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容' 
-
+    arrayMessage:[],
+    arrayImageIsread:['/images/红圈.png',''],//是否已读标志
+    arrayImageType:['/images/缴费.png','/images/转入转出.png','/images/审核.png'],//消息类型图片
+    arrayTextType:['党费通知','转入转出通知','审核通知'],//消息类型文本
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    wx.loadFontFace({
-      PingFang: 'PingFangSC-Medium',
-      source: 'url("https://www.your-server.com/PingFangSC-Medium.ttf")',
-      success: function () { console.log('load font success') }
+    var that=this
+    var user_number = app.globalData.user_number
+    db.collection('message').where({
+      message_userID:user_number
+    }).get({
+      success:function(res){
+        that.setData({
+          arrayMessage:res.data
+        })
+      }
     })
 
   },
+  tapMessage:function(e){
+    var that=this
+    var message=that.data.arrayMessage[e.currentTarget.id]
+    var user_number=app.globalData.user_number
+    wx.showModal({
+      title: that.data.arrayTextType[message.message_type],
+      content: message.message_content,
+      confirmColor: '#E71111',
+      cancelColor:'#E71111',
+      success(res) {
+        if (res.confirm) {
+          wx.cloud.callFunction({
+            name: 'updateMessage', // 云函数名称
+            // 传给云函数的参数
+            data: {
+              id: message._id
+            },
+            success: function (res) {
+              console.log('更新成功')
+              db.collection('message').where({
+                message_userID: user_number
+              }).get({
+                success: function (res) {
+                  that.setData({
+                    arrayMessage: res.data
+                  })
+                }
+              })
+            },
+            fail: function(res){
+              console.log('更新失败')
+            }
+          })
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+          wx.cloud.callFunction({
+            name: 'updateMessage', // 云函数名称
+            // 传给云函数的参数
+            data: {
+              id: message._id
+            },
+            success: function (res) {
+              console.log('更新成功')
+              db.collection('message').where({
+                message_userID: user_number
+              }).get({
+                success: function (res) {
+                  that.setData({
+                    arrayMessage: res.data
+                  })
+                }
+              })
+            },
+            fail: function (res) {
+              console.log('更新失败')
+            }
+          })
+        }
+      }
+    })
   }
+
 })

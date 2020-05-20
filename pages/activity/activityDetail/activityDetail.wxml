@@ -56,8 +56,8 @@
   </view>
   <view class="activity-operate">
     <view class="operate-collect">
-      <image bindtap="collectTap" src="{{imageCollectImageArray[imageCollectImageIndex]}}"></image><view>收藏</view>
+      <image bindtap="collectTap" src="{{imageCollectArray[imageCollectIndex]}}"></image><view>{{collectText}}</view>
     </view>
-    <view class="operate-button"><button bindtap="buttonTap" >{{buttonArray[buttonIndex]}}</button></view>
+    <view class="operate-button"><button bindtap="buttonTap" disabled='{{disabled}}' style="color:#ffffff;background-color:{{buttonColor[btnColorIndex]}}">{{buttonArray[buttonIndex]}}</button></view>
   </view>
 </view>

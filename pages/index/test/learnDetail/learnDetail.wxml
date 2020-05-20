@@ -1,8 +1,15 @@
 <!--pages/index/test/learnDetail/learnDetail.wxml-->
 <view class="learnDetail">
+  <view class="learn-title">
+    <view  class="learn-title-show">学习标题：</view>
+    <view class="learn-title-detail">{{learnTitle}}</view>
+  </view>
   <scroll-view class="learn-text" scroll-y='true'><rich-text>{{learnDetail}}</rich-text></scroll-view>
   <view class="learn-reminder">
     <view class="learn-reminder-score">学习时间满{{learnTime}}分钟可获得{{learnScore}}积分</view>
-    <view class="learn-reminder-time">时间：5:20</view>
+    <view class="learn-reminder-time">
+      <view class="learn-reminder-time-show">时间:</view>
+      <view class="learn-reminder-time-detail">{{timer}}</view>
+    </view>
   </view>
 </view>

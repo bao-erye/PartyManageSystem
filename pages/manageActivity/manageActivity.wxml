@@ -1,18 +1,18 @@
 <view class="activity">
   <view class="activity-choose">
-    <picker class="activity-choose-academy" bindchange="changeXueyuan" value="{{xueyuanIndex}}" range="{{xueyuanArray}}">
+    <picker class="activity-choose-academy" bindchange="bindPickerChangeXueyuan" range="{{arrayAcademy}}">
       <view class="activity-choose-academy-detail">
-        {{xueyuanArray[xueyuanIndex]}}<image src="/images/下拉.png"></image>
+        {{acBelong}}<image src="/images/下拉.png"></image>
       </view>
     </picker>
-    <picker class="activity-choose-academy" bindchange="changeObject" value="{{objectIndex}}" range="{{objectArray}}">
+    <picker class="activity-choose-academy" bindchange="bindPickerChangeType" range="{{arrayObject}}">
       <view class="activity-choose-academy-detail">
-        {{objectArray[objectIndex]}}<image src="/images/下拉.png"></image>
+        {{acObject}}<image src="/images/下拉.png"></image>
       </view>
     </picker>
-    <picker class="activity-choose-academy" bindchange="changeStatus" value="{{statusIndex}}" range="{{statusArray}}">
+    <picker class="activity-choose-academy" bindchange="bindPickerChangeStatus" range="{{statusArray}}">
       <view class="activity-choose-academy-detail">
-        {{statusArray[statusIndex]}}<image src="/images/下拉.png"></image>
+        {{acStatus}}<image src="/images/下拉.png"></image>
       </view>
     </picker>
     <view class="activity-add" bindtap="tapAdd">
@@ -21,8 +21,16 @@
     </view>
   </view>
   <scroll-view class="activity-items" scroll-y="true">
-    <view wx:for='{{activityArray}}'>
-      <activity/>
+    <view wx:for='{{arrayActivity}}' wx:key='key' wx:for-item='activity'>
+      <view bindtap="tapActivity" id='{{index}}'>
+        <activity 
+          acTitle='{{activity.activity_title}}' 
+          acDate='{{activity.activity_date}}' 
+          acPlace='{{activity.activity_place}}' 
+          acIssuer='{{activity.activity_issuer}}' 
+          acObject='{{activity.activity_object}}' 
+          imageUrl='{{activity.activity_imageID}}' />
+      </view>
     </view>
   </scroll-view>
 </view>

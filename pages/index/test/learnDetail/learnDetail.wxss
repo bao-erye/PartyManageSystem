@@ -1,4 +1,3 @@
-/* pages/index/test/learnDetail/learnDetail.wxss */
 page{
   width: 100%;
   height: 100%;
@@ -7,22 +6,57 @@ page{
   margin-left: 15px;
   margin-right: 15px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.learn-text{
-  height: 95%;
-  border: 1px solid #BBBBBE;
-}
-.learn-reminder{
+.learn-title{
   height: 5%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.learn-title-show{
+  width: 25%
+}
+.learn-title-detail{
+  height: 80%;
+  width: 75%;
+  border-radius: 5px;
+  background-color: #BBBBBE;
+  display: flex;
+  align-items: center;
+}
+.learn-text{
+  height: 87%;
+  padding-top: 3px;
+  border: 1px solid #BBBBBE;
+  margin-top: 8px;
+}
+.learn-reminder{
+  height: 5%;
+  padding-top: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .learn-reminder-score{
-  width: 80%;
+  color:#E71111;
+  width: 70%;
 }
 .learn-reminder-time{
-  width: 20%;
+  width: 30%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+.learn-reminder-time-show{
+  width: 50%;
+}
+.learn-reminder-time-detail{
+  width: 50%;
+  background-color: #BBBBBE;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

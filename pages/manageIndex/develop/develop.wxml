@@ -17,7 +17,7 @@
       </view>
       <view class="detail-row">
         专业：<view class="detail-birthPlace">{{major}}</view>
-        班级：<view class="detail-birthDay">{{class}}</view>
+        班级：<view class="detail-birthDay">{{stuClass}}</view>
       </view>
       <view class="detail-row">
         学号：<view class="detail-birthPlace">{{number}}</view>
@@ -34,12 +34,12 @@
   <view class="zhengshen">
     <view class="zhengshen-title"><view class="zhengshen-title-contain">政审结果</view></view>
     <scroll-view  scroll-y="true" class="zhengshen-detail">
-    {{zhengshen}}
+      <textarea class="zhengshen-detail-input" bindinput="blurPoliticalExam" maxlength="-1"></textarea>
     </scroll-view>
   </view>
   <view class="button">
-    <button bindtap="tapYes">审核不通过</button>
+    <button bindtap="tapNo">审核不通过</button>
     <view class="space"></view>
-    <button bindtap="tapNo">审核通过</button>
+    <button bindtap="tapYes">审核通过</button>
   </view>
 </view>

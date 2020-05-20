@@ -17,7 +17,6 @@ Page({
         that.setData({
           arrayLearn:res.data
         })
-        console.log(that.data.arrayLearn)
       }
     })
     //获取考核列表
@@ -26,13 +25,15 @@ Page({
         that.setData({
           arrayTest: res.data
         })
-        console.log(that.data.arrayTest)
       }
     })
   },
   //学习列表点击事件
   tapLearn:function(e){
     console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '/pages/index/test/learnDetail/learnDetail?id='+e.currentTarget.id,
+    })
   },
   //考核列表点击事件
   tapTest: function (e) {

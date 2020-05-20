@@ -45,6 +45,7 @@ Page({
     let stuClass = e.detail.value.stuClass
     let tele = e.detail.value.tele
     let position = e.detail.value.position
+    let score=[0]
     if(stuNumber==''){
       wx.showToast({
         title: '学号不能为空',
@@ -91,6 +92,7 @@ Page({
           user_class: stuClass,
           user_telephone: tele,
           user_position: position,
+          user_scores: score
         },
         success: function (res) {
           console.log(res)

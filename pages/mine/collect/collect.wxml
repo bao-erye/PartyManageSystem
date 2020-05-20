@@ -1,6 +1,11 @@
-<!--pages/mine/collect/collect.wxml-->
-<view class="collect">
-  <activity/>
-  <activity/>
-  <activity/>
+<view wx:for='{{arrayActivity}}' wx:key='key' wx:for-item='activity'>
+  <view id="{{index}}" bindtap="tapActivity">
+    <activity 
+    acTitle='{{activity.activity_title}}' 
+    acDate='{{activity.activity_date}}' 
+    acPlace='{{activity.activity_place}}' 
+    acIssuer='{{activity.activity_issuer}}' 
+    acObject='{{activity.activity_object}}' 
+    imageUrl='{{activity.activity_imageID}}' />
+  </view>
 </view>

@@ -1,22 +1,16 @@
 .section{
-  height: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding-top: 13px;
+  height: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .section-picker{
   height: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: center
-}
-.section-picker picker{
-  height: 15px;
-  font-size: 13px;
-  color:rgb(77, 77, 77);
+  align-items: center;
 }
 .section-picker image{
   width: 13px;
