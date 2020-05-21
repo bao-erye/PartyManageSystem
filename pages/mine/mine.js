@@ -12,9 +12,7 @@ Page({
     mineMajor:'',
     mineStatus:'',
     arrayStatus:['群众','入党积极分子','发展对象','预备党员','党员'],
-
   },
-
   onLoad: function (options) {
     var that=this
     var user_number=app.globalData.user_number
@@ -53,8 +51,13 @@ Page({
     wx.navigateTo({
       url: '/pages/mine/myActivity/myActivity',
     })
+  },
+  //退出
+  tapExit:function(e){
+    wx.reLaunch({
+      url: '/pages/login/login',
+    })
   }
-  //关于
 
 
 })

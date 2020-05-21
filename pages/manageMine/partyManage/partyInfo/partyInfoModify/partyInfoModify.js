@@ -1,36 +1,66 @@
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
-
-
   data: {
-    dangwei:null,
-    dangweiArray:['软件学院','物理学院','医学院','化学学院','工程学院'],
-    dangweiIndex:0,
-    partyName:'软件工程党支部',
-    managerName:'王晨宝',
-    managerTele:15079617331,
-    managerPosition:'教授',
-    managerNumber:8000116237,
+    branchID:'',
+    branchName: '',
+    arrayDangwei: ['软件学院党委', '计算机学院党委', '信息科学学院党委', '物理学院党委'],
+    dangwei:'',
+    adminName:'',
+    adminTele:'',
+    adminID:''
   },
 
   onLoad: function (options) {
+    var that=this
+    var branch_id = options.branchID
+    that.setData({
+      branchID:branch_id
+    })
+    db.collection('branch').doc(branch_id).get({
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          branchName: res.data.branch_name,
+          dangwei: res.data.branch_dangWei,
+          adminName:res.data.branch_adminName,
+          adminID:res.data.branch_adminID,
+          adminTele:res.data.branch_adminTele
+        })
+        
 
+      }
+    })
   },
   //所属党委picker
   changeDangwei:function(e){
     this.setData({
-      dangwei:this.data.dangweiArray[e.detail.value]
+      dangwei: this.data.arrayDangwei[e.detail.value]
     })
-    console.log(this.data.dangwei)
   },
   //form提交
   formSubmit:function(e){
-    console.log(e)
-    this.setData({
-      partyName:e.detail.value.partyName,
-      managerName:e.detail.value.managerName,
-      managerTele:e.detail.value.managerTele,
-      managerPosition:e.detail.value.managerPosition,
-      managerNumber:e.detail.value.managerNumber
+    var that=this
+    var branchID = that.data.branchID
+    db.collection('branch').doc(branchID).update({
+      data:{
+        branch_name:e.detail.value.branchName,
+        branch_dangWei:that.data.dangwei,
+        branch_adminName:e.detail.value.adminName,
+        branch_adminID:e.detail.value.adminID,
+        branch_adminTele:e.detail.value.adminTele
+      },success:function(res){
+        console.log('修改成功')
+        wx.showToast({
+          title: '修改成功',
+          icon:'none',
+          duration:1500,
+          complete:function(){
+            wx.navigateBack({})
+          }
+        })
+      }
     })
 
   }

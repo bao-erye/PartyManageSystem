@@ -1,41 +1,56 @@
+var app=getApp()
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
-
-
   data: {
     mineImageUrl: '/images/我的/头像.png',
-    mineName: '王晨宝',
-    mineSchool: '南昌大学',
-    mineAcademy: '软件学院党委',
-    mineMajor: '软件工程党支部',
-    mineStage: '入党积极分子'
+    mineName: '',
+    mineDangwei: '',
+    mineBranch: '',
   },
 
   onLoad: function (options) {
-
+    var that=this
+    var admin_id=app.globalData.user_number
+    db.collection('admin').doc(admin_id).get({
+      success:function(res){
+        that.setData({
+          mineName:res.data.admin_name,
+          mineDangwei:res.data.admin_dangWei,
+          mineBranch:res.data.admin_branch
+        })
+      }
+    })
   },
   //个人资料
   tapPersonalData:function(e){
-
-  },
-  //党支部成员
-  tapPartyMember:function(e){
-
+    wx.navigateTo({
+      url: '/pages/manageMine/personalData/personalData',
+    })
   },
   //党支部管理
   tapPartyManage:function(e){
-
+    wx.navigateTo({
+      url: '/pages/manageMine/partyManage/partyManage',
+    })
   },
-  //消息管理
-  tapMessageManage:function(e){
-
-  },
-  //发布投票
-  tapIssueVote:function(e){
-
+  //转入转出管理
+  tapInoutManage:function(e){
+    wx.navigateTo({
+      url: '/pages/manageMine/manageInout/manageInout',
+    })
   },
   //党费缴纳情况
   tapPartyCharge:function(e){
-
+    wx.navigateTo({
+      url: '/pages/manageMine/payStatistic/payStatistic',
+    })
   },
-  
+  //退出
+  tapExit: function (e) {
+    wx.reLaunch({
+      url: '/pages/login/login',
+    })
+  },
 })

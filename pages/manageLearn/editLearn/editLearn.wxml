@@ -9,6 +9,6 @@
       满<view class="editLearn-score-time"><input name="scoreTime" value="{{scoreTime}}"></input></view>分钟可得
       <view class="editLearn-score-score"><input name="scoreScore" value="{{scoreScore}}"></input></view>积分
     </view>
-    <view class="editLearn-button"><button form-type="submit">确认提交</button></view>
+    <view class="editLearn-button"><button form-type="submit">提交修改</button></view>
   </form>
 </view>

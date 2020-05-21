@@ -9,7 +9,7 @@ Page({
     user_belong:'',
     gotoDangwei:'',
     gotoBranch:'',
-    multiArray: [['软件学院党委', '信息工程学院党委'], ['软件工程党支部', '信息安全党支部']],
+    multiArray: [['软件学院党委', '计算机学院党委'], ['软件工程党支部', '信息安全党支部']],
     multiIndex: [0, 0],
     pickerTime:'',
     reason:'',

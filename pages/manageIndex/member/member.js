@@ -117,11 +117,13 @@ Page({
   tapPartyCost:function(e){
     var partyCost=this.data.partyCost//获取输入党费
     var userid=this.data.userID
+    var userName=this.data.userName
     var month = new Date().getMonth()+1
     var year=new Date().getFullYear()
     db.collection('charge').add({
       data:{
         charge_userID:userid,
+        charge_userName:userName,
         charge_year:year,
         charge_month:month,
         charge_isPayed:0,

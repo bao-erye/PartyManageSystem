@@ -2,8 +2,6 @@
 wx.cloud.init({ env: "party-test-3q2zh" })
 const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
-
-
   data: {
     arrayLearn: [],//课程对象数组
     arrayTest: [],//考核对象数组

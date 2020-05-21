@@ -1,7 +1,7 @@
 <view class="mine-head">
   <view class="mine-head-image"><image src="{{mineImageUrl}}"></image></view>
   <view class="mine-head-name">{{mineName}}</view>
-  <view class="mine-head-branch">{{mineSchool}}|{{mineAcademy}}|{{mineMajor}}</view>
+  <view class="mine-head-branch">{{mineDangwei}}|{{mineBranch}}</view>
   <view class="mine-head-stage">管理员</view>
 </view>
 <view class="mine-contain">
@@ -10,29 +10,24 @@
     <view class="mine-contain-item-title">个人资料</view>
     <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
   </view>
-  <view class="mine-contain-item" bindtap="tapPartyMember">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/成员.png"></image></view>
-    <view class="mine-contain-item-title">党支部成员</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
-  </view>
   <view class="mine-contain-item" bindtap="tapPartyManage">
     <view class="mine-contain-item-image"><image src="/images/管理我的/成员管理.png"></image></view>
     <view class="mine-contain-item-title">党支部管理</view>
     <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
   </view>
-  <view class="mine-contain-item" bindtap="tapMessageManage">
+  <view class="mine-contain-item" bindtap="tapInoutManage">
     <view class="mine-contain-item-image"><image src="/images/管理我的/消息.png"></image></view>
-    <view class="mine-contain-item-title">消息管理</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
-  </view>
-  <view class="mine-contain-item" bindtap="tapIssueVote">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/投票.png"></image></view>
-    <view class="mine-contain-item-title">发布投票</view>
+    <view class="mine-contain-item-title">转入转出管理</view>
     <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
   </view>
   <view class="mine-contain-item" bindtap="tapPartyCharge">
     <view class="mine-contain-item-image"><image src="/images/管理我的/党费缴纳.png"></image></view>
     <view class="mine-contain-item-title">党费缴纳情况</view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+  </view>
+  <view class="mine-contain-item" bindtap="tapExit">
+    <view class="mine-contain-item-image"><image src="/images/管理我的/退出.png"></image></view>
+    <view class="mine-contain-item-title">退出</view>
     <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
   </view>
 </view>

@@ -6,7 +6,7 @@
       <view class="name-label">性别：</view>
       <view class="sex">
         <view class="sex-show">{{sex}}</view>
-        <picker class="sex-picker" value="{{sexArray[sexIndex]}}" range="{{sexArray}}" bindchange="changeSex" name="sex"><image src="/images/下拉.png"></image> </picker>
+        <picker class="sex-picker" range="{{sexArray}}" bindchange="changeSex"><image src="/images/下拉.png"></image> </picker>
       </view>
     </view>
     <view class="name">
@@ -17,7 +17,13 @@
       </view>
     </view>
     <view class="name"><view class="name-label">籍贯：</view><input name="birthPlace" class="name-input" value="{{birthPlace}}"></input></view>
-    <view class="name"><view class="name-label">学校：</view><input name="school" class="name-input" value="{{school}}"></input></view>
+    <view class="name">
+      <view class="name-label2">所属党委：</view>
+      <view class="show">
+        <view class="show-detail">{{dangwei}}</view>
+        <picker class="show-picker" bindchange="changeDangwei" range="{{arrayDangwei}}"><image src="/images/下拉.png"></image> </picker>
+      </view>
+    </view>
     <view class="name"><view class="name-label">学院：</view><input name="academy" class="name-input" value="{{academy}}"></input></view>
     <view class="name"><view class="name-label">电话：</view><input name="tele" class="name-input" value="{{tele}}" maxlength="11"></input></view>
     <view class="name"><view class="name-label2">职位或职称：</view><input name="position" class="name-input2" value="{{position}}"></input></view>

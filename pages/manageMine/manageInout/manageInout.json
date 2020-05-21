@@ -2,5 +2,5 @@
   "usingComponents": {
     "messageItem":"/components/messageItem/messageItem"
   },
-  "navigationBarTitleText":"消息"
+  "navigationBarTitleText":"转入转出管理"
 }

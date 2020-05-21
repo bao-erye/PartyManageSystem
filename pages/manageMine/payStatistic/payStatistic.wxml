@@ -1,17 +1,16 @@
 <view class="payStatistic">
   <view class="choose">
     <view class="choose-year">
-      <view class="choose-year-label">年份：{{yearArray[yearIndex]}}</view>
-      <picker class="choose-year-picker" value="{{yearArray[yearIndex]}}" range="{{yearArray}}" bindchange="changeYear"><image src="/images/白下拉.png"></image></picker>
+      <view class="choose-year-label">年份：{{year}}</view>
+      <picker class="choose-year-picker" range="{{arrayYear}}" bindchange="changeYear"><image src="/images/白下拉.png"></image></picker>
     </view>
     <view class="choose-year">
-      <view class="choose-year-label">月份：{{monthArray[monthIndex]}}</view>
-      <picker class="choose-year-picker" value="{{monthArray[monthIndex]}}" range="{{monthArray}}" bindchange="changeMonth"><image src="/images/白下拉.png"></image></picker>
+      <view class="choose-year-label">月份：{{month}}</view>
+      <picker class="choose-year-picker"  range="{{arrayMonth}}" bindchange="changeMonth"><image src="/images/白下拉.png"></image></picker>
     </view>
   </view>
   <view class="payed">
     <view class="payed-label">已缴纳：</view>
-    <scroll-view class="payed-detail" scroll-y="true">
       <view class="table">
         <view class="table-title">
           <view class="table-title-number">序号</view>
@@ -21,20 +20,18 @@
           <view class="table-title-account">金额</view>
         </view>
         <scroll-view class="table-scrollView" scroll-y="true">
-          <view class="table-item" wx:for='{{arrayPayed}}' bindtap="tapPayed" >
+          <view class="table-item" wx:for='{{arrayPayed}}' wx:key='key'>
             <view class="table-item-number">{{index+1}}</view>
-            <view class="table-item-name"></view>
-            <view class="table-item-year"></view>
-            <view class="table-item-month"></view>
-            <view class="table-item-account"></view>
+            <view class="table-item-name">{{item.charge_userName}}</view>
+            <view class="table-item-year">{{item.charge_year}}</view>
+            <view class="table-item-month">{{item.charge_month}}</view>
+            <view class="table-item-account">{{item.charge_account}}</view>
           </view>
         </scroll-view>
       </view>
-    </scroll-view>
   </view>
   <view class="nopay">
     <view class="payed-label">未缴纳：</view>
-    <scroll-view class="payed-detail" scroll-y="true">
       <view class="table">
         <view class="table-title">
           <view class="table-title-number">序号</view>
@@ -44,15 +41,14 @@
           <view class="table-title-account">金额</view>
         </view>
         <scroll-view class="table-scrollView" scroll-y="true">
-          <view class="table-item" wx:for='{{arrayNopay}}' bindtap="tapNopay" >
+          <view class="table-item" wx:for='{{arrayNopay}}' wx:key='key' >
             <view class="table-item-number">{{index+1}}</view>
-            <view class="table-item-name"></view>
-            <view class="table-item-year"></view>
-            <view class="table-item-month"></view>
-            <view class="table-item-account"></view>
+            <view class="table-item-name">{{item.charge_userName}}</view>
+            <view class="table-item-year">{{item.charge_year}}</view>
+            <view class="table-item-month">{{item.charge_month}}</view>
+            <view class="table-item-account">{{item.charge_account}}</view>
           </view>
         </scroll-view>
       </view>
-    </scroll-view>
   </view>
 </view>

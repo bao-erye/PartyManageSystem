@@ -1,41 +1,106 @@
+var app = getApp()
+//云数据库初始化
+wx.cloud.init({ env: "party-test-3q2zh" })
+const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
-
-
   data: {
     //picker
-    yearArray:[2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],
-    yearIndex:0,
-    monthArray:[1,2,3,4,5,6,7,8,9,10,11,12],
-    monthIndex:0,
+    arrayYear:[2015,2016,2017,2018,2019,2020],
+    year:0,
+    arrayMonth:[1,2,3,4,5,6,7,8,9,10,11,12],
+    month:0,
     //缴纳名单
-    arrayPayed: ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
+    arrayPayed: [],
     //未缴纳名单
-    arrayNopay: ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
+    arrayNopay: [],
   },
 
   onLoad: function (options) {
-
+    var that=this
+    //获取已缴纳记录
+    db.collection('charge').where({
+      charge_isPayed: 1
+    }).get({
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          arrayPayed:res.data
+        })
+      }
+    })
+    //获取未缴纳记录
+    db.collection('charge').where({
+      charge_isPayed: 0
+    }).get({
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          arrayNopay: res.data
+        })
+      }
+    })
   },
   //年份picker
   changeYear:function(e){
-    this.setData({
-      yearIndex:e.detail.value
+    var that=this
+    that.setData({
+      year:that.data.arrayYear[e.detail.value]
+    })
+    var year=that.data.year
+    //获取已缴纳
+    db.collection('charge').where({
+      charge_year:year,
+      charge_isPayed:1
+    }).get({
+      success:function(res){
+        that.setData({
+          arrayPayed:res.data
+        })
+      }
+    })
+    //获取未缴纳
+    db.collection('charge').where({
+      charge_year: year,
+      charge_isPayed: 0
+    }).get({
+      success: function (res) {
+        that.setData({
+          arrayNopay: res.data
+        })
+      }
     })
   },
   //月份picker
   changeMonth: function (e) {
-    this.setData({
-      monthIndex: e.detail.value
+    var that = this
+    that.setData({
+      month: that.data.arrayMonth[e.detail.value]
+    })
+    var month = that.data.month
+    //获取已缴纳
+    db.collection('charge').where({
+      charge_month: month,
+      charge_isPayed: 1
+    }).get({
+      success: function (res) {
+        that.setData({
+          arrayPayed: res.data
+        })
+      }
+    })
+    //获取未缴纳
+    db.collection('charge').where({
+      charge_month: month,
+      charge_isPayed: 0
+    }).get({
+      success: function (res) {
+        that.setData({
+          arrayNopay: res.data
+        })
+      }
     })
   },
-  //已缴纳tap
-  tapPayed:function(e){
 
-  },
-  //未缴纳tap
-  tapNopay:function(e){
-    
-  }
 
  
 })

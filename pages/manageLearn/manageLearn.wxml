@@ -8,10 +8,10 @@
   </view>
   <view class="learn-contain">
     <scroll-view class="learn-contain-scrollView" scroll-y='true'>
-      <view wx:for='{{arrayLearn}}'>
-        <view class="learn-contain-item" bindtap="tapItem" id="{{index}}" >
+      <view wx:for='{{arrayLearn}}' wx:key='key'>
+        <view class="learn-contain-item" bindtap="tapLearn" id="{{index}}" >
         <view class="learn-contain-item-image"><image src="/images/文件夹.png"></image></view>
-        <view class="learn-contain-item-name">{{item}}</view>
+        <view class="learn-contain-item-name">{{item.study_title}}</view>
         </view>
       </view>
     </scroll-view>
@@ -25,9 +25,9 @@
   </view>
   <view class="learn-contain">
     <scroll-view class="learn-contain-scrollView" scroll-y='true'>
-    <view class="learn-contain-item" wx:for='{{arrayTest}}'>
+    <view class="learn-contain-item" wx:for='{{arrayTest}}' wx:key='key'>
     <view class="learn-contain-item-image"><image src="/images/文件夹.png"></image></view>
-    <view class="learn-contain-item-name">{{item}}</view>
+    <view class="learn-contain-item-name">{{item.exam_title}}</view>
     </view>
     </scroll-view>
   </view>

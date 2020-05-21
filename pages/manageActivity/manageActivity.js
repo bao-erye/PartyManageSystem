@@ -26,8 +26,6 @@ Page({
     })
 
   },
-
-  
   //学院选择器
   bindPickerChangeXueyuan: function (e) {
     this.setData({ acBelong: this.data.arrayAcademy[e.detail.value] });

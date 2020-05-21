@@ -54,14 +54,14 @@ page{
   align-items: center;
 }
 .table-title-name{
-  width: 35%;
+  width: 39%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #BBBBBE;
 }
 .table-title-admin{
-  width: 20%;
+  width: 16%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,9 +85,15 @@ page{
   height: 95%;
 }
 .table-item{
-  height: 23px;
+  height: 25px;
   display: flex;
   flex-direction: row;
+}
+.table-item-detail{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row
 }
 .table-item-number{
   width: 10%;
@@ -97,14 +103,14 @@ page{
   align-items: center;
 }
 .table-item-name{
-  width: 35%;
+  width: 39%;
   border: 1px solid #BBBBBE;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .table-item-admin{
-  width: 20%;
+  width: 16%;
   border: 1px solid #BBBBBE;
   display: flex;
   justify-content: center;

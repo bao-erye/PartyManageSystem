@@ -4,12 +4,10 @@
   margin-right: 15px;
   margin-top: 10px;
   height:60px;
-  border: 1px solid rgb(209, 204, 204);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  background-color: #837D7D;
-  color: #ffffff;
+  border: 1px solid #837D7D;
 }
 .message-image{
   height: 100%;
@@ -56,7 +54,6 @@
   width: 60%;
   font-size: 13px;
   font-weight: bold;
-  color: rgb(17, 206, 231);
 }
 .message-item-date{
   width: 40%;

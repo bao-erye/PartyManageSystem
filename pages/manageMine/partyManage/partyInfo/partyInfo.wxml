@@ -1,30 +1,29 @@
 <view class="partyInfo">
-  <view class="partyInfo-items">
-    <view class="item">
-      <view class="item-label">支部名称：</view>
-      <view class="item-show">{{partyName}}</view>
-    </view>
-    <view class="item">
-      <view class="item-label">所属党委：</view>
-      <view class="item-show">{{belongDangwei}}</view>
-    </view>
-    <view class="item">
-      <view class="item-label">管理员姓名：</view>
-      <view class="item-show">{{managerName}}</view>
-    </view>
-    <view class="item">
-      <view class="item-label">管理员电话：</view>
-      <view class="item-show">{{managerTele}}</view>
-    </view>
-    <view class="item">
-      <view class="item-label">管理员职称：</view>
-      <view class="item-show">{{managerPosition}}</view>
-    </view>
-    <view class="item">
-      <view class="item-label">管理员工号：</view>
-      <view class="item-show">{{managerNumber}}</view>
+  <view class="header" bindtap="tapInfo">
+    <view class="header-image"><image src="/images/头像.png"></image></view>
+    <view class="header-detail">
+      <view class="header-detail-name">{{branchName}}</view>
+      <view class="header-detail-class">管理员：{{branch_adminName}}</view>
+      <view class="header-detail-stuNumber">电话：{{branch_adminTele}}</view>
     </view>
   </view>
-  <view class="partyInfo-button"><button hidden="{{isButton}}">修改信息</button></view>
+  <view class="table">
+    <view class="table-title">
+      <view class="table-title-number">序号</view>
+      <view class="table-title-name">姓名</view>
+      <view class="table-title-class">班级</view>
+      <view class="table-title-tele">电话</view>
+    </view>
+    <scroll-view class="table-scrollView" scroll-y="true">
+      <view  wx:for='{{arrayMember}}' wx:key='key'>
+        <view class="table-item" id='{{index}}' bindtap="tapMember">
+          <view class="table-item-number">{{index+1}}</view>
+          <view class="table-item-name">{{item.user_name}}</view>
+          <view class="table-item-class">{{item.user_class}}</view>
+          <view class="table-item-tele">{{item.user_telephone}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
 
 </view>

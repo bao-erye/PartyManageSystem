@@ -1,18 +1,8 @@
 <view class="partyMember">
   <view class="activity-choose">
-    <picker class="activity-choose-academy" bindchange="changeDangWei" value="{{dangweiIndex}}" range="{{dangweiArray}}">
+    <picker class="activity-choose-academy" bindchange="changeDangWei" range="{{arrayDangwei}}">
       <view class="activity-choose-academy-detail">
-        {{dangweiArray[dangweiIndex]}}<image src="/images/下拉.png"></image>
-      </view>
-    </picker>
-    <picker class="activity-choose-academy" bindchange="changeDangZong" value="{{dangzongIndex}}" range="{{dangzongArray}}">
-      <view class="activity-choose-academy-detail">
-        {{dangzongArray[dangzongIndex]}}<image src="/images/下拉.png"></image>
-      </view>
-    </picker>
-    <picker class="activity-choose-academy" bindchange="changeBranch" value="{{branchIndex}}" range="{{branchArray}}">
-      <view class="activity-choose-academy-detail">
-        {{branchArray[branchIndex]}}<image src="/images/下拉.png"></image>
+        {{dangwei}}<image src="/images/下拉.png"></image>
       </view>
     </picker>
     <view class="activity-add" bindtap="tapAdd">
@@ -29,12 +19,14 @@
       <view class="table-title-sum">人数</view>
     </view>
     <scroll-view class="table-scrollView" scroll-y="true">
-      <view class="table-item" wx:for='{{arrayMasses}}' bindtap="tapItem" >
-        <view class="table-item-number">{{index+1}}</view>
-        <view class="table-item-name"></view>
-        <view class="table-item-admin"></view>
-        <view class="table-item-tele"></view>
-        <view class="table-item-sum"></view>
+      <view class="table-item" wx:for='{{arrayBranch}}' wx:key='key'>
+        <view class="table-item-detail" bindtap="tapBranch" id='{{index}}'>
+          <view class="table-item-number">{{index+1}}</view>
+          <view class="table-item-name">{{item.branch_name}}</view>
+          <view class="table-item-admin">{{item.branch_adminName}}</view>
+          <view class="table-item-tele">{{item.branch_adminTele}}</view>
+          <view class="table-item-sum">{{item.branch_member.length}}</view>
+        </view>
       </view>
     </scroll-view>
   </view>

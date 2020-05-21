@@ -87,11 +87,14 @@
     </view>
     <view class="acImage">
       <view class="acImage-title">活动图片：</view>
-      <view class="acImage-contain" bindtap="tapAddImage">
-        <view class="contain-icon"><image src="/images/图片.png"></image></view>
-        <view class="contain-text">点击添加图片</view>
+      <view class="acImage-contain" >
+        <view class="contain-icon"><image src="{{acImageUrl}}" mode="widthFix"></image></view>
+        <view class="contain-text">
+          <image src="/images/新建.png" bindtap="tapAddImage"></image>
+          <view class="contain-text-detail">点击修改图片</view>
+        </view>
       </view>
     </view>
-    <view class="button"><button form-type="submit">确认修改</button></view>
+    <view class="button"><button form-type="submit">提交修改</button></view>
   </form>
 </view>

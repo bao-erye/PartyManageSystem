@@ -14,21 +14,21 @@
   </view>
   <view class="table">
     <view class="table-title">
-        <view class="table-title-number">序号</view>
-        <view class="table-title-name">姓名</view>
-        <view class="table-title-class">班级</view>
-        <view class="table-title-tele">电话</view>
-      </view>
-      <scroll-view class="table-scrollView" scroll-y="true">
-        <view  wx:for='{{arrayUser}}' wx:key='key'>
-          <view class="table-item" id='{{index}}' bindtap="tapUser">
-            <view class="table-item-number">{{index+1}}</view>
-            <view class="table-item-name">{{item.user_name}}</view>
-            <view class="table-item-class">{{item.user_class}}</view>
-            <view class="table-item-tele">{{item.user_telephone}}</view>
-          </view>
+      <view class="table-title-number">序号</view>
+      <view class="table-title-name">姓名</view>
+      <view class="table-title-class">班级</view>
+      <view class="table-title-tele">电话</view>
+    </view>
+    <scroll-view class="table-scrollView" scroll-y="true">
+      <view  wx:for='{{arrayUser}}' wx:key='key'>
+        <view class="table-item" id='{{index}}' bindtap="tapUser">
+          <view class="table-item-number">{{index+1}}</view>
+          <view class="table-item-name">{{item.user_name}}</view>
+          <view class="table-item-class">{{item.user_class}}</view>
+          <view class="table-item-tele">{{item.user_telephone}}</view>
         </view>
-      </scroll-view>
+      </view>
+    </scroll-view>
   </view>
 </view>
 <tabBar/>

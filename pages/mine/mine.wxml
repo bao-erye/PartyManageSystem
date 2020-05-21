@@ -26,8 +26,8 @@
     <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapCollect"></image></view>
   </view>
   <view class="mine-contain-item">
-    <view class="mine-contain-item-image"><image src="/images/我的/关于.png"></image></view>
-    <view class="mine-contain-item-title">关于</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapAbout"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/我的/退出.png"></image></view>
+    <view class="mine-contain-item-title">退出</view>
+    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapExit"></image></view>
   </view>
 </view>
