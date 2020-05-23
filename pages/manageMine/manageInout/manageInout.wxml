@@ -2,15 +2,14 @@
   <view class="untreated">
     <view class="untreated-title">待处理：</view>
     <scroll-view class="untreated-contain" scroll-y='true'>
-      <view wx:for='{{arrayInout}}' wx:key='key'>
-        <view class="untreated-contain-detail" bindtap="tapUntreatedInout" id='{{index}}'>
-          {{item.inOut_userName}}申请<view wx:if="{{item.inOut_isPass==1}}">转入</view><view wx:else>转出</view>
+      <view wx:for='{{arrayUntreated}}' wx:key='key'>
+        <view class="untreated-contain-detail" bindtap="tapUntreated" id='{{index}}'>
+          {{item.inOut_userName}}申请<view wx:if="{{item.inOut_gotoBranch==adminBranch}}">转入</view><view wx:if="{{item.inOut_userBranch==adminBranch}}" >转出</view>
           <image src="/images/右箭头.png" ></image>
         </view>
       </view>
     </scroll-view>
   </view>
-  <view class="line"></view>
   <view class="treated">
     <view class="treated-title">已处理：</view>
     <view class="treated-contain">
@@ -22,11 +21,13 @@
           <view class="table-title-goto">去向支部</view>
         </view>
         <scroll-view class="table-scrollView" scroll-y="true">
-          <view class="table-item" wx:for='{{arrayPayed}}' bindtap="tapPayed" wx:key='key'>
-            <view class="table-item-number">{{index+1}}</view>
-            <view class="table-item-name"></view>
-            <view class="table-item-belong"></view>
-            <view class="table-item-goto"></view>
+          <view  wx:for='{{arrayTreated}}' wx:key='key'>
+            <view class="table-item" bindtap="tapTreated" id='{{index}}'>
+              <view class="table-item-number">{{index+1}}</view>
+              <view class="table-item-name">{{item.inOut_userName}}</view>
+              <view class="table-item-belong">{{item.inOut_userBranch}}</view>
+              <view class="table-item-goto">{{item.inOut_gotoBranch}}</view>
+            </view>
           </view>
         </scroll-view>
       </view>

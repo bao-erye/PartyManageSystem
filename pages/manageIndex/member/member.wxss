@@ -245,7 +245,7 @@
   background-color: #e71111;
 }
 .partyCost{
-  height: 150px;
+  height: 55px;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -262,9 +262,9 @@
 }
 .partyCost-contain{
   width: 100%;
-  height: 120px;
+  height: 30px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 .partyCost-contain-input{
   width: 100%;
@@ -281,11 +281,88 @@
 }
 .partyCost-contain-button{
   width: 100%;
-  height: 70%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .partyCost-contain-button button{
   color: #ffffff;
+}
+.container{
+  height: 200px;
+  width: 100%;
+}
+.container-title{
+  height: 15px;
+}
+.container-table{
+  padding-top: 3px;
+  width: 100%;
+  height: 100%;
+}
+.container-table-title{
+  height: 20px;
+  background: #E71111;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.container-table-title-number{
+  width: 13%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-year{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-isPayed{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-month{
+  width: 18.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-title-account{
+  width: 18.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-scrollView{
+  height: 100%;
+}
+.container-table-item{
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.container-table-item-number{
+  width: 13%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-year{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-isPayed{
+  width: 25%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-month{
+  width: 18.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
+}
+.container-table-item-account{
+  width: 18.5%;
+  text-align: center;
+  border: 1px solid #BBBBBE;
 }

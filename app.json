@@ -1,13 +1,11 @@
 {
   "cloud": true,
   "pages": [
-    "pages/manageMine/manageMine",
-    "pages/manageMine/manageInout/manageInout",
-    
+    "pages/welcome/welcome",
+    "pages/index/index/index",
     "pages/login/login",
     "pages/login/register/register",
     "pages/index/applyParty/applyParty",
-    "pages/index/index/index",
     "pages/index/checkTable/checkTable",
     "pages/index/test/test",
     "pages/index/partyCost/partyCost",
@@ -34,18 +32,22 @@
     "pages/manageActivity/manageActivity",
     "pages/manageActivity/editActivity/editActivity",
     "pages/manageActivity/addActivity/addActivity",
+    "pages/manageMine/manageMine",
     "pages/manageMine/partyManage/partyManage",
     "pages/manageMine/partyManage/partyInfo/partyInfo",
     "pages/manageMine/partyManage/partyInfo/partyInfoModify/partyInfoModify",
     "pages/manageMine/partyManage/addParty/addParty",
     "pages/manageMine/personalData/personalData",
     "pages/manageMine/payStatistic/payStatistic",
+    "pages/manageMine/manageInout/inoutDeal/inoutDeal",
+    "pages/manageMine/manageInout/inoutDetail/inoutDetail",
+    "pages/manageMine/manageInout/manageInout",
     "pages/manageLearn/addLearn/addLearn",
     "pages/manageLearn/editLearn/editLearn",
     "pages/manageLearn/manageLearn",
     "components/activityItem/activityItem",
-    "components/tabBar/tabBar",
-    "pages/manageMine/manageInout/inoutDeal/inoutDeal"
+    "components/tabBar/tabBar"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

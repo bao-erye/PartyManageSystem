@@ -83,21 +83,21 @@ page{
   align-items: center;
 }
 .table-title-name{
-  width:16%;
+  width:14%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #DBDBDB;
 }
 .table-title-belong{
-  width: 37%;
+  width: 38%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #DBDBDB;
 }
 .table-title-goto{
-  width: 37%;
+  width: 38%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,6 +131,7 @@ page{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .table-item-goto{
   width: 37%;
@@ -138,4 +139,7 @@ page{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }

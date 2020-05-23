@@ -62,7 +62,7 @@ Page({
       let name=e.detail.value.name
       let nation=e.detail.value.nation
       let sex=that.data.sex
-      let birthDay=e.detail.value.birthDay
+      let birthDay=that.data.birthDay
       let birthPlace=e.detail.value.birthPlace
       let dangwei=that.data.dangwei
       let academy=e.detail.value.academy

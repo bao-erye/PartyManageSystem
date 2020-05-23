@@ -1,0 +1,30 @@
+<view class="inout">
+  <view class="header">
+    <view class="name">
+      <label class="labelName1">姓名：</label>
+      <view class="labelName2"><view class="labelName-contain">{{user_name}}</view></view>
+    </view>
+    <view class="belong">
+      <view class="labelBelong1">所属支部：</view>
+      <view class="labelBelong2"><view class="labelBelong-contain">{{user_belong}}</view></view>
+    </view>
+    <view class="belong">
+      <view class="labelBelong1">去向支部：</view>
+      <view class="labelBelong2"><view class="labelBelong-contain">{{user_goto}}</view></view>
+    </view>
+    <view class="name">
+      <label class="labelName1">日期：</label>
+      <view class="labelName2"><view class="labelName-contain">{{user_date}}</view></view>
+    </view>
+    <view class="result">
+      <view class="result-label">审核结果:</view>
+      <view class="result-detail" wx:if="{{isPass==2}}">审核通过</view>
+      <view class="result-detail" wx:else>审核不通过</view>
+    </view>
+    <view class="reason">
+      <label class="reason-label">原因：</label>
+      <view class="reason-detail">{{reason}}</view>
+    </view>
+    
+  </view>
+</view>

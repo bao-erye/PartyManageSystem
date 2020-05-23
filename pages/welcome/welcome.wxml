@@ -1,0 +1,7 @@
+<view class="welcome">
+  <view class="welcome-blank"></view>
+  <view class="welcome-button">
+    <view class="button-detail" bindtap="tapWelcome">欢迎使用</view>
+    <view class="button-remind">注：系统只对校园内部人员开放</view>
+  </view>
+</view>

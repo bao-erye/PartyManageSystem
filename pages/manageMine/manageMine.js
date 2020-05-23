@@ -37,8 +37,9 @@ Page({
   },
   //转入转出管理
   tapInoutManage:function(e){
+    var adminBranch = this.data.mineBranch
     wx.navigateTo({
-      url: '/pages/manageMine/manageInout/manageInout',
+      url: '/pages/manageMine/manageInout/manageInout?adminBranch='+adminBranch,
     })
   },
   //党费缴纳情况

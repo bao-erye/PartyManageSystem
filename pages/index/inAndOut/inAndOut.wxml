@@ -6,7 +6,7 @@
     </view>
     <view class="belong">
       <view class="labelBelong1">所属支部：</view>
-      <view class="labelBelong2"><view class="labelBelong-contain">{{user_belong}}</view></view>
+      <view class="labelBelong2"><view class="labelBelong-contain">{{user_dangWei+user_branch}}</view></view>
     </view>
     <view class="goto">
       <label class="labelGoto">去向支部：</label>
@@ -32,7 +32,7 @@
     </view>
     <view class="reason">
       <label class="reason-label">原因：</label>
-      <view class="reason-input"><input class="reason-inputing" bindblur="blurReason"></input></view>
+      <view class="reason-input"><input class="reason-inputing" bindinput="inputReason"></input></view>
     </view>
   </view>
   <view class="footer">

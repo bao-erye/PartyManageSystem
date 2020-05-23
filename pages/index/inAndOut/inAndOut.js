@@ -6,7 +6,8 @@ Page({
 
   data: {
     user_name:'',
-    user_belong:'',
+    user_dangWei:'',
+    user_branch:'',
     gotoDangwei:'',
     gotoBranch:'',
     multiArray: [['软件学院党委', '计算机学院党委'], ['软件工程党支部', '信息安全党支部']],
@@ -19,27 +20,15 @@ Page({
   onLoad: function (options) {
     var that=this
     var number = app.globalData.user_number
-    var name
-    var dangwei
-    var branch
-    var belong
     db.collection('user').doc(number).get({
       success:function(res){
-        console.log(res.data)
-        name=res.data.user_name
-        dangwei=res.data.user_dangWei
-        branch=res.data.user_partyBranch
-        belong=dangwei+branch
-        console.log(name)
-        console.log(belong)
         that.setData({
-          user_name: name,
-          user_belong: belong
+          user_name:res.data.user_name,
+          user_dangWei:res.data.user_dangWei,
+          user_branch:res.data.user_partyBranch,
         })
-        
       }
     })
-    
   },
   //去向支部选择器
   bindMultiPickerChange: function (e) {
@@ -79,7 +68,7 @@ Page({
     })
   },
   //原因
-  blurReason:function(e){
+  inputReason:function(e){
     this.setData({
       reason:e.detail.value
     })
@@ -87,12 +76,14 @@ Page({
   //提交按钮事件
   tapSubmit:function(e){
     let userID = app.globalData.user_number
-    let userBranch = this.data.user_belong
+    let userName=this.data.user_name
+    let userDangwei=this.data.user_dangWei
+    let userBranch=this.data.user_branch
     let gotoDangwei=this.data.gotoDangwei
     let gotoBranch=this.data.gotoBranch
     let date = this.data.pickerTime
     let reason=this.data.reason
-    if(userID==''||userBranch==''){
+    if(userID==''||userName==''||userDangwei==''||userBranch==''){
       wx.showToast({
         title: '用户信息获取不成功',
         icon:'none',
@@ -108,6 +99,8 @@ Page({
       db.collection('inOut').add({
         data: {
           inOut_userID: userID,
+          inOut_userName:userName,
+          inOut_userDangwei:userDangwei,
           inOut_userBranch: userBranch,
           inOut_gotoDangwei: gotoDangwei,
           inOut_gotoBranch: gotoBranch,
@@ -117,6 +110,14 @@ Page({
         },
         success: function (res) {
           console.log("插入成功")
+          wx.showToast({
+            title: '申请成功，等待审核',
+            icon:'none',
+            duration:1500,
+            complete:function(){
+              wx.navigateBack({})
+            }
+          })
         }
       })
     }

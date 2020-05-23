@@ -24,6 +24,7 @@ page{
 .item-input{
   width: 75%;
   height: 35px;
+  padding-left: 3px;
   border: 1px solid #bbbbbe;
   border-radius: 5px;
   display: flex;

@@ -85,7 +85,34 @@
     <view class="partyCost-title">党费</view>
     <view class="partyCost-contain">
       <view class="partyCost-contain-input">设置本月党费：<input bindinput="inputCharge"></input>元</view>
-      <view class="partyCost-contain-button"><button bindtap="tapPartyCost" style="background-color:{{btnColor}}" disabled="{{disabled}}">{{btnText}}</button></view>
     </view>
+  </view>
+  <view class="container">
+    <view class="container-title">缴费记录：</view>
+    <view class="container-table">
+      <view class="container-table-title">
+        <view class="container-table-title-number">序号</view>
+        <view class="container-table-title-year">年份</view>
+        <view class="container-table-title-month">月份</view>
+        <view class="container-table-title-account">金额</view>
+        <view class="container-table-title-isPayed">是否缴纳</view>
+      </view>
+      <scroll-view class="container-table-scrollView" scroll-y="true">
+        <view class="container-table-item" wx:for='{{arrayCost}}' wx:key='key'>
+          <view class="container-table-item-number">{{index+1}}</view>
+          <view class="container-table-item-year">{{item.charge_year}}</view>
+          <view class="container-table-item-month">{{item.charge_month}}</view>
+          <view class="container-table-item-account">{{item.charge_account}}</view>
+          <view class="container-table-item-isPayed">{{arrayIspayed[item.charge_isPayed]}}</view>  
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="partyCost-contain-button">
+    <button 
+      bindtap="tapPartyCost" 
+      style="background-color:{{btnColor}}" 
+      disabled="{{disabled}}">{{btnText}}
+    </button>
   </view>
 </view>

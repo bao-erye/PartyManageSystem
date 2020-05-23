@@ -22,7 +22,7 @@
     </view>
   </view>
   <view class="footer">
-    <view class="submit"><button bindtap="tapNo">审核不通过</button></view>
-    <view class="submit"><button bindtap="tapYes">审核通过</button></view>
+    <view class="submit"><button bindtap="tapNo" disabled="{{disabled}}" style="background-color:{{backColor}};color: #ffffff">审核不通过</button></view>
+    <view class="submit"><button bindtap="tapYes" disabled="{{disabled}}" style="background-color:{{backColor}};color: #ffffff">审核通过</button></view>
   </view>
 </view>

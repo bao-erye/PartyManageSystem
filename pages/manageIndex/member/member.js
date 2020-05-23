@@ -32,11 +32,9 @@ Page({
     btnText:'设置',//按钮文本
     btnColor:'#E71111',//按钮背景色
     disabled:false,//是否禁用
-
-
-    
+    arrayCost:[],//缴费记录
+    arrayIspayed: ['未缴纳', '已缴纳']
   },
-
   onLoad: function (options) {
     var that = this
     var user_id = options.userID
@@ -106,6 +104,18 @@ Page({
         }
       }
     })
+    //查询缴费记录
+    var userID = that.data.userID
+    db.collection('charge').where({
+      charge_userID: userID
+    }).orderBy('month', 'asc').get({
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          arrayCost: res.data
+        })
+      }
+    })
   },
   //党费输入事件
   inputCharge:function(e){
@@ -120,24 +130,34 @@ Page({
     var userName=this.data.userName
     var month = new Date().getMonth()+1
     var year=new Date().getFullYear()
-    db.collection('charge').add({
-      data:{
-        charge_userID:userid,
-        charge_userName:userName,
-        charge_year:year,
-        charge_month:month,
-        charge_isPayed:0,
-        charge_account:partyCost
-      },success:function(res){
-        console.log('党费设置成功')
-        wx.showToast({
-          title: '党费设置成功',
-          icon:'none',
-          duration:1500
-        })
-        wx.navigateBack({})
-      }
-    })
+    if(partyCost==''){
+      wx.showToast({
+        title: '输入不能为空',
+        icon:'none',
+        duration:1500
+      })
+    }else{
+      //设置党费
+      db.collection('charge').add({
+        data: {
+          charge_userID: userid,
+          charge_userName: userName,
+          charge_year: year,
+          charge_month: month,
+          charge_isPayed: 0,
+          charge_account: partyCost
+        }, success: function (res) {
+          console.log('党费设置成功')
+          wx.showToast({
+            title: '党费设置成功',
+            icon: 'none',
+            duration: 1500
+          })
+          wx.navigateBack({})
+        }
+      })
+    }
+    
 
 
   }
