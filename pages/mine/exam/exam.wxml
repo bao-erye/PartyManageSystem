@@ -1,0 +1,25 @@
+<!--pages/mine/score/score.wxml-->
+<view class="score">
+  <view class="header">
+    <view class="header-image"><image src="{{userImgUrl}}"></image></view>
+    <view class="header-detail">
+      <view class="header-detail-name">{{userName}}</view>
+      <view class="header-detail-class">班级：{{userClass}}</view>
+      <view class="header-detail-stuNumber">学号：{{userStuNumber}}</view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="footer-title">考核明细：</view><view class="line"></view>
+    <scroll-view class="footer-contain" scroll-y="true">
+      <view wx:for="{{arrayExam}}" wx:key='key'>
+        <view class="footer-contain-item" >
+          <view class="footer-contain-item-left">
+            <view class="item-left-acTitle">{{item.examTitle}}</view>
+            <view class="item-left-acDate">{{item.time}}</view>
+          </view>
+          <view class="footer-contain-item-score">{{item.score}}分</view>
+      </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

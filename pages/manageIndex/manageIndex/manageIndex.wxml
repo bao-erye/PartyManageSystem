@@ -10,7 +10,7 @@
   <view class="search">
     <view class="search-name"><input placeholder="姓名" bindblur="blurSearchName"></input></view>
     <view class="search-tele"><input placeholder="手机号" bindblur="blurSearchTele"></input></view>
-    <view class="search-button" bindtap="tapSearch"><image src="/images/搜索.png" ></image></view>
+    <view class="search-button" bindtap="tapSearch"><image src="/images/search.png" ></image></view>
   </view>
   <view class="table">
     <view class="table-title">

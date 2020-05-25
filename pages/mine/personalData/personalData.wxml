@@ -6,14 +6,14 @@
       <view class="name-label">性别：</view>
       <view class="sex">
         <view class="sex-show">{{sex}}</view>
-        <picker class="sex-picker" value="{{sexArray[sexIndex]}}" range="{{sexArray}}" bindchange="changeSex" name="sex"><image src="/images/下拉.png"></image> </picker>
+        <picker class="sex-picker" value="{{sexArray[sexIndex]}}" range="{{sexArray}}" bindchange="changeSex" name="sex"><image src="/images/xiala.png"></image> </picker>
       </view>
     </view>
     <view class="name">
       <view class="name-label2">出生年月日：</view>
       <view class="show">
         <view class="show-detail">{{birthDay}}</view>
-        <picker mode="date" class="show-picker" bindchange="changeBirthDay" name="birthDay"><image src="/images/下拉.png"></image> </picker>
+        <picker mode="date" class="show-picker" bindchange="changeBirthDay" name="birthDay"><image src="/images/xiala.png"></image> </picker>
       </view>
     </view>
     <view class="name"><view class="name-label">籍贯：</view><input name="birthPlace" class="name-input" value="{{birthPlace}}"></input></view>

@@ -2,11 +2,11 @@
   <view class="activity-choose">
     <picker class="activity-choose-academy" bindchange="changeDangWei" range="{{arrayDangwei}}">
       <view class="activity-choose-academy-detail">
-        {{dangwei}}<image src="/images/下拉.png"></image>
+        {{dangwei}}<image src="/images/xiala.png"></image>
       </view>
     </picker>
     <view class="activity-add" bindtap="tapAdd">
-      <image src="/images/新建.png"></image>
+      <image src="/images/newadd.png"></image>
       <view class="activity-add-contain">添加支部</view>
     </view>
   </view>

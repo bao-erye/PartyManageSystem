@@ -21,7 +21,7 @@ Page({
     detail: "",
     belongArray: ['软件学院', '计算机学院', '医学院', '信安学院'],
     objectArray: ['群众', '入党积极分子', '发展对象', '预备党员', '党员'],
-    acImageUrl:'/images/图片.png',
+    acImageUrl:'/images/image.png',
   },
 
   onLoad: function (options) {

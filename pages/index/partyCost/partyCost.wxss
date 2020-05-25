@@ -22,7 +22,7 @@ page{
   border-radius: 2px;
 }
 .container{
-  height: 55%;
+  height: 40%;
   width: 100%;
 }
 .container-title{
@@ -99,11 +99,29 @@ page{
   border: 1px solid #BBBBBE;
 }
 .footer{
-  height:30%;
+  height:45%;
   padding-bottom: 40rpx;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.footer-image{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-label{
+  height: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-image image{
+  width: 200px;
+  height: 200px;
 }
 .footer button{
   background-color: #E71111;

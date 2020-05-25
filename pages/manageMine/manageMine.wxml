@@ -6,29 +6,29 @@
 </view>
 <view class="mine-contain">
   <view class="mine-contain-item" bindtap="tapPersonalData">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/个人资料.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/adminMine/personalData.png"></image></view>
     <view class="mine-contain-item-title">个人资料</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png"></image></view>
   </view>
   <view class="mine-contain-item" bindtap="tapPartyManage">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/成员管理.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/adminMine/branch.png"></image></view>
     <view class="mine-contain-item-title">党支部管理</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png"></image></view>
   </view>
   <view class="mine-contain-item" bindtap="tapInoutManage">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/消息.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/adminMine/message.png"></image></view>
     <view class="mine-contain-item-title">转入转出管理</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png"></image></view>
   </view>
   <view class="mine-contain-item" bindtap="tapPartyCharge">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/党费缴纳.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/adminMine/partyCost.png"></image></view>
     <view class="mine-contain-item-title">党费缴纳情况</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png"></image></view>
   </view>
   <view class="mine-contain-item" bindtap="tapExit">
-    <view class="mine-contain-item-image"><image src="/images/管理我的/退出.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/adminMine/exit.png"></image></view>
     <view class="mine-contain-item-title">退出</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png"></image></view>
   </view>
 </view>
 <tabBar/>

@@ -6,7 +6,10 @@ Page({
 
     partyCost: 0,//应交党费
     arrayCost:[],//缴费记录
-    arrayIspayed:['未缴纳','已缴纳']
+    arrayIspayed:['未缴纳','已缴纳'],
+    payImageUrl:'',//收款码
+    arrayImage: ['cloud://party-test-3q2zh.7061-party-test-3q2zh-1301732621/images/用户首页/code.jpg'],
+    payText:'',
 
   },
   onLoad: function (options) {
@@ -43,8 +46,19 @@ Page({
   },
   //支付按钮
   bindtapPay: function (e) {
-
+    this.setData({
+      payImageUrl: 'cloud://party-test-3q2zh.7061-party-test-3q2zh-1301732621/images/用户首页/code.jpg',
+      payText:'长按二维码保存图片后期完成支付'
+    })
   },
+  //点击图片
+  tapImage:function(e){
+    var imageUrl=this.data.payImageUrl
+    wx.previewImage({
+      current:imageUrl,
+      urls: this.data.arrayImage
+    })
+  }
 
   
 })

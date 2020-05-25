@@ -4,7 +4,7 @@
     <view class="income-type-label">选择收入方式：</view>
     <view class="income-type-picker">
       <picker bindchange="bindchangeIncome" range="{{typeArray}}">
-          {{incomeType}}<image src="/images/下拉.png"></image>
+          {{incomeType}}<image src="/images/xiala.png"></image>
       </picker>
     </view>
   </view>

@@ -1,0 +1,15 @@
+<view class="beforeTest">
+  <view class="attention-image"><image src="/images/attention.png"></image></view>
+  <view class="attention-detail">
+    <text>
+      注意事项：\n
+      1.注意考试截止时间。在设定的时间内内没有完成答题的话，系统是会自动交卷结算分数。\n
+      2.熟悉考试系统。考题只能作答一次，作答一次后不能进行修改，谨慎作答。\n
+      3.仔细审题。题型排布是不一定是按照顺序的。因此考生在考试是一定要仔细看清题目，避免混淆造成失分。\n
+      4.严守考试规则。在线考试中没有监考老师，但不意味着考生就可以肆无忌惮的作弊。考生一定不要尝试触碰“红线”，诚信考试。
+    </text>
+  </view>
+  <view class="button">
+    <button bindtap="tapBegin">开始考试</button>
+  </view>
+</view>

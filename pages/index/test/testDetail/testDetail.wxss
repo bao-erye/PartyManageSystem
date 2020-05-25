@@ -1,27 +1,35 @@
-/* pages/index/test/testDetail/testDetail.wxss */
-page{
-  width: 100%;
-  height: 100%;
-}
 .test{
+  margin-top: 18px;
   margin-left: 15px;
   margin-right: 15px;
-  height: 100%;
+}
+.test-time{
+  width: 100%;
+  height: 18px;
+  background-color: #E71111;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;top: 0;
 }
 .test-contain{
   padding-top: 10px;
-  height: 25%;
+  border: 1px solid #e71111;
+  border-radius: 5px;
 }
 .test-contain-title{
   height:10%;
 }
 .test-contain-radio{
   margin-top: 5px;
+  padding-left: 10px;
   display: flex;
 }
 .test-button{
   height: 60%;
   width: 100%;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

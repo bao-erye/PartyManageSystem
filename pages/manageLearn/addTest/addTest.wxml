@@ -1,0 +1,53 @@
+<view class="addTest">
+  <view class="header">
+    <view class="header-title">
+      <view class="header-title-label">考核标题：</view>
+      <input class="header-title-input" bindinput="inputTestTitle"></input>
+    </view>
+    <view class="header-time">
+      <view class="header-time-label">考核时长:</view>
+      <input class="header-time-input" type="number" bindinput="inputTime"></input>分钟
+    </view>
+  </view>
+  <view class="container">
+      <view class="container-label">考核内容:</view>
+      <view class="container-title">
+        <view class="container-title-label">题目:</view>
+        <input class="container-title-input" bindinput="inputTitle" value="{{title}}"></input>
+      </view>
+      <view class="container-option">
+        <view class="container-option-label">选项A：</view>
+        <input class="container-option-input" bindinput="inputOA" value="{{optionA}}"></input>
+      </view>
+      <view class="container-option">
+        <view class="container-option-label">选项B：</view>
+        <input class="container-option-input" bindinput="inputOB" value="{{optionB}}"></input>
+      </view>
+      <view class="container-option">
+        <view class="container-option-label">选项C：</view>
+        <input class="container-option-input" bindinput="inputOC" value="{{optionC}}"></input>
+      </view>
+      <view class="container-option">
+        <view class="container-option-label">选项D：</view>
+        <input class="container-option-input" bindinput="inputOD" value="{{optionD}}"></input>
+      </view>
+      <view class="container-truth">
+        <view class="container-truth-label">正确选项:</view>
+        <view class="container-truth-input">
+          <view class="container-truth-input-show">{{truth}}</view>
+          <view class="container-truth-input-picker">
+            <picker range="{{arrayChoose}}" bindchange="changeTruth" ><image src="/images/xiala.png"></image></picker></view>
+        </view>
+      </view>
+      <view class="container-submit">
+        <view class="container-submit-image"><image src="/images/newadd.png" bindtap="tapAdd"></image></view>
+        <view class="container-submit-label">添加题目</view>
+      </view>
+  </view>
+  <view class="testSum">已添加题目数为：{{testSum}}</view>
+  <view class="footer">
+    <view class="footer-submit">
+      <button bindtap="tapSubmit">提交考核</button>
+    </view>
+  </view>
+</view>

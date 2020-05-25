@@ -215,7 +215,7 @@ page{
   height: 80%;
 }
 .activity-operate{
-  height: 18%;
+  height: 15%;
   margin-top: 30rpx;
   border-radius: 7px;
   display: flex;
@@ -237,6 +237,4 @@ page{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.operate-button button{
 }

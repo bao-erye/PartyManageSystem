@@ -1,0 +1,129 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.addTest{
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-title{
+  height: 50%;
+  display: flex;
+  flex-direction: row
+}
+.header-title-label{
+  width: 23%;
+}
+.header-title-input{
+  width: 77%;
+  border: 1px solid #BBBBBE;
+}
+.header-time{
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.header-time-label{
+  width: 23%;
+}
+.header-time-input{
+  width: 65%;
+  border: 1px solid #BBBBBE;
+}
+.container{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container-label{
+  height: 30px;
+}
+.container-title{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.container-title-label{
+  width: 23%;
+}
+.container-title-input{
+  width: 77%;
+  border: 1px solid #BBBBBE;
+}
+.container-option{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.container-option-label{
+  width: 23%;
+}
+.container-option-input{
+  width: 77%;
+  border: 1px solid #BBBBBE;
+}
+.container-truth{
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.container-truth-label{
+  width: 23%;
+}
+.container-truth-input{
+  width: 77%;
+  border: 1px solid #BBBBBE;
+  display: flex;
+  flex-direction: row;
+}
+.container-truth-input-show{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-truth-input-picker{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-truth-input-picker image{
+  width: 15px;
+  height: 15px;
+}
+.container-submit{
+  height: 50px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-submit-label{
+  height: 20px;
+}
+.container-submit-image image{
+  width: 25px;
+  height: 25px;
+}
+.footer{
+  height:35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-submit button{
+  color:#ffffff;
+  background-color: #E71111
+}

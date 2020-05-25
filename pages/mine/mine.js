@@ -5,7 +5,7 @@ const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
 
   data: {
-    mineImageUrl:'/images/我的/头像.png',
+    mineImageUrl:'/images/userMine/icon.png',
     mineName:'',
     mineSchool:'',
     mineAcademy:'',
@@ -38,6 +38,12 @@ Page({
   tapScore:function(e){
     wx.navigateTo({
       url: '/pages/mine/score/score',
+    })
+  },
+  //我的考核
+  tapExam:function(e){
+    wx.navigateTo({
+      url: '/pages/mine/exam/exam',
     })
   },
   //我的活动

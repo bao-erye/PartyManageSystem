@@ -3,17 +3,19 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/index/index/index",
+    
     "pages/login/login",
     "pages/login/register/register",
     "pages/index/applyParty/applyParty",
     "pages/index/checkTable/checkTable",
-    "pages/index/test/test",
     "pages/index/partyCost/partyCost",
     "pages/index/report/report",
     "pages/index/calculator/calculator",
     "pages/index/inAndOut/inAndOut",
-    "pages/index/test/testDetail/testDetail",
     "pages/index/test/learnDetail/learnDetail",
+    "pages/index/test/test",
+    "pages/index/test/beforeTest/beforeTest",
+    "pages/index/test/testDetail/testDetail",
     "pages/index/process/process",
     "pages/activity/activityDetail/activityDetail",
     "pages/message/message",
@@ -22,6 +24,7 @@
     "pages/mine/myActivity/myActivity",
     "pages/mine/collect/collect",
     "pages/mine/score/score",
+    "pages/mine/exam/exam",
     "pages/mine/mine",
     "pages/manageIndex/manageIndex/manageIndex",
     "pages/manageIndex/member/member",
@@ -44,6 +47,7 @@
     "pages/manageMine/manageInout/manageInout",
     "pages/manageLearn/addLearn/addLearn",
     "pages/manageLearn/editLearn/editLearn",
+    "pages/manageLearn/addTest/addTest",
     "pages/manageLearn/manageLearn",
     "components/activityItem/activityItem",
     "components/tabBar/tabBar"
@@ -62,26 +66,26 @@
       {
         "pagePath": "pages/index/index/index",
         "text": "首 页",
-        "iconPath": "/images/菜单栏/首页.png",
-        "selectedIconPath": "/images/菜单栏/首页-选中.png"
+        "iconPath": "/images/menu/index.png",
+        "selectedIconPath": "/images/menu/indexChoose.png"
       },
       {
         "pagePath": "pages/activity/activity",
         "text": "活 动",
-        "iconPath": "/images/菜单栏/活动.png",
-        "selectedIconPath": "/images/菜单栏/活动-选中.png"
+        "iconPath": "/images/menu/activity.png",
+        "selectedIconPath": "/images/menu/activityChoose.png"
       },
       {
         "pagePath": "pages/message/message",
         "text": "消 息",
-        "iconPath": "/images/菜单栏/消息.png",
-        "selectedIconPath": "/images/菜单栏/消息-选中.png"
+        "iconPath": "/images/menu/message.png",
+        "selectedIconPath": "/images/menu/messageChoose.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我 的",
-        "iconPath": "/images/菜单栏/我的.png",
-        "selectedIconPath": "/images/菜单栏/我的-选中.png"
+        "iconPath": "/images/menu/mine.png",
+        "selectedIconPath": "/images/menu/mineChoose.png"
       }
     ]
   },

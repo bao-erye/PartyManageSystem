@@ -2,11 +2,11 @@
   <view class="choose">
     <view class="choose-year">
       <view class="choose-year-label">年份：{{year}}</view>
-      <picker class="choose-year-picker" range="{{arrayYear}}" bindchange="changeYear"><image src="/images/白下拉.png"></image></picker>
+      <picker class="choose-year-picker" range="{{arrayYear}}" bindchange="changeYear"><image src="/images/whiteXiala.png"></image></picker>
     </view>
     <view class="choose-year">
       <view class="choose-year-label">月份：{{month}}</view>
-      <picker class="choose-year-picker"  range="{{arrayMonth}}" bindchange="changeMonth"><image src="/images/白下拉.png"></image></picker>
+      <picker class="choose-year-picker"  range="{{arrayMonth}}" bindchange="changeMonth"><image src="/images/whiteXiala.png"></image></picker>
     </view>
   </view>
   <view class="payed">

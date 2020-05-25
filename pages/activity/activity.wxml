@@ -2,20 +2,20 @@
   <view class="section-picker">
     <picker  bindchange="bindPickerChangeXueyuan"  range="{{arrayAcademy}}">
     {{acBelong}}
-    <image src="/images/下拉.png"></image>
+    <image src="/images/xiala.png"></image>
     </picker>
   </view>
   <view class="section-picker">
     <picker  bindchange="bindPickerChangeType" range="{{arrayObject}}">
     {{acObject}}
-    <image src="/images/下拉.png"></image>
+    <image src="/images/xiala.png"></image>
     </picker>
     
   </view>  
   <view class="section-picker">
     <picker  bindchange="bindPickerChangeStatus"  range="{{statusArray}}">
     {{acStatus}}
-    <image src="/images/下拉.png"></image>
+    <image src="/images/xiala.png"></image>
     </picker>
     
   </view> 

@@ -24,12 +24,12 @@ Page({
     acImageUrl:'',//活动图片路径
     acDetail:'',
     //公告中图片路径
-    noticeImageUrlArray:['/images/白圈.png','/images/红圈.png'],
+    noticeImageUrlArray:['/images/whiteRing.png','/images/redRing.png'],
     affirmImageUrlIndex:0,
     signinImageUrlIndex:0,
     endImageUrlIndex:0,
     //收藏图标
-    imageCollectArray:['/images/我的/我的收藏.png','/images/我的/收藏选中.png'],
+    imageCollectArray:['/images/userMine/collect.png','/images/userMine/collectChoosed.png'],
     imageCollectIndex:0,
     collectText:'收藏',
     //按钮字样
@@ -62,10 +62,13 @@ Page({
         var signinEnd=res.data.activity_signinEnd
         var begin=res.data.activity_begin
         var end=res.data.activity_end
-
+        //用于显示
         var acAffirmTime = affirmDateBegin + ' ' + affirmTimeBegin + '---' +affirmDateEnd+' '+affirmTimeEnd
         var acSigninTime = activityDate + ' ' + signinBegin + '---' +activityDate+' '+signinEnd
         var acBeginTime = activityDate + ' ' + begin + '---' +activityDate+' '+end
+        //用于比较
+        var affirmBegin=affirmDateBegin+' '+affirmTimeBegin
+        var affirmEnd=affirmDateEnd+' '+affirmTimeEnd
         that.setData(
           {
             acTitle: res.data.activity_title, //活动标题
@@ -86,10 +89,10 @@ Page({
         var now_time = new Date().getTime()//现在的时间
         var affirmBeginTime = new Date(affirmBegin)
         var affirmEndTime = new Date(affirmEnd)
-        var signinBeginTime = new Date(signinBegin)
-        var signinEndTime = new Date(signinEnd)
-        var beginTime = new Date(begin)
-        var endTime = new Date(end)
+        var signinBeginTime = new Date(activityDate+' '+signinBegin)
+        var signinEndTime = new Date(activityDate + ' ' +signinEnd)
+        var beginTime = new Date(activityDate + ' ' +begin)
+        var endTime = new Date(activityDate + ' ' +end)
         if(now_time<affirmBeginTime){//确认之前
           that.setData({
             buttonIndex:0,

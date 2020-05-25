@@ -6,28 +6,33 @@
 </view>
 <view class="mine-contain">
   <view class="mine-contain-item">
-    <view class="mine-contain-item-image"><image src="/images/我的/个人资料.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/userMine/personalData.png"></image></view>
     <view class="mine-contain-item-title">个人资料</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapData"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png" bindtap="tapData"></image></view>
   </view>
   <view class="mine-contain-item">
-    <view class="mine-contain-item-image"><image src="/images/我的/我的积分.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/userMine/score.png"></image></view>
     <view class="mine-contain-item-title">我的积分</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapScore"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png" bindtap="tapScore"></image></view>
   </view>
   <view class="mine-contain-item">
-    <view class="mine-contain-item-image"><image src="/images/我的/我的活动.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/userMine/exam.png"></image></view>
+    <view class="mine-contain-item-title">我的考核</view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png" bindtap="tapExam"></image></view>
+  </view>
+  <view class="mine-contain-item">
+    <view class="mine-contain-item-image"><image src="/images/userMine/activity.png"></image></view>
     <view class="mine-contain-item-title">我的活动</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapActivity"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png" bindtap="tapActivity"></image></view>
   </view>
   <view class="mine-contain-item">
-    <view class="mine-contain-item-image"><image src="/images/我的/我的收藏.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/userMine/collect.png"></image></view>
     <view class="mine-contain-item-title">我的收藏</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapCollect"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png" bindtap="tapCollect"></image></view>
   </view>
   <view class="mine-contain-item">
-    <view class="mine-contain-item-image"><image src="/images/我的/退出.png"></image></view>
+    <view class="mine-contain-item-image"><image src="/images/userMine/exit.png"></image></view>
     <view class="mine-contain-item-title">退出</view>
-    <view class="mine-contain-item-enter"><image src="/images/右箭头.png" bindtap="tapExit"></image></view>
+    <view class="mine-contain-item-enter"><image src="/images/rightArrow.png" bindtap="tapExit"></image></view>
   </view>
 </view>

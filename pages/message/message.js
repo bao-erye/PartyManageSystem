@@ -6,8 +6,8 @@ Page({
   data: {
     //通知板块数据
     arrayMessage:[],
-    arrayImageIsread:['/images/红圈.png',''],//是否已读标志
-    arrayImageType:['/images/缴费.png','/images/转入转出.png','/images/审核.png'],//消息类型图片
+    arrayImageIsread:['/images/redRing.png',''],//是否已读标志
+    arrayImageType:['/images/payCost.png','/images/inOut.png','/images/check.png'],//消息类型图片
     arrayTextType:['党费通知','转入转出通知','审核通知'],//消息类型文本
   },
   onLoad: function (options) {

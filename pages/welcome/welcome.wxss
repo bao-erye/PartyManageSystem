@@ -11,12 +11,13 @@ page{
   background-size: 100% 100%;
 }
 .welcome-blank{
-  height: 60%;
+  height: 65%;
 }
 .welcome-button{
-  height: 40%;
+  height: 35%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 .button-detail{

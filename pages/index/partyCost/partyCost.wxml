@@ -27,6 +27,8 @@
     </view>
   </view>
   <view class="footer">
+    <view class="footer-image"><image src="{{payImageUrl}}" bindtap="tapImage"></image></view>
+    <view class="footer-label">{{payText}}</view>
     <button bindtap="bindtapPay">点击支付</button>
   </view>
 </view>

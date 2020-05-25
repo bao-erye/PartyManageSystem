@@ -5,7 +5,7 @@ const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
 
   data: {
-    userImgUrl:'/images/我的/头像.png',
+    userImgUrl:'/images/userMine/icon.png',
     userName:'',
     userClass:'',
     userStuNumber:'',

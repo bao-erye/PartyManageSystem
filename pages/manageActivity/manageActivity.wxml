@@ -2,21 +2,21 @@
   <view class="activity-choose">
     <picker class="activity-choose-academy" bindchange="bindPickerChangeXueyuan" range="{{arrayAcademy}}">
       <view class="activity-choose-academy-detail">
-        {{acBelong}}<image src="/images/下拉.png"></image>
+        {{acBelong}}<image src="/images/xiala.png"></image>
       </view>
     </picker>
     <picker class="activity-choose-academy" bindchange="bindPickerChangeType" range="{{arrayObject}}">
       <view class="activity-choose-academy-detail">
-        {{acObject}}<image src="/images/下拉.png"></image>
+        {{acObject}}<image src="/images/xiala.png"></image>
       </view>
     </picker>
     <picker class="activity-choose-academy" bindchange="bindPickerChangeStatus" range="{{statusArray}}">
       <view class="activity-choose-academy-detail">
-        {{acStatus}}<image src="/images/下拉.png"></image>
+        {{acStatus}}<image src="/images/xiala.png"></image>
       </view>
     </picker>
     <view class="activity-add" bindtap="tapAdd">
-      <image src="/images/新建.png"></image>
+      <image src="/images/newadd.png"></image>
       <view class="activity-add-contain">新建活动</view>
     </view>
   </view>

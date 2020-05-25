@@ -8,7 +8,7 @@
       <view class="item-label">所属党委：</view>
       <view class="item-input">
         <view class="item-input-show">{{dangwei}}</view>
-        <picker class="item-input-picker" bindchange="changeDangwei"  range="{{arrayDangwei}}"><image src="/images/下拉.png"></image></picker>      
+        <picker class="item-input-picker" bindchange="changeDangwei"  range="{{arrayDangwei}}"><image src="/images/xiala.png"></image></picker>      
       </view>
     </view>
     <view class="item">

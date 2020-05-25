@@ -9,37 +9,37 @@
 <view class="container">
   <view class="container-item">
     <view class="container-item-applyParty" bindtap="bandtapApplyParty">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/申请书.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/application.png"></image></view>
       <label>入党申请书</label>
     </view>
     <view class="container-item-applyParty" bindtap="bandtapPartyCost">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/党费.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/partyCost.png"></image></view>
       <label>缴纳党费</label>
     </view>
     <view class="container-item-applyParty" bindtap="bandtapReport">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/报告.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/report.png"></image></view>
       <label>思想报告</label>
     </view>
     <view class="container-item-applyParty" bindtap="bandtapCheck">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/登记表.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/table.png"></image></view>
       <label>登记表</label>
     </view>
   </view>
   <view class="container-item">
     <view class="container-item-applyParty" bindtap="bandtapProcess">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/流程.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/process.png"></image></view>
       <label>入党流程</label>
     </view>
     <view class="container-item-applyParty" bindtap="bandtapTest">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/考核.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/learn.png"></image></view>
       <label>学习与考核</label>
     </view>
     <view class="container-item-applyParty" bindtap="bandtapCalculator">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/计算器.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/calculator.png"></image></view>
       <label>党费计算器</label>
     </view>
     <view class="container-item-applyParty" bindtap="bandtapInOut">
-      <view class="container-item-applyParty-image"><image  src="/images/首页/转入转出.png"></image></view>
+      <view class="container-item-applyParty-image"><image  src="/images/userIndex/inout.png"></image></view>
       <label>转入转出</label>
     </view>
   </view>
@@ -47,5 +47,13 @@
 <view class="line"></view>
 <view class="activity-recently">最近活动</view>
 <view wx:for='{{arrayActivity}}' wx:key='key' wx:for-item='activity'>
-  <activity acTitle='{{activity.activity_title}}' acDate='{{activity.activity_date}}' acPlace='{{activity.activity_place}}' acIssuer='{{activity.activity_issuer}}' acObject='{{activity.activity_object}}' imageUrl='{{activity.activity_imageID}}'/>
+  <view bindtap="tapActivity" id='{{index}}'>
+    <activity 
+    acTitle='{{activity.activity_title}}' 
+    acDate='{{activity.activity_date}}' 
+    acPlace='{{activity.activity_place}}' 
+    acIssuer='{{activity.activity_issuer}}' 
+    acObject='{{activity.activity_object}}' 
+    imageUrl='{{activity.activity_imageID}}'/>
+  </view>
 </view>

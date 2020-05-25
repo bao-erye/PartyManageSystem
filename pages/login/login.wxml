@@ -1,11 +1,11 @@
 <view class="login">
   <view class="icon">
-    <image src="/images/头像.png"></image>
+    <image src="/images/icon1.png"></image>
   </view>
   <view class="input">
     <view class="picker">
       <view class="picker-show">{{identity}}</view>
-      <picker class="picker-image" range="{{arrayIdentity}}" bindchange="changeIndex"><image src="/images/下拉.png"></image></picker>
+      <picker class="picker-image" range="{{arrayIdentity}}" bindchange="changeIndex"><image src="/images/xiala.png"></image></picker>
     </view>
     <view class="input-number"><input type="number" maxlength="10" placeholder="输入学号" placeholder-style="color:#ffffff" bindblur="blurNumber" style="color:#ffffff"></input></view>
     <view class="input-password"><input password="true" placeholder="输入密码" placeholder-style="color:#ffffff" bindblur="blurPassword" style="color:#ffffff"></input></view>

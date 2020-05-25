@@ -5,7 +5,7 @@
       <view class="item-title">日期：</view>
       <view class="item-input">
         <view class="item-input-view">{{date}}</view>
-        <picker class="item-input-picker" mode="date" bindchange="changeDate" value="{{date}}" name="date"><image src="/images/下拉.png"></image></picker>
+        <picker class="item-input-picker" mode="date" bindchange="changeDate" value="{{date}}" name="date"><image src="/images/xiala.png"></image></picker>
       </view>
     </view>
     <view class="item"><view class="item-title">地点：</view><input class="item-input-origin" name="place" value="{{place}}"></input></view>
@@ -13,14 +13,14 @@
       <view class="item-title">对象：</view>
         <view class="item-input">
           <view class="item-input-view">{{object}}</view>
-          <picker class="item-input-picker" bindchange="changeObject" value="{{object}}" range="{{objectArray}}" name="object"><image src="/images/下拉.png"></image></picker>
+          <picker class="item-input-picker" bindchange="changeObject" value="{{object}}" range="{{objectArray}}" name="object"><image src="/images/xiala.png"></image></picker>
         </view>
     </view>
     <view class="item">
       <view class="item-title">组织：</view>
         <view class="item-input">
           <view class="item-input-view">{{belong}}</view>
-          <picker class="item-input-picker" bindchange="changeBelong" value="{{belong}}" range="{{belongArray}}" name="belong"><image src="/images/下拉.png"></image></picker>
+          <picker class="item-input-picker" bindchange="changeBelong" value="{{belong}}" range="{{belongArray}}" name="belong"><image src="/images/xiala.png"></image></picker>
         </view>
     </view>
     <view class="item"><view class="item-title">积分：</view><input class="item-input-origin" name="score" value="{{score}}"></input></view>
@@ -30,12 +30,12 @@
       <view class="item-time-input">
         <view class="item-time-input1">
           <view class="item-time-input1-view">{{affirmDateBegin}}</view>
-          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmDateBegin" mode="date" name="affirmBegin" ><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmDateBegin" mode="date" name="affirmBegin" ><image src="/images/xiala.png"></image></picker>
         </view>
         <view class="item-time-">-</view>
         <view class="item-time-input2">
           <view class="item-time-input2-view">{{affirmTimeBegin}}</view>
-          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmTimeBegin" mode="time" name="affirmEnd" ><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmTimeBegin" mode="time" name="affirmEnd" ><image src="/images/xiala.png"></image></picker>
        </view>
       </view>
     </view>
@@ -44,12 +44,12 @@
       <view class="item-time-input">
         <view class="item-time-input1">
           <view class="item-time-input1-view">{{affirmDateEnd}}</view>
-          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmDateEnd" mode="date" name="affirmBegin" ><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input1-picker" value="{{affirmBegin}}" bindchange="bindAffirmDateEnd" mode="date" name="affirmBegin" ><image src="/images/xiala.png"></image></picker>
         </view>
         <view class="item-time-">-</view>
         <view class="item-time-input2">
           <view class="item-time-input2-view">{{affirmTimeEnd}}</view>
-          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmTimeEnd" mode="time" name="affirmEnd" ><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input2-picker" value="{{affirmEnd}}" bindchange="bindAffirmTimeEnd" mode="time" name="affirmEnd" ><image src="/images/xiala.png"></image></picker>
        </view>
       </view>
     </view>
@@ -58,12 +58,12 @@
       <view class="item-time-input">
         <view class="item-time-input1">
           <view class="item-time-input1-view">{{signinBegin}}</view>
-          <picker class="item-time-input1-picker" value="{{signinBegin}}" bindchange="bindSigninBegin" mode="time" name="signinBegin"><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input1-picker" value="{{signinBegin}}" bindchange="bindSigninBegin" mode="time" name="signinBegin"><image src="/images/xiala.png"></image></picker>
         </view>
         <view class="item-time-">-</view>
         <view class="item-time-input2">
           <view class="item-time-input2-view">{{signinEnd}}</view>
-          <picker class="item-time-input2-picker" value="{{signinEnd}}" bindchange="bindSigninEnd" mode="time" name="signinEnd"><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input2-picker" value="{{signinEnd}}" bindchange="bindSigninEnd" mode="time" name="signinEnd"><image src="/images/xiala.png"></image></picker>
        </view>
       </view>
     </view>
@@ -72,12 +72,12 @@
       <view class="item-time-input">
         <view class="item-time-input1">
           <view class="item-time-input1-view">{{activityBegin}}</view>
-          <picker class="item-time-input1-picker" value="{{activityBegin}}" bindchange="bindActivityBegin" mode="time" name="activityBegin"><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input1-picker" value="{{activityBegin}}" bindchange="bindActivityBegin" mode="time" name="activityBegin"><image src="/images/xiala.png"></image></picker>
         </view>
         <view class="item-time-">-</view>
         <view class="item-time-input2">
           <view class="item-time-input2-view">{{activityEnd}}</view>
-          <picker class="item-time-input2-picker" value="{{activityEnd}}" bindchange="bindActivityEnd" mode="time" name="activityEnd"><image src="/images/下拉.png"></image></picker>
+          <picker class="item-time-input2-picker" value="{{activityEnd}}" bindchange="bindActivityEnd" mode="time" name="activityEnd"><image src="/images/xiala.png"></image></picker>
        </view>
       </view>
     </view>
@@ -90,7 +90,7 @@
       <view class="acImage-contain" >
         <view class="contain-icon"><image src="{{acImageUrl}}" mode="widthFix"></image></view>
         <view class="contain-text">
-          <image src="/images/新建.png" bindtap="tapAddImage"></image>
+          <image src="/images/newadd.png" bindtap="tapAddImage"></image>
           <view class="contain-text-detail">点击修改图片</view>
         </view>
       </view>

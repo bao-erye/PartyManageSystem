@@ -5,7 +5,7 @@
       <view wx:for='{{arrayUntreated}}' wx:key='key'>
         <view class="untreated-contain-detail" bindtap="tapUntreated" id='{{index}}'>
           {{item.inOut_userName}}申请<view wx:if="{{item.inOut_gotoBranch==adminBranch}}">转入</view><view wx:if="{{item.inOut_userBranch==adminBranch}}" >转出</view>
-          <image src="/images/右箭头.png" ></image>
+          <image src="/images/rightArrow.png" ></image>
         </view>
       </view>
     </scroll-view>

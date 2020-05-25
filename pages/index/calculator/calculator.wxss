@@ -15,7 +15,7 @@ page{
   flex-direction: row;
 }
 .income-type-label{
-  width: 100px;
+  width: 110px;
   display: flex;
   align-items: center;
 }

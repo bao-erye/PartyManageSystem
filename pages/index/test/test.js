@@ -35,7 +35,11 @@ Page({
   },
   //考核列表点击事件
   tapTest: function (e) {
+    var that=this
     console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '/pages/index/test/beforeTest/beforeTest?examID=' + that.data.arrayTest[e.currentTarget.id]._id,
+    })
   }
 
 })

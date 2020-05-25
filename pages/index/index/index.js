@@ -3,7 +3,7 @@ wx.cloud.init({env: "party-test-3q2zh"})
 const db = wx.cloud.database({env: "party-test-3q2zh"})
 Page({
   data: {
-    images: ['/images/滑动窗/1.jpg', '/images/滑动窗/2.jpg','/images/滑动窗/3.jpg'],
+    images: [],
     arrayImageID:[],//滑动窗图片ID
     //活动对象数组
     arrayActivity:[],
@@ -13,7 +13,6 @@ Page({
     //获取活动对象
     db.collection('activity').get({
       success:function(res){
-        console.log(res.data)//打印活动对象
         that.setData({
           arrayActivity:res.data
         })
@@ -27,7 +26,6 @@ Page({
         that.setData({
           arrayImageID:array//将数组赋值给data
         })
-        console.log(that.data.arrayImageID)
         
       }
     })
@@ -80,4 +78,12 @@ Page({
       url: '/pages/index/inAndOut/inAndOut',
     })
   },
+  //选择活动
+  tapActivity: function (e) {
+    var that = this
+    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '/pages/activity/activityDetail/activityDetail?activity_id=' + that.data.arrayActivity[e.currentTarget.id]._id,
+    })
+  }
 })

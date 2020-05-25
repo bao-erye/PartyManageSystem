@@ -46,6 +46,7 @@ Page({
     let tele = e.detail.value.tele
     let position = e.detail.value.position
     let score=[0]
+    let exam=[]
     if(stuNumber==''){
       wx.showToast({
         title: '学号不能为空',
@@ -92,10 +93,19 @@ Page({
           user_class: stuClass,
           user_telephone: tele,
           user_position: position,
-          user_scores: score
+          user_scores: score,
+          user_exam:exam
         },
         success: function (res) {
-          console.log(res)
+          console.log('注册成功')
+          wx.showToast({
+            title: '恭喜您注册成功',
+            icon:'success',
+            duration:1500,
+            complete:function(){
+              wx.navigateBack({})
+            }
+          })
         }
       })
     }

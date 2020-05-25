@@ -1,16 +1,18 @@
 <!--pages/index/test/testDetail/testDetail.wxml-->
+<view class="test-time">本场考试剩余时间为：{{timer}}</view>
 <view class="test">
-  <view class="test-contain">
-    <view class="test-contain-title">{{testIndex}}.{{testTitle}}</view>
-    <radio-group bindchange="bindchange">
-      <radio class="test-contain-radio" wx:for-items="{{arrayTestChoose}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}"><text>{{item.value}}</text></radio>
-
+  <view class="test-contain" wx:for="{{arrayTestChoose}}" wx:key='key'>
+    <view class="test-contain-title">{{index+1}}.{{item.title}}</view>
+    <radio-group bindchange="bindchange" id='{{index}}'>
+      <radio class="test-contain-radio" value="{{item.A.name}}" disabled="{{item.choose}}">{{item.A.value}}</radio>
+      <radio class="test-contain-radio" value="{{item.B.name}}" disabled="{{item.choose}}">{{item.B.value}}</radio>
+      <radio class="test-contain-radio" value="{{item.C.name}}" disabled="{{item.choose}}">{{item.C.value}}</radio>
+      <radio class="test-contain-radio" value="{{item.D.name}}" disabled="{{item.choose}}">{{item.D.value}}</radio>
     </radio-group>
   </view>  
   <view class="test-button">
     <view class="button">
-      <button>上一题</button>
-      <button>下一题</button>
+      <button bindtap="tapBtn">提 交</button>
     </view>
   </view>
 </view>

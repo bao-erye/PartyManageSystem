@@ -32,14 +32,7 @@ Page({
         })
       }
     })
-  },
-  //审核不通过
-  tapNo: function (e) {
-
-  },
-  //审核通过
-  tapYes: function (e) {
-
   }
+
 
 })

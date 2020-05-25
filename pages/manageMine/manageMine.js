@@ -4,7 +4,7 @@ wx.cloud.init({ env: "party-test-3q2zh" })
 const db = wx.cloud.database({ env: "party-test-3q2zh" })
 Page({
   data: {
-    mineImageUrl: '/images/我的/头像.png',
+    mineImageUrl: '/images/userMine/icon.png',
     mineName: '',
     mineDangwei: '',
     mineBranch: '',

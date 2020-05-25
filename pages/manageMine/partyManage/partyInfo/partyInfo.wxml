@@ -1,6 +1,6 @@
 <view class="partyInfo">
   <view class="header" bindtap="tapInfo">
-    <view class="header-image"><image src="/images/头像.png"></image></view>
+    <view class="header-image"><image src="/images/icon.png"></image></view>
     <view class="header-detail">
       <view class="header-detail-name">{{branchName}}</view>
       <view class="header-detail-class">管理员：{{branch_adminName}}</view>

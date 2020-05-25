@@ -18,7 +18,7 @@
         bindcolumnchange="bindMultiPickerColumnChange" 
         value="{{multiIndex}}" 
         range="{{multiArray}}">
-        <image src="/images/下拉.png"></image>
+        <image src="/images/xiala.png"></image>
         </picker>
       </view>
     </view>
@@ -27,7 +27,7 @@
       <view class="time-picker">
         <view class="time-picker-show">{{pickerTime}}</view>
         <picker mode='date' bindchange="bindchangeTime">
-        <image src="/images/下拉.png"></image></picker>
+        <image src="/images/xiala.png"></image></picker>
       </view>
     </view>
     <view class="reason">
