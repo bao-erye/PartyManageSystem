@@ -92,9 +92,12 @@ Page({
             wx.showToast({
               title: '修改成功',
               icon:'none',
-              duration:1500,
-              complete:function(){
-                wx.navigateBack({})
+              success:function(e){
+                setTimeout(function(e){
+                  wx.navigateBack({
+                    complete: (res) => {},
+                  })
+                },1500)
               }
             })
           }

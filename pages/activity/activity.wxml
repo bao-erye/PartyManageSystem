@@ -13,7 +13,7 @@
     
   </view>  
   <view class="section-picker">
-    <picker  bindchange="bindPickerChangeStatus"  range="{{statusArray}}">
+    <picker  bindchange="bindPickerChangeStatus"  range="{{arrayStatus}}">
     {{acStatus}}
     <image src="/images/xiala.png"></image>
     </picker>

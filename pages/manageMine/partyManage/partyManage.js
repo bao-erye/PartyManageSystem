@@ -4,8 +4,8 @@ const db = wx.cloud.database({env: "party-test-3q2zh"})
 Page({
   data: {
     //单选框内容
-    arrayDangwei: ['软件学院党委', '计算机学院党委', '信息科学学院党委', '物理学院党委'],
-    dangwei:'软件学院党委',
+    arrayDangwei: ['全部支部','软件学院党委', '计算机学院党委', '信息科学学院党委', '物理学院党委'],
+    dangwei:'全部支部',
     //党支部数组
     arrayBranch: [],
   },
@@ -27,15 +27,20 @@ Page({
     this.setData({
       dangwei:this.data.arrayDangwei[e.detail.value]
     })
-    db.collection('branch').where({
-      branch_dangWei:that.data.dangwei
-    }).get({
-      success:function(res){
-        that.setData({
-          arrayBranch:res.data
-        })
-      }
-    })
+    if(this.data.dangwei=='全部支部'){
+      this.onLoad()
+    }else{
+      db.collection('branch').where({
+        branch_dangWei:that.data.dangwei
+      }).get({
+        success:function(res){
+          that.setData({
+            arrayBranch:res.data
+          })
+        }
+      })
+    }
+    
   },
   //添加支部
   tapAdd:function(e){

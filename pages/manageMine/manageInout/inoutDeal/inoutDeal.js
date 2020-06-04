@@ -91,9 +91,13 @@ Page({
                   wx.showToast({
                     title: '最终审核结束',
                     icon: 'none',
-                    duration: 1500,
-                    complete: function (e) {
-                      wx.navigateBack({})
+                    success:function(res){
+                      setTimeout(function(){
+                        wx.navigateBack({
+                          complete: (res) => {
+                          },
+                        })
+                      },1500)
                     }
                   })
                 }
@@ -104,9 +108,13 @@ Page({
               wx.showToast({
                 title: '单方审核不通过',
                 icon: 'none',
-                duration: 1500,
-                complete: function (e) {
-                  wx.navigateBack({})
+                success:function(e){
+                  setTimeout(function(){
+                    wx.navigateBack({
+                      complete: (res) => {
+                      },
+                    })
+                  },1500)
                 }
               })
             }
@@ -179,9 +187,13 @@ Page({
                       wx.showToast({
                         title: '最终审核成功',
                         icon: 'none',
-                        duration: 1500,
-                        complete:function(e){
-                          wx.navigateBack({})
+                        success:function(){
+                          setTimeout(function(){
+                            wx.navigateBack({
+                              complete: (res) => {
+                              },
+                            })
+                          },1500)
                         }
                       })
                       
@@ -198,9 +210,13 @@ Page({
               wx.showToast({
                 title: '单方审核成功',
                 icon:'none',
-                duration:1500,
-                complete: function (e) {
-                  wx.navigateBack({})
+                success:function(){
+                  setTimeout(function(){
+                    wx.navigateBack({
+                      complete: (res) => {
+                      },
+                    })
+                  },1500)
                 }
               })
             }

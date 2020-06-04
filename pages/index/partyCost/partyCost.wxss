@@ -34,7 +34,7 @@ page{
   height: 100%;
 }
 .container-table-title{
-  height: 20px;
+  height: 25px;
   background: #E71111;
   color: #ffffff;
   display: flex;
@@ -44,32 +44,47 @@ page{
   width: 13%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-title-year{
   width: 25%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-title-isPayed{
   width: 25%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-title-month{
   width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-title-account{
   width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-scrollView{
   height: 100%;
 }
 .container-table-item{
-  height: 20px;
+  height: 25px;
   display: flex;
   flex-direction: row;
 }
@@ -77,26 +92,41 @@ page{
   width: 13%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-item-year{
   width: 25%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-item-isPayed{
   width: 25%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-item-month{
   width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-table-item-account{
   width: 18.5%;
   text-align: center;
   border: 1px solid #BBBBBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer{
   height:45%;

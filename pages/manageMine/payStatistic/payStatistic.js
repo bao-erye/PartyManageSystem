@@ -6,9 +6,9 @@ Page({
   data: {
     //picker
     arrayYear:[2015,2016,2017,2018,2019,2020],
-    year:0,
+    year:'选择年份',
     arrayMonth:[1,2,3,4,5,6,7,8,9,10,11,12],
-    month:0,
+    month:'选择月份',
     //缴纳名单
     arrayPayed: [],
     //未缴纳名单

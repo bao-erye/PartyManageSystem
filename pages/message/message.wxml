@@ -1,5 +1,5 @@
 <view wx:for='{{arrayMessage}}' wx:key='key'>
-  <view bindtap="tapMessage" id='{{index}}'>
+  <view bindtap="tapMessage" bindlongtap="longtapMessage" id='{{index}}'>
     <messageItem 
     messageImage1='{{arrayImageIsread[item.message_isRead]}}' 
     messageImage2='{{arrayImageType[item.message_type]}}' 

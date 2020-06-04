@@ -2,8 +2,8 @@
   "cloud": true,
   "pages": [
     "pages/welcome/welcome",
+    "pages/manageIndex/manageIndex/manageIndex",
     "pages/index/index/index",
-    
     "pages/login/login",
     "pages/login/register/register",
     "pages/index/applyParty/applyParty",
@@ -26,7 +26,7 @@
     "pages/mine/score/score",
     "pages/mine/exam/exam",
     "pages/mine/mine",
-    "pages/manageIndex/manageIndex/manageIndex",
+    
     "pages/manageIndex/member/member",
     "pages/manageIndex/ready/ready",
     "pages/manageIndex/develop/develop",

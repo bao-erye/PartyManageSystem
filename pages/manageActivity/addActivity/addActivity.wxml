@@ -88,7 +88,7 @@
     <view class="acImage">
       <view class="acImage-title">活动图片：</view>
       <view class="acImage-contain">
-        <view class="contain-icon"><image src="{{acImageUrl}}" mode="widthFix"></image></view>
+        <view class="contain-icon"><image src="{{acImageUrl}}"></image></view>
         <view class="contain-text">
           <image src="/images/newadd.png" bindtap="tapAddImage"></image>
           <view class="contain-text-detail">点击添加图片</view>

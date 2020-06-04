@@ -200,19 +200,19 @@ page{
   text-align: center;
 }
 .activity-detail{
-  height: 20%;
+  height: 25%;
   margin-top: 30rpx;
   border: 1px solid #BEEEEE;
   border-radius: 7px;
 }
 .detail-title{
-  height: 20%;
+  height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .detail-contain{
-  height: 80%;
+  height: 85%;
 }
 .activity-operate{
   height: 15%;

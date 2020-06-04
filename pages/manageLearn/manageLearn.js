@@ -27,6 +27,9 @@ Page({
       }
     })
   },
+  onShow:function(e){
+    this.onLoad()
+  },
   //添加学习内容
   tapAddLearn:function(e){
     wx.navigateTo({
@@ -36,7 +39,9 @@ Page({
   },
   //添加考核内容
   tapAddTest:function(e){
-
+    wx.navigateTo({
+      url: '/pages/manageLearn/addTest/addTest',
+    })
   },
   //学习列表点击事件
   tapLearn: function (e) {

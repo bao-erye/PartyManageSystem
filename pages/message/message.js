@@ -24,6 +24,7 @@ Page({
     })
 
   },
+  //点击消息
   tapMessage:function(e){
     var that=this
     var message=that.data.arrayMessage[e.currentTarget.id]
@@ -85,6 +86,39 @@ Page({
         }
       }
     })
+  },
+  //长按删除
+  longtapMessage:function(e){
+    var that=this
+    var messageID = this.data.arrayMessage[e.currentTarget.id]._id
+    wx.showModal({
+      title: '提示',
+      content: '删除消息后无法恢复，确定删除？',
+      confirmColor: '#E71111',
+      cancelColor: '#E71111',
+      success (res){
+        if(res.confirm){
+          //调用云函数删除消息
+          wx.cloud.callFunction({
+            name: 'deleteMessage',
+            // 传给云函数的参数
+            data: {
+              messageID: messageID
+            },
+            success: function (res) {
+              console.log('删除成功')
+              that.onLoad()
+            },
+            fail: function (res) {
+              console.log('删除失败')
+            }
+          })
+        }else if(res.cancel){
+          console.log('用户点击了取消')
+        }
+      }
+    })
+    
   }
 
 })

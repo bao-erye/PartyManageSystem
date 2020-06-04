@@ -26,10 +26,15 @@
   <view class="learn-contain">
     <scroll-view class="learn-contain-scrollView" scroll-y='true'>
     <view class="learn-contain-item" wx:for='{{arrayTest}}' wx:key='key'>
-    <view class="learn-contain-item-image"><image src="/images/file.png"></image></view>
+    <view class="learn-contain-item-image"><image src="/images/exam.png"></image></view>
     <view class="learn-contain-item-name">{{item.exam_title}}</view>
     </view>
     </scroll-view>
   </view>
 </view>
-<tabBar/>
+<tabBar
+index='0'
+activity='0'
+learn='1'
+mine='0'
+/>

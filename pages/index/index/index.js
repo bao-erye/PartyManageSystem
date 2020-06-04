@@ -13,9 +13,6 @@ Page({
     //获取活动对象
     db.collection('activity').get({
       success:function(res){
-        that.setData({
-          arrayActivity:res.data
-        })
         //获取活动图片ID
         var length=res.data.length;
         var array=new Array();
@@ -27,6 +24,25 @@ Page({
           arrayImageID:array//将数组赋值给data
         })
         
+      }
+    })
+    //获取最近活动
+    var nowTime = new Date().getTime()//获取现在日期
+    db.collection('activity').get({
+      success:function(res){
+        var activitys=res.data
+        var array=[]
+        var i=0
+        for(i;i<activitys.length;i++){
+          let time=new Date(activitys[i].activity_date)
+          if(time>nowTime){
+            array.push(activitys[i])
+          }else{
+          }
+        }
+        that.setData({
+          arrayActivity:array
+        })
       }
     })
   },

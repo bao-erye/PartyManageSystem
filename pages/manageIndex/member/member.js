@@ -127,7 +127,7 @@ Page({
   tapPartyCost:function(e){
     var partyCost=this.data.partyCost//获取输入党费
     var userid=this.data.userID
-    var userName=this.data.userName
+    var userName=this.data.name
     var month = new Date().getMonth()+1
     var year=new Date().getFullYear()
     if(partyCost==''){

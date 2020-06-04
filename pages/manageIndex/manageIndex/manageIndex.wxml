@@ -31,4 +31,9 @@
     </scroll-view>
   </view>
 </view>
-<tabBar/>
+<tabBar
+index='1'
+activity='0'
+learn='0'
+mine='0'
+/>

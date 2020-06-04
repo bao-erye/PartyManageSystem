@@ -101,7 +101,7 @@ page{
   height: 75%;
 }
 .table-title{
-  height: 23px;
+  height: 25px;
   background: #E71111;
   color: #ffffff;
   display: flex;
@@ -139,7 +139,7 @@ page{
   height: 95%;
 }
 .table-item{
-  height: 23px;
+  height: 25px;
   display: flex;
   flex-direction: row;
 }

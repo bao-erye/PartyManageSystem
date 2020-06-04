@@ -144,6 +144,8 @@ page{
   flex-direction: row;
 }
 .contain-icon{
+  width: 30%;
+  height: 80px; 
   border: 3px dashed #BBBBBE;
   display: flex;
   justify-content: center;

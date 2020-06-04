@@ -1,17 +1,38 @@
 <view class="login">
   <view class="icon">
-    <image src="/images/icon1.png"></image>
+    <image src="/images/login.png"></image>
   </view>
   <view class="input">
     <view class="picker">
+      <view class="picker-identity"><image src="/images/identity.png"></image></view>
       <view class="picker-show">{{identity}}</view>
-      <picker class="picker-image" range="{{arrayIdentity}}" bindchange="changeIndex"><image src="/images/xiala.png"></image></picker>
+      <picker class="picker-image" range="{{arrayIdentity}}" bindchange="changeIndex"><image src="/images/whiteXiala.png"></image></picker>
     </view>
-    <view class="input-number"><input type="number" maxlength="10" placeholder="输入学号" placeholder-style="color:#ffffff" bindblur="blurNumber" style="color:#ffffff"></input></view>
-    <view class="input-password"><input password="true" placeholder="输入密码" placeholder-style="color:#ffffff" bindblur="blurPassword" style="color:#ffffff"></input></view>
+    <view class="input-number">
+    <view class="input-number-icon"><image src="/images/icon1.png"></image></view>
+    <input 
+      type="number" 
+      maxlength="10" 
+      placeholder="学号" 
+      placeholder-style="color:#BBBBBE" 
+      bindblur="blurNumber" 
+      style="color:#ffffff" 
+      value="{{number}}">
+    </input>
+    </view>
+    <view class="input-password">
+    <view class="input-password-icon"><image src="/images/password.png"></image></view>
+    <input 
+      password="true" 
+      placeholder="密码" 
+      placeholder-style="color:#BBBBBE" 
+      bindblur="blurPassword" 
+      style="color:#ffffff"
+      value="{{password}}">
+    </input></view>
   </view> 
   <view class="button">
     <view class="button-detail"><button bindtap="tapLogin">登    录</button></view>
-    <view class="button-register" bindtap="tapRegister">没有账号？注册一个！</view>
+    <view class="button-register" bindtap="tapRegister">注  册</view>
   </view>
 </view>

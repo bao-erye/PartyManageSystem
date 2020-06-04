@@ -31,4 +31,9 @@
     <view class="mine-contain-item-enter"><image src="/images/rightArrow.png"></image></view>
   </view>
 </view>
-<tabBar/>
+<tabBar
+index='0'
+activity='0'
+learn='0'
+mine='1'
+/>

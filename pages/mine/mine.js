@@ -55,7 +55,7 @@ Page({
   //我的收藏
   tapCollect:function(e){
     wx.navigateTo({
-      url: '/pages/mine/myActivity/myActivity',
+      url: '/pages/mine/collect/collect',
     })
   },
   //退出

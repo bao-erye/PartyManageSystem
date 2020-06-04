@@ -18,7 +18,7 @@
             <view class="item-left-acTitle">{{item.title}}</view>
             <view class="item-left-acDate">{{item.nowTime}}</view>
           </view>
-          <view class="footer-contain-item-score">{{item.score}}</view>
+          <view class="footer-contain-item-score">{{item.score}}分</view>
       </view>
       </view>
     </scroll-view>

@@ -17,7 +17,6 @@ Page({
       collect_userID:user_number
     }).get({
       success:function(res){
-        console.log(res.data)
         var j=0
         for (j; j < res.data.length; j++) {
           db.collection('activity').doc(res.data[j].collect_activityID).get({
@@ -47,6 +46,4 @@ Page({
     this.onLoad()
     
   },
-  
-
 })

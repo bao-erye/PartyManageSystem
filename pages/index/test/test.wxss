@@ -47,8 +47,8 @@ page{
   align-items: center;
 }
 .learn-contain-item-image image{
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 .learn-contain-item-name{
   width: 90%;
@@ -68,8 +68,8 @@ page{
   align-items: center;
 }
 .learn-attention-image image{
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 .learn-attention-text{
   font-size: 11px;

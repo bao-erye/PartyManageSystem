@@ -98,7 +98,7 @@
 }
 .learn-title-contain{
   height: 20px;
-  width: 100px;
+  width: 110px;
   background-color: #e71111;
   color: #ffffff;
   border-radius: 5px;

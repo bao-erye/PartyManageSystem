@@ -61,18 +61,18 @@ Page({
   formSubmit:function(e){
     var that=this
     let user_number=app.globalData.user_number
-    let name=that.data.name
-    let nation=that.data.nation
+    let name=e.detail.value.name
+    let nation=e.detail.value.nation
     let sex=that.data.sex
     let birthDay=that.data.birthDay
-    let birthPlace=that.data.birthPlace
-    let school=that.data.school
-    let academy=that.data.academy
-    let major=that.data.major
-    let stuClass=that.data.stuClass
-    let tele=that.data.tele
-    let position=that.data.position
-    let award=that.data.award
+    let birthPlace=e.detail.value.birthPlace
+    let school=e.detail.value.school
+    let academy=e.detail.value.academy
+    let major=e.detail.value.major
+    let stuClass=e.detail.value.stuClass
+    let tele=e.detail.value.tele
+    let position=e.detail.value.position
+    let award=e.detail.value.award
     db.collection('user').doc(user_number).update({
       data:{
         user_name:name,
@@ -92,12 +92,15 @@ Page({
         wx.showToast({
           title: '修改成功',
           icon:'none',
-          duration:1500
+          duration:1500,
+          success:function(){
+            setTimeout(() => {
+              //关闭当前页面
+              wx.navigateBack({})
+            }, 1500);
+          }
         })
-        //关闭当前页面
-        wx.navigateBack({
-          
-        })
+        
       }
     })
   }

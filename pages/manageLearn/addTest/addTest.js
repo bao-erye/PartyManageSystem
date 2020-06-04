@@ -138,11 +138,12 @@ Page({
           wx.showToast({
             title: '成功创建考核内容',
             icon:'none',
-            duration:1500,
-            complete:function(res){
-              wx.navigateBack({
-                
-              })
+            duration:2000,
+            success:function(res){
+              setTimeout(function(){
+                //返回上一页
+                wx.navigateBack({})
+              },2000)
             }
           })
         }

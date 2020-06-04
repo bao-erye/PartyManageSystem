@@ -8,7 +8,7 @@ Page({
     learnTitle:'',//学习标题
     learnDetail:'',//学习内容
     learnTime:0,//学习时间
-    learnScore:'',//可得积分
+    learnScore:0,//可得积分
     timer:'0:0',//定时器
     timerName:null,
     number:''//用户ID
@@ -30,14 +30,12 @@ Page({
         })
         //查询是否存在积分项
         let title = that.data.learnTitle
-        console.log(title)
         const _ = db.command
         db.collection('user').where({
           _id: user_number,
           'user_scores.title': title
         }).get({
           success: function (res) {
-            console.log(res.data.length)
             if (res.data.length > 0) {//如果存在积分项
               wx.showToast({
                 title: '您已经获得该板块积分',
@@ -61,10 +59,9 @@ Page({
     var that = this;
     var time = that.data.learnTime*60;//获取倒计时初始值,单位分钟
     var year=new Date().getFullYear()
-    var month=new Date().getMonth()
-    var day=new Date().getDay()
+    var month=new Date().getMonth()+1
+    var day=new Date().getDate()
     var nowTime=year+'-'+month+'-'+day
-    console.log(nowTime)
     that.setData({
       timerName: setInterval(function () {  
         time--;
@@ -81,9 +78,9 @@ Page({
         if (time == 0) {
           clearInterval(that.data.timerName)
           //关闭定时器之后，更新积分
-          let user_number=that.data.number
-          let score=that.data.learnScore
-          let title = that.data.learnTitle
+          var user_number=that.data.number
+          var score=parseInt(that.data.learnScore)
+          var title = that.data.learnTitle
           //更新积分
           const _=db.command
           db.collection('user').doc(user_number).update({
@@ -92,22 +89,30 @@ Page({
             },
             success: function (res) {
               console.log("积分更新成功")
-            }
-          })
-          //添加积分项
-          db.collection('user').doc(user_number).update({
-            data: {
-              user_scores: _.push({"nowTime":nowTime,"title":title,"score":score})
-            },
-            success: function (res) {
-              console.log("恭喜获得积分")
+              //添加积分项
+              db.collection('user').doc(user_number).update({
+                data: {
+                  user_scores: _.push({"nowTime":nowTime,"title":title,"score":score})
+                },
+                success: function (res) {
+                  console.log("恭喜获得积分")
+                  wx.showToast({
+                    title: '恭喜您获得积分',
+                    icon: 'none',
+                    duration:1500
+                  })
+                }
+              })
+            },fail:function(res){
+              console.log('积分更新失败')
               wx.showToast({
-                title: '恭喜您获得积分',
-                icon: 'none',
-                duration: 1500
+                title: '服务器出小差啦，稍后再试',
+                icon:'none',
+                duration:1500
               })
             }
           })
+          
         }
        }, 1000)
     })

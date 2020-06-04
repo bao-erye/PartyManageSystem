@@ -31,15 +31,21 @@ page{
 .picker{
   width: 80%;
   height: 45px;
+  border-bottom: 1px solid #ffffff;
   padding-left: 3px;
-  background-color: #837D7D;
-  border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+.picker-identity{
+  width: 10%;
+}
+.picker-identity image{
+  width: 20px;
+  height: 18px;
+}
 .picker-show{
-  width: 90%;
+  width: 80%;
   color: #ffffff;
 }
 .picker-image{
@@ -52,20 +58,32 @@ page{
 .input-number{
   width: 80%;
   height: 45px;
+  border-bottom: 1px solid #ffffff;
   padding-left: 3px;
-  background-color: #837D7D;
-  border-radius: 10px;
   display: flex;
   align-items: center;
+}
+.input-number-icon{
+  width: 10%;
+}
+.input-number-icon image{
+  width: 20px;
+  height: 18px;
 }
 .input-password{
   width: 80%;
   height: 45px;
+  border-bottom: 1px solid #ffffff;
   padding-left: 3px;
-  background-color: #837D7D;
-  border-radius: 10px;
   display: flex;
   align-items: center;
+}
+.input-password-icon{
+  width: 10%;
+}
+.input-password-icon image{
+  width: 20px;
+  height: 18px;
 }
 .button{
   height: 25%;

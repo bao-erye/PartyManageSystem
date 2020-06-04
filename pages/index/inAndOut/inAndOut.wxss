@@ -169,7 +169,3 @@ form{
 .submit{
   margin-bottom: 20px;
 }
-.submit button{
-  background-color:  #e71111;
-  color: #ffffff;
-}

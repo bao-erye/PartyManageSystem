@@ -36,6 +36,6 @@
     </view>
   </view>
   <view class="footer">
-    <view class="submit"><button bindtap="tapSubmit">提出申请</button></view>
+    <view class="submit"><button bindtap="tapSubmit" style="background-color:{{back_color}};color: #ffffff;" disabled="{{disabled}}">{{buttonText}}</button></view>
   </view>
 </view>

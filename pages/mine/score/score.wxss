@@ -85,7 +85,7 @@ page{
   flex-direction: row;
 }
 .footer-contain-item-left{
-  width: 90%;
+  width: 87%;
   padding-left: 30rpx;
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@ page{
   color: rgb(116, 119, 119);
 }
 .footer-contain-item-score{
-  width: 10%;
+  width: 13%;
   font-size: 18px;
   display: flex;
   align-items: center;

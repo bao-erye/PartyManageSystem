@@ -10,11 +10,6 @@
         {{acObject}}<image src="/images/xiala.png"></image>
       </view>
     </picker>
-    <picker class="activity-choose-academy" bindchange="bindPickerChangeStatus" range="{{statusArray}}">
-      <view class="activity-choose-academy-detail">
-        {{acStatus}}<image src="/images/xiala.png"></image>
-      </view>
-    </picker>
     <view class="activity-add" bindtap="tapAdd">
       <image src="/images/newadd.png"></image>
       <view class="activity-add-contain">新建活动</view>
@@ -34,4 +29,9 @@
     </view>
   </scroll-view>
 </view>
-<tabBar/>
+<tabBar
+index='0'
+activity='1'
+learn='0'
+mine='0'
+/>

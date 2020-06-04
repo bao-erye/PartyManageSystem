@@ -1,18 +1,18 @@
 <view class="tabBar">
   <view class="index" bindtap="tapIndex">
-    <view class="index-image"><image src="/images/menu/index.png"></image></view>
+    <view class="index-image"><image src="{{arrayIndex[index]}}"></image></view>
     <view class="index-text">首页</view>
   </view>
   <view class="activity" bindtap="tapActivity">
-    <view class="index-image"><image src="/images/menu/activity.png"></image></view>
+    <view class="index-image"><image src="{{arrayActivity[activity]}}"></image></view>
     <view class="index-text">活动</view>
   </view>
   <view class="learn" bindtap="tapLearn">
-    <view class="index-image"><image src="/images/menu/learn.png"></image></view>
+    <view class="index-image"><image src="{{arrayLearn[learn]}}"></image></view>
     <view class="index-text">学习</view>
   </view>
   <view class="mine" bindtap="tapMine">
-    <view class="index-image"><image src="/images/menu/mine.png"></image></view>
+    <view class="index-image"><image src="{{arrayMine[mine]}}"></image></view>
     <view class="index-text">我的</view>
   </view>
 </view>

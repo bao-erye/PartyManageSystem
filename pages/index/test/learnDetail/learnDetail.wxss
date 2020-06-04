@@ -16,11 +16,11 @@ page{
   align-items: center;
 }
 .learn-title-show{
-  width: 25%
+  width: 23%
 }
 .learn-title-detail{
   height: 80%;
-  width: 75%;
+  width: 77%;
   border-radius: 5px;
   background-color: #BBBBBE;
   display: flex;
