@@ -15,7 +15,7 @@
       maxlength="10" 
       placeholder="学号" 
       placeholder-style="color:#BBBBBE" 
-      bindblur="blurNumber" 
+      bindinput="inputNumber"
       style="color:#ffffff" 
       value="{{number}}">
     </input>
@@ -26,7 +26,7 @@
       password="true" 
       placeholder="密码" 
       placeholder-style="color:#BBBBBE" 
-      bindblur="blurPassword" 
+      bindinput="inputPsd"
       style="color:#ffffff"
       value="{{password}}">
     </input></view>

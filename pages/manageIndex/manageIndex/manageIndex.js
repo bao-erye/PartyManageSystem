@@ -200,9 +200,10 @@ Page({
         url: '/pages/manageIndex/member/member?userID=' + userID,
       })
     }
-
-
-  
+  },
+  //刷新
+  onShow:function(e){
+    this.onLoad()
   }
 
   

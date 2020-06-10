@@ -60,6 +60,7 @@ Page({
   },
   //登录按钮
   tapLogin:function(e){
+    var that=this
     var number=this.data.number
     var password=this.data.password
     if(number==''){
@@ -149,13 +150,13 @@ Page({
     }
   },
   //学号输入失去焦点
-  blurNumber:function(e){
+  inputNumber:function(e){
     this.setData({
       number:e.detail.value
     })
   },
   //密码输入失去焦点
-  blurPassword:function(e){
+  inputPsd:function(e){
     this.setData({
       password:e.detail.value
     })
